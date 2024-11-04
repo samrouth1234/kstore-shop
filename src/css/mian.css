@@ -24,11 +24,13 @@
 }
 
 .background-primary-color{
-    background-color: var(--primary-color);
+  background-color: var(--primary-color);
 }
 
-.nav-bar-style{
-    padding: 20px 50px;
+@media (min-width: 960px) { 
+	.nav-bar-style{
+		padding: 20px 50px;
+	}
 }
 
 .style-footer{
