@@ -81,8 +81,8 @@
 
 		<!-- Hero section -->
 		<main class="container max-w-screen-xl mx-auto">
+			<!-- Carousel wrapper -->
 			<div id="default-carousel" class="relative w-full mt-5" data-carousel="slide">
-				<!-- Carousel wrapper -->
 				<div class="relative h-56 overflow-hidden rounded-lg show-slide">
 					<!-- Item 1 -->
 					<div class="hidden duration-700 ease-in-out" data-carousel-item>
@@ -155,7 +155,7 @@
 						</section>
 					</div>
 				</div>
-				<!-- Slider indicators -->
+
 				<div class="absolute z-30 flex -translate-x-1/2 slide-style space-x-3 rtl:space-x-reverse">
 					<button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
 					<button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
@@ -164,8 +164,9 @@
 					<button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
 				</div>
 			</div>
+
 			<!-- Service -->
-			<section class="border py-3 px-5 service-style">
+			<div class="border py-3 px-5 service-style">
 				<div class="flex items-center gap-4">
 					<i class="bi bi-box-seam icon-size"></i>
 					<div>
@@ -194,9 +195,10 @@
 						<span class="delivery-description">Delivery in 24/H</span>
 					</div>
 				</div>
-			</section>
+			</div>
+
 			<!-- Popular product -->
-			<section>
+			<div>
 				<h2 class="popular-title-style">Popular Product</h2>
 				<div class="grid grid-cols-3">
 					<div>
@@ -238,91 +240,94 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
+
 			<!-- Shop with category -->
-			<section>
+			<div>
 				<h2 class="popular-title-style">Shop with Categorys</h2>
 				<!-- horizontal-scrolling-items -->
-				<div class="horizontal-scrolling-items flex gap-5">
-					<div class="flex gap-5">
-						<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
-							<img src="./img/banner.png" width="148" alt="imag-not-found" />
-							<span class="pt-8 text-base font-medium">Electronics</span>
+				<div class="horizontal-scrolling-wrapper">
+					<div class="horizontal-scrolling-items flex gap-5">
+						<div class="flex gap-5">
+							<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
+								<img src="./img/banner.png" width="148" alt="imag-not-found" />
+								<span class="pt-8 text-base font-medium">Electronics</span>
+							</div>
+							<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
+								<img src="./img/camera.png" width="148" alt="imag-not-found" />
+								<span class="pt-4 text-base font-medium">Camera & Photo</span>
+							</div>
+							<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
+								<img src="./img/Image.png" width="148" alt="imag-not-found" />
+								<span class="pt-4 text-base font-medium">SmartPhone</span>
+							</div>
+							<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
+								<img src="./img/Tv.png" width="148" alt="imag-not-found" />
+								<span class="pt-4 text-base font-medium">Electronics</span>
+							</div>
+							<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
+								<img src="./img/keyborad.png" width="148" alt="imag-not-found" />
+								<span class="pt-4 text-base font-medium">Accessories</span>
+							</div>
+							<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
+								<img src="./img/Tv show.png" width="148" alt="imag-not-found" />
+								<span class="pt-4 text-base font-medium">TV & Homes</span>
+							</div>
+							<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
+								<img src="./img/LED.png" width="148" alt="imag-not-found" />
+								<span class="pt-8 text-base font-medium">LED Smart TV</span>
+							</div>
+							<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
+								<img src="./img/headphone.png" width="148" alt="imag-not-found" />
+								<span class="pt-4 text-base font-medium">Headphones</span>
+							</div>
 						</div>
-						<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
-							<img src="./img/camera.png" width="148" alt="imag-not-found" />
-							<span class="pt-4 text-base font-medium">Camera & Photo</span>
-						</div>
-						<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
-							<img src="./img/Image.png" width="148" alt="imag-not-found" />
-							<span class="pt-4 text-base font-medium">SmartPhone</span>
-						</div>
-						<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
-							<img src="./img/Tv.png" width="148" alt="imag-not-found" />
-							<span class="pt-4 text-base font-medium">Electronics</span>
-						</div>
-						<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
-							<img src="./img/keyborad.png" width="148" alt="imag-not-found" />
-							<span class="pt-4 text-base font-medium">Accessories</span>
-						</div>
-						<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
-							<img src="./img/Tv show.png" width="148" alt="imag-not-found" />
-							<span class="pt-4 text-base font-medium">TV & Homes</span>
-						</div>
-						<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
-							<img src="./img/LED.png" width="148" alt="imag-not-found" />
-							<span class="pt-8 text-base font-medium">LED Smart TV</span>
-						</div>
-						<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
-							<img src="./img/headphone.png" width="148" alt="imag-not-found" />
-							<span class="pt-4 text-base font-medium">Headphones</span>
-						</div>
-					</div>
-					<div class="flex gap-5">
-						<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
-							<img src="./img/banner.png" width="148" alt="imag-not-found" />
-							<span class="pt-8 text-base font-medium">Electronics</span>
-						</div>
-						<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
-							<img src="./img/camera.png" width="148" alt="imag-not-found" />
-							<span class="pt-4 text-base font-medium">Camera & Photo</span>
-						</div>
-						<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
-							<img src="./img/Image.png" width="148" alt="imag-not-found" />
-							<span class="pt-4 text-base font-medium">SmartPhone</span>
-						</div>
-						<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
-							<img src="./img/Tv.png" width="148" alt="imag-not-found" />
-							<span class="pt-4 text-base font-medium">Electronics</span>
-						</div>
-						<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
-							<img src="./img/keyborad.png" width="148" alt="imag-not-found" />
-							<span class="pt-4 text-base font-medium">Accessories</span>
-						</div>
-						<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
-							<img src="./img/Tv show.png" width="148" alt="imag-not-found" />
-							<span class="pt-4 text-base font-medium">TV & Homes</span>
-						</div>
-						<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
-							<img src="./img/LED.png" width="148" alt="imag-not-found" />
-							<span class="pt-8 text-base font-medium">LED Smart TV</span>
-						</div>
-						<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
-							<img src="./img/headphone.png" width="148" alt="imag-not-found" />
-							<span class="pt-4 text-base font-medium">Headphones</span>
+						<div class="flex gap-5">
+							<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
+								<img src="./img/banner.png" width="148" alt="imag-not-found" />
+								<span class="pt-8 text-base font-medium">Electronics</span>
+							</div>
+							<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
+								<img src="./img/camera.png" width="148" alt="imag-not-found" />
+								<span class="pt-4 text-base font-medium">Camera & Photo</span>
+							</div>
+							<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
+								<img src="./img/Image.png" width="148" alt="imag-not-found" />
+								<span class="pt-4 text-base font-medium">SmartPhone</span>
+							</div>
+							<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
+								<img src="./img/Tv.png" width="148" alt="imag-not-found" />
+								<span class="pt-4 text-base font-medium">Electronics</span>
+							</div>
+							<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
+								<img src="./img/keyborad.png" width="148" alt="imag-not-found" />
+								<span class="pt-4 text-base font-medium">Accessories</span>
+							</div>
+							<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
+								<img src="./img/Tv show.png" width="148" alt="imag-not-found" />
+								<span class="pt-4 text-base font-medium">TV & Homes</span>
+							</div>
+							<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
+								<img src="./img/LED.png" width="148" alt="imag-not-found" />
+								<span class="pt-8 text-base font-medium">LED Smart TV</span>
+							</div>
+							<div class="border w-40 flex flex-col items-center p-4 rounded-lg">
+								<img src="./img/headphone.png" width="148" alt="imag-not-found" />
+								<span class="pt-4 text-base font-medium">Headphones</span>
+							</div>
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 
 			<!-- Featured Products  -->
-			<section class="grid grid-cols-4 gap-4 featured-product">
+			<div class="grid grid-cols-4 gap-4 featured-product">
 				<div class="discount-style text-center">
 					<p class="p-2 title-discount">COMPUTER & ACCESSORIES</p>
 					<h3 class="text-3xl font-medium pb-2">32% Discount</h3>
 					<p class="text-base font-normal text-gray-500">For all ellectronics products</p>
 					<button class="background-primary-secondary-color discount-btn">SHOP NOW <i class="bi bi-arrow-right"></i></button>
-					<img src="./img/banner-discount.png" alt="" />
+					<img src="./img/banner-discount.png" alt="" class="image-discount" />
 				</div>
 				<div class="col-span-3">
 					<div>
@@ -354,9 +359,15 @@
 							<div class="hidden" id="all-product" role="tabpanel" aria-labelledby="all-product-tab">
 								<div class="grid grid-cols-4 gap-4">
 									<!-- Card item 1 -->
-									<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow">
+									<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
 										<a href="#">
-											<img class="pb-4" width="202" src="./img/true.png" alt="product image" />
+											<div class="image-container">
+												<img class="pb-4 image-card" width="202" src="./img/true.png" alt="product image" />
+												<div class="icon-overlay">
+													<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
+													<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
+												</div>
+											</div>
 										</a>
 										<div>
 											<div class="flex items-center mt-2">
@@ -373,9 +384,15 @@
 										</div>
 									</div>
 									<!-- Card item 2 -->
-									<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow">
+									<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
 										<a href="#">
-											<img class="pb-4" width="202" src="./img/true.png" alt="product image" />
+											<div class="image-container">
+												<img class="pb-4 image-card" width="202" src="./img/true.png" alt="product image" />
+												<div class="icon-overlay">
+													<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
+													<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
+												</div>
+											</div>
 										</a>
 										<div>
 											<div class="flex items-center mt-2">
@@ -392,9 +409,15 @@
 										</div>
 									</div>
 									<!-- Card item 3 -->
-									<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow">
+									<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
 										<a href="#">
-											<img class="pb-4" width="202" src="./img/true.png" alt="product image" />
+											<div class="image-container">
+												<img class="pb-4 image-card" width="202" src="./img/true.png" alt="product image" />
+												<div class="icon-overlay">
+													<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
+													<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
+												</div>
+											</div>
 										</a>
 										<div>
 											<div class="flex items-center mt-2">
@@ -411,9 +434,15 @@
 										</div>
 									</div>
 									<!-- Card item 4 -->
-									<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow">
+									<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
 										<a href="#">
-											<img class="pb-4" width="202" src="./img/true.png" alt="product image" />
+											<div class="image-container">
+												<img class="pb-4 image-card" width="202" src="./img/true.png" alt="product image" />
+												<div class="icon-overlay">
+													<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
+													<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
+												</div>
+											</div>
 										</a>
 										<div>
 											<div class="flex items-center mt-2">
@@ -430,9 +459,15 @@
 										</div>
 									</div>
 									<!-- Card item 5 -->
-									<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow">
+									<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
 										<a href="#">
-											<img class="pb-4" width="202" src="./img/true.png" alt="product image" />
+											<div class="image-container">
+												<img class="pb-4 image-card" width="202" src="./img/true.png" alt="product image" />
+												<div class="icon-overlay">
+													<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
+													<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
+												</div>
+											</div>
 										</a>
 										<div>
 											<div class="flex items-center mt-2">
@@ -449,9 +484,15 @@
 										</div>
 									</div>
 									<!-- Card item 6 -->
-									<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow">
+									<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
 										<a href="#">
-											<img class="pb-4" width="202" src="./img/true.png" alt="product image" />
+											<div class="image-container">
+												<img class="pb-4 image-card" width="202" src="./img/true.png" alt="product image" />
+												<div class="icon-overlay">
+													<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
+													<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
+												</div>
+											</div>
 										</a>
 										<div>
 											<div class="flex items-center mt-2">
@@ -468,9 +509,15 @@
 										</div>
 									</div>
 									<!-- Card item 7 -->
-									<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow">
+									<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
 										<a href="#">
-											<img class="pb-4" width="202" src="./img/true.png" alt="product image" />
+											<div class="image-container">
+												<img class="pb-4 image-card" width="202" src="./img/true.png" alt="product image" />
+												<div class="icon-overlay">
+													<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
+													<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
+												</div>
+											</div>
 										</a>
 										<div>
 											<div class="flex items-center mt-2">
@@ -487,9 +534,15 @@
 										</div>
 									</div>
 									<!-- Card item 8 -->
-									<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow">
+									<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
 										<a href="#">
-											<img class="pb-4" width="202" src="./img/true.png" alt="product image" />
+											<div class="image-container">
+												<img class="pb-4 image-card" width="202" src="./img/true.png" alt="product image" />
+												<div class="icon-overlay">
+													<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
+													<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
+												</div>
+											</div>
 										</a>
 										<div>
 											<div class="flex items-center mt-2">
@@ -523,7 +576,7 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 		</main>
 		<!-- End Section -->
 

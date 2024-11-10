@@ -133,22 +133,30 @@
 /* Horizontal Category */
 
 @keyframes infiniteScroll {
-	from {
-		transform: translateX(0);
+	0% {
+			transform: translateX(0);
 	}
-	to {
-		transform: translateX(-50%);
+	100% {
+			transform: translateX(-50%);
 	}
+}
+
+.horizontal-scrolling-wrapper {
+	overflow: hidden; 
+	position: relative;
 }
 
 .horizontal-scrolling-items {
 	display: flex;
 	font-size: 40px;
-	width: 2600px;
 	animation-name: infiniteScroll;
-	animation-duration: 10s;
-	animation-iteration-count: infinite;
+	animation-duration: 10s; 
 	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.border {
+	min-width: 160px; 
 }
 
 /* Popular Product */
@@ -303,6 +311,10 @@
 	font-weight: 500;
 }
 
+.image-discount{
+	margin-top: 35px;
+}
+
 .active-tab {
 	border-bottom: 2px solid #f3de6d;
 	color: #f3de6d; 
@@ -333,4 +345,64 @@
 
 .price-card{
 	color: #2DA5F3;
+}
+
+.background-heart-icon {
+	width: 46px;
+	height: 46px;
+	background-color: var(--primary-color);
+	color: white;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	border-radius: 50%;
+}
+
+.background-cart-icon {
+	width: 46px;
+	height: 46px;
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	border-radius: 50%;
+}
+
+.card-featured-product {
+	position: relative; 
+}
+
+.image-container {
+	position: relative; 
+}
+
+.image-card {
+	display: block; 
+	transition: opacity 0.3s ease; 
+}
+
+.icon-overlay {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); 
+	display: none; 
+	flex-direction: row;
+	gap: 10px; 
+}
+
+.image-container:hover .icon-overlay {
+	display: flex; 
+}
+
+/* Change image opacity when hovering over icons */
+.image-container:hover .image-card,
+.icon-overlay:hover ~ .image-card {
+	opacity: 0.5; 
+}
+
+.background-heart-icon:hover,
+.background-cart-icon:hover {
+	transform: scale(1.1); 
 }
