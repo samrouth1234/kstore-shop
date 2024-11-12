@@ -123,6 +123,7 @@
 .service-style {
 	display: flex;
 	justify-content: space-around;
+	margin-top: 10px;
 }
 
 .slide-style {
@@ -305,6 +306,12 @@
 	color: white;
 }
 
+.discount-btn:hover {
+	transition: 0.8s;
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+}
+
 .title-discount {
 	color: #be4646;
 	font-size: 14px;
@@ -330,8 +337,6 @@
 }
 
 .card-featured-product{
-	width: 227px;
-  height: 320px;
   border-radius: 8px;
   cursor: pointer;
 	padding: 10px;
@@ -405,4 +410,90 @@
 .background-heart-icon:hover,
 .background-cart-icon:hover {
 	transform: scale(1.1); 
+}
+
+
+/* New Feed */
+
+.introducing-btn{
+	font-size: 14px;
+	font-weight: 600;
+	background-color: var(--primary-color);
+	color: white;
+	padding: 6px 12px;
+	border-radius: 6px;
+}
+
+.introducing-btn-new{
+	font-size: 14px;
+	font-weight: 600;
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+	padding: 6px 12px;
+	border-radius: 6px;
+}
+
+.introducing-title{
+	margin-top: 8px;
+	font-size: 32px;
+	font-weight: 600;
+}
+
+.introducing-title-new{
+	margin-top: 8px;
+	font-size: 32px;
+	font-weight: 600;
+	color: white;
+}
+
+.introducing-description{
+	margin-top: 10px;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.introducing-description-new{
+	margin-top: 10px;
+	font-size: 16px;
+	font-weight: 400;
+	color: var(--light-gray-color);
+}
+
+.btn-introducing-shop-new{
+	background-color: var(--primary-color);
+	color: white;
+	padding: 10px 15px;
+	border-radius: 8px;
+	margin-top: 20px;
+	font-size: 14px;
+	font-weight: 550;
+}
+
+.btn-introducing-new-shop{
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+	padding: 10px 15px;
+	border-radius: 8px;
+	margin-top: 20px;
+	font-size: 14px;
+	font-weight: 550;
+}
+
+.bg-homepod{
+	background-color: #F2F4F5;
+	padding: 44px 32px;
+	border-radius: 8px;
+}
+
+.bg-Xiaomi{
+	background-color: var(--primary-color);
+	border-radius: 8px;
+}
+
+.new{
+	margin-left: 32px;
+}
+
+.xiaomi{
+	margin-top: 80px;
 }
