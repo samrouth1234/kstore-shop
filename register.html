@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+<body>
+    <div class="register-container">
+        <div class="left-section">
+            <img src="img/login-image.png" alt="Illustration of a person at a desk">
+        </div>
+        <div class="right-section">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password" required>
+                    <span class="toggle-password">👁</span> <!-- Eye icon to toggle visibility -->
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirmed Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Enter password" required>
+                    <span class="toggle-password">👁</span>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Register</button>
+                </div>
+            </form>
+
+            <div class="divide">
+                <div></div>
+                <p>OR</p>
+                <div></div>
+            </div>
+            
+
+            <button class="google-login-btn">
+                <i class="fa-brands fa-google"></i> Login with Google
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
