@@ -1,17 +1,18 @@
 
 
 .form-group {
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 	display: flex;
 	flex-direction: column;
 }
 
 .input-username{
 	width: 100%;
-	padding: 10px;
+	padding: 15px 0px 18px 20px;
 	border: 1px solid #183b56;
-	border-radius: 4px;
-	font-size: 13px;
+	border-radius: 8px;
+	font-size: 14px;
+	font-weight: normal;
 	outline: none;
 	color: #183b56;
 	position: relative;
@@ -23,18 +24,17 @@
 
 .login-button {
 	width: 100%;
-	padding: 10px;
-	background-color: #333;
+	padding: 15px 0px;
 	color: white;
 	border: none;
-	border-radius: 4px;
-	font-size: 20px;
+	border-radius: 8px;
 	cursor: pointer;
-	margin-top: 10px;	
 }
 
-.login-button:hover {
-	background-color: #555;
+.login-button:hover{
+	color: #232536;
+	background-color: #FFD050;
+	transition: background-color 0.5s ease;
 }
 
 .divider {
@@ -48,7 +48,7 @@
 .divider::after {
 	content: '';
 	display: inline-block;
-	width: 40%;
+	width: 47%;
 	height: 1px;
 	background-color: #ddd;
 	position: absolute;
@@ -65,22 +65,17 @@
 
 .google-login {
 	width: 100%;
-	padding: 10px;
+	padding: 15px 0px;
 	border: 1px solid #ddd;
 	background-color: white;
 	color: #333;
-	border-radius: 4px;
+	border-radius: 8px;
 	font-size: 16px;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 10px;
-}
-
-.google-login img {
-	width: 20px;
-	height: auto;
 }
 
 .google-login:hover {
@@ -90,6 +85,7 @@
 .eye {
 	position: relative;
 }
+
 .toggle-password {
 	position: absolute;
 	top: 50%;
