@@ -1,0 +1,95 @@
+
+
+.form-group {
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.input-username{
+	width: 100%;
+	padding: 15px 0px 18px 20px;
+	border: 1px solid #183b56;
+	border-radius: 8px;
+	font-size: 14px;
+	font-weight: normal;
+	outline: none;
+	color: #183b56;
+	position: relative;
+}
+
+.register{
+	color: #2EB8B8;
+}
+
+.login-button {
+	width: 100%;
+	padding: 15px 0px;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.login-button:hover{
+	color: #232536;
+	background-color: #FFD050;
+	transition: background-color 0.5s ease;
+}
+
+.divider {
+	text-align: center;
+	margin: 20px 0;
+	color: #888;
+	position: relative;
+}
+
+.divider::before,
+.divider::after {
+	content: '';
+	display: inline-block;
+	width: 47%;
+	height: 1px;
+	background-color: #ddd;
+	position: absolute;
+	top: 50%;
+}
+
+.divider::before {
+	left: 0;
+}
+
+.divider::after {
+	right: 0;
+}
+
+.google-login {
+	width: 100%;
+	padding: 15px 0px;
+	border: 1px solid #ddd;
+	background-color: white;
+	color: #333;
+	border-radius: 8px;
+	font-size: 16px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+.google-login:hover {
+	background-color: #f4f4f4;
+}
+
+.eye {
+	position: relative;
+}
+
+.toggle-password {
+	position: absolute;
+	top: 50%;
+	right: 0.5rem;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+}
