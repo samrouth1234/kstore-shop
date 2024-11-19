@@ -1,119 +1,101 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.register-container {
-    display: flex;
-    width: 800px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-.left-section {
-    flex: 1;
-    background-color: #f8f9fa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.left-section img {
-    max-width: 100%;
-    height: auto;
-}
-
-.right-section {
-    flex: 1;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
 .form-group {
-    margin-bottom: 20px;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
+.input-username {
+	width: 100%;
+	padding: 15px 0px 18px 20px;
+	border: 1px solid #183b56;
+	border-radius: 8px;
+	font-size: 14px;
+	font-weight: normal;
+	outline: none;
+	color: #183b56;
+	position: relative;
 }
 
-.form-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+.register {
+	color: #2eb8b8;
+}
+
+.login-button {
+	width: 100%;
+	padding: 15px 0px;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.login-button:hover {
+	color: #232536;
+	background-color: #ffd050;
+	transition: background-color 0.5s ease;
+}
+
+.divider {
+	text-align: center;
+	margin: 20px 0;
+	color: #888;
+	position: relative;
+}
+
+.divider::before,
+.divider::after {
+	content: '';
+	display: inline-block;
+	width: 47%;
+	height: 1px;
+	background-color: #ddd;
+	position: absolute;
+	top: 50%;
+}
+
+.divider::before {
+	left: 0;
+}
+
+.divider::after {
+	right: 0;
+}
+
+.google-login {
+	width: 100%;
+	padding: 15px 0px;
+	border: 1px solid #ddd;
+	background-color: white;
+	color: #333;
+	border-radius: 8px;
+	font-size: 16px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+.google-login:hover {
+	background-color: #f4f4f4;
+}
+
+.eye {
+	position: relative;
 }
 
 .toggle-password {
-    position: relative;
-    float: right;
-    margin-top: -28px;
-    margin-right: 10px;
-    cursor: pointer;
+	position: absolute;
+	top: 50%;
+	right: 0.5rem;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
 }
 
-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #444;
-    color: white;
-}
-
-.google-login-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f8f9fa;
-    padding: 10px;
-    border: 1px solid #ccc;
-    margin-top: 20px;
-    cursor: pointer;
-    color: #444;
-}
-.google-login-btn i {
-    margin-right: 10px;
-}
-.divide {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    justify-content: center;
-}
-.divide div{
-    height: 1px;
-    width: 50%;
-    background-color: #444;
-}
-p {
-    text-align: center;
-    margin-top: 20px;
-}
-.divide p{
-    font-size: 13px;
+.toggle-confirmed_password {
+	position: absolute;
+	top: 50%;
+	right: 0.5rem;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
 }
