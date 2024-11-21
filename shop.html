@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
 		<!-- Link CSS -->
 		<link rel="stylesheet" href="./css/mian.css" />
+		<link rel="stylesheet" href="./css/shop.css" />
 	</head>
 	<body>
 		<!-- Navigation Bar -->
@@ -79,14 +80,14 @@
 		</nav>
 		<!-- End Navigation Bar -->
 
-		<section class="flex gap-3 bg-gray-50 py-5 pl-10 text-gray-500">
+		<section class="flex gap-3 bg-gray-200 py-5 text-gray-600 font-medium breadcrumb-nav">
 			<i class="bi bi-house-door"></i>
 			<a href="./index.html">Home</a>
 			<i class="bi bi-chevron-right"></i>
 			<a href="./shop.html" class="text-secondary-color">Shop</a>
 		</section>
 
-		<main class="container max-w-screen-xl mx-auto mt-5">
+		<main class="container mx-auto mt-5">
 			<section class="w-full">
 				<div class="flex">
 					<label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only">Your Email</label>
@@ -123,68 +124,267 @@
 						</ul>
 					</div>
 					<div class="relative w-full">
-						<input type="search" id="search-dropdown" class="block py-3 px-4 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-md border-s-back border-s-2 border border-back" placeholder="Search" required />
+						<input type="search" id="search-dropdown" class="block py-3 px-4 w-full text-sm text-gray-900 bg-gray-50 rounded-e-md border-s-0 border border-back" placeholder="Search" required />
 					</div>
 				</div>
 			</section>
-			<!-- Card Product -->
+			
+			<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 gap-5 my-5">
+				<!-- Card Product -->
+				<div class="col-span-3">
+					<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+						<div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+							<a href="#">
+								<img class="rounded-t-lg w-full" src="./img/shop/shopping-01.png" alt="product image" />
+							</a>
+							<div class="px-4 py-5">
+								<a href="#">
+									<h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
+								</a>
+								<div class="flex items-center mt-2.5 mb-5">
+									<div class="flex items-center space-x-2 rtl:space-x-reverse">
+										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+										<i class="bi bi-star text-gray-200 text-xl"></i>
+									</div>
+									<span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">5.0</span>
+								</div>
+								<div class="flex items-center justify-between">
+									<span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+									<button class="text-white background-primary-color font-medium rounded-lg text-md px-5 py-2.5 text-center">Add to cart</button>
+								</div>
+							</div>
+						</div>
+						<div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+							<a href="#">
+								<img class="rounded-t-lg w-full" src="./img/shop/shopping-01.png" alt="product image" />
+							</a>
+							<div class="px-4 py-5">
+								<a href="#">
+									<h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
+								</a>
+								<div class="flex items-center mt-2.5 mb-5">
+									<div class="flex items-center space-x-2 rtl:space-x-reverse">
+										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+										<i class="bi bi-star text-gray-200 text-xl"></i>
+									</div>
+									<span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">5.0</span>
+								</div>
+								<div class="flex items-center justify-between">
+									<span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+									<button class="text-white background-primary-color font-medium rounded-lg text-md px-5 py-2.5 text-center">Add to cart</button>
+								</div>
+							</div>
+						</div>
+						<div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+							<a href="#">
+								<img class="rounded-t-lg w-full" src="./img/shop/shopping-01.png" alt="product image" />
+							</a>
+							<div class="px-4 py-5">
+								<a href="#">
+									<h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
+								</a>
+								<div class="flex items-center mt-2.5 mb-5">
+									<div class="flex items-center space-x-2 rtl:space-x-reverse">
+										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+										<i class="bi bi-star text-gray-200 text-xl"></i>
+									</div>
+									<span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">5.0</span>
+								</div>
+								<div class="flex items-center justify-between">
+									<span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+									<button class="text-white background-primary-color font-medium rounded-lg text-md px-5 py-2.5 text-center">Add to cart</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Search -->
+				<div class="w-full">
+					<div id="accordion-color" data-accordion="collapse">
+						<h2 class=" w-full p-5 font-semibold text-lg border border-b-0 border-gray-200 rounded-t-lg gap-3">
+							Shop Category
+						</h2>
+						<!-- Category -->
+						<h2 id="sub-category-1">
+							<button
+								type="button"
+								class="flex items-center justify-between w-full p-5 font-medium text-gray-500 border border-b-0 gap-3"
+								data-accordion-target="#sub-category-body"
+								aria-expanded="true"
+								aria-controls="sub-category-body"
+							>
+								<span>SubCategory</span>
+								<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+									<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+								</svg>
+							</button>
+						</h2>
+						<div id="sub-category-body" class="hidden" aria-labelledby="sub-category-1">
+							<div class="p-5 border border-b-0 border-gray-200">
+								<div class="flex items-center mb-4">
+									<input id="default-checkbox-01" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-1" />
+									<label for="default-checkbox-01" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Apparel</label>
+								</div>
+								<div class="flex items-center mb-4">
+									<input id="default-checkbox-02" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-1" />
+									<label for="default-checkbox-02" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Sneakers</label>
+								</div>
+								<div class="flex items-center mb-4">
+									<input id="default-checkbox-03" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-1" />
+									<label for="default-checkbox-03" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Bags & Luggage</label>
+								</div>
+								<div class="flex items-center mb-4">
+									<input id="default-checkbox-04" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-1" />
+									<label for="default-checkbox-04" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Handbags</label>
+								</div>
+								<div class="flex items-center mb-4">
+									<input id="default-checkbox-05" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-1" />
+									<label for="default-checkbox-05" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Watches</label>
+								</div>
+								<div class="flex items-center mb-4">
+									<input id="default-checkbox-06" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-1" />
+									<label for="default-checkbox-06" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Men Fashion</label>
+								</div>
+								<div class="flex items-center mb-4">
+									<input id="default-checkbox-07" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-1" />
+									<label for="default-checkbox-07" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Women Bags</label>
+								</div>
+								<div class="flex items-center mb-4">
+									<input id="default-checkbox-08" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-1" />
+									<label for="default-checkbox-08" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Women Fashion</label>
+								</div>
+							</div>
+						</div>
+						<!-- Manufacturer -->
+						<h2 id="manufacturer">
+							<button
+								type="button"
+								class="flex items-center justify-between w-full p-5 font-medium text-gray-500 border border-b-0 gap-3"
+								data-accordion-target="#manufacturer-body"
+								aria-expanded="false"
+								aria-controls="manufacturer-body"
+							>
+								<span>Manufacturer</span>
+								<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+									<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+								</svg>
+							</button>
+						</h2>
+						<div id="manufacturer-body" class="hidden" aria-labelledby="manufacturer">
+							<div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+								<div class="flex items-center mb-4">
+									<input id="clinic" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+									<label for="clinic" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Clinic</label>
+								</div>
+								<div class="flex items-center mb-4">
+									<input id="guerlain" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+									<label for="guerlain" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Guerlain</label>
+								</div>
+								<div class="flex items-center mb-4">
+									<input id="farmasi" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+									<label for="farmasi" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Farmasi</label>
+								</div>
+								<div class="flex items-center mb-4">
+									<input id="salon-chic" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+									<label for="salon-chic" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Salon CHIC</label>
+								</div>
+							</div>
+						</div>
+						<!-- Color -->
+						<h2 id="color">
+							<button
+								type="button"
+								class="flex items-center justify-between w-full p-5 font-medium text-gray-500 border border-b-0 gap-3"
+								data-accordion-target="#color-body"
+								aria-expanded="false"
+								aria-controls="color-body"
+							>
+								<span>Color</span>
+								<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+									<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+								</svg>
+							</button>
+						</h2>
+						<div id="color-body" class="hidden" aria-labelledby="color">
+							<div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+								<div class="flex items-center mb-4">
+									<input id="blue" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+									<label for="blue" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blue</label>
+								</div>
+								<div class="flex items-center mb-4">
+									<input id="lime" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+									<label for="lime" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Lime</label>
+								</div>
+								<div class="flex items-center mb-4">
+									<input id="pink" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+									<label for="pink" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Pink</label>
+								</div>
+								<div class="flex items-center mb-4">
+									<input id="silver" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+									<label for="silver" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Silver</label>
+								</div>
+								<div class="flex items-center mb-4">
+									<input id="yellow" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+									<label for="yellow" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Yellow</label>
+								</div>
+								<div class="flex items-center mb-4">
+									<input id="metal" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+									<label for="metal" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Metal</label>
+								</div>
+							</div>
+						</div>
+						<!-- Size -->
+						<h2 id="size">
+							<button
+								type="button"
+								class="flex items-center justify-between w-full p-5 font-medium text-gray-500 border border-b-1 gap-3"
+								data-accordion-target="#size-body"
+								aria-expanded="false"
+								aria-controls="size-body"
+							>
+								<span>Size 2</span>
+								<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+									<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+								</svg>
+							</button>
+						</h2>
+						<div id="size-body" class="hidden" aria-labelledby="size">
+							<div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+								<div class="flex items-center mb-4">
+									<input id="size-42" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+									<label for="size-42" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">42</label>
+								</div>
+								<div class="flex items-center mb-4">
+									<input id="size-43" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+									<label for="size-43" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">43</label>
+								</div>
+								<div class="flex items-center mb-4">
+									<input id="size-39" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+									<label for="size-39" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">39</label>
+								</div>
+								<div class="flex items-center mb-4">
+									<input id="size-40" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+									<label for="size-40" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">40</label>
+								</div>
+								<div class="flex items-center mb-4">
+									<input id="size-41" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+									<label for="size-41" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">41</label>
+								</div>
+							</div>
+						</div>
 
-      <div class="grid grid-cols-4 gap-3 mt-5">
-        <div class="col-span-3">
-          <div class="grid grid-cols-3 gap-3">
-            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-              <a href="#">
-                <img class="p-8 rounded-t-lg" src="./img/camera.png" alt="product image" />
-              </a>
-              <div class="px-4 pb-5">
-                <a href="#">
-                  <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
-                </a>
-                <div class="flex items-center mt-2.5 mb-5">
-                  <div class="flex items-center space-x-1 rtl:space-x-reverse">
-                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                      <path
-                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                      />
-                    </svg>
-                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                      <path
-                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                      />
-                    </svg>
-                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                      <path
-                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                      />
-                    </svg>
-                    <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                      <path
-                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                      />
-                    </svg>
-                    <svg class="w-4 h-4 text-gray-200 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
-                      <path
-                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                      />
-                    </svg>
-                  </div>
-                  <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
-                </div>
-                <div class="flex items-center justify-between">
-                  <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
-                  <a href="#" class="text-white background-primary-color font-medium rounded-lg text-sm px-5 py-2.5 text-center">Add to cart</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Search -->
-        <div>
-          <h1>Hellow</h1>
-        </div>
-      </div>
-
-
+					</div>
+				</div>
+			</div>
 		</main>
 
 		<!-- Footer -->
