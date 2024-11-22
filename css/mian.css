@@ -47,12 +47,6 @@
 	color: var(--medium-gray-color);
 }
 
-@media (min-width: 960px) {
-	.nav-bar-style {
-		padding: 20px 50px;
-	}
-}
-
 .style-footer {
 	display: flex;
 	justify-content: space-between;
@@ -62,45 +56,19 @@
 	.logo-image {
 		width: 50%;
 	}
-}
-
-@media (min-width: 960px) {
-	.show-slide {
+	.slice-show{
 		height: 500px !important;
 	}
-}
-
-.carouusel-style {
-	width: 300px !important;
-}
-
-.xbox-style {
-	font-weight: 600;
-	font-size: 35px;
-}
-
-.card-show {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	padding: 50px 20px;
-	background-color: #f4f0f8;
-	border-radius: 6px;
-}
-
-.xbox-description-style {
-	font-size: 15px;
-	font-weight: 500;
 }
 
 .style-navbar:hover {
 	color: #ffd050;
 }
 
-.btn-shop-new {
-	font-size: 16px;
-	font-weight: 500;
-	border-radius: 8px;
+.btn-shop-new:hover{
+	color: var(--secondary-color);
+  background-color: var(--primary-color) ;
+  transition: background-color 0.5s ease;
 }
 
 /* Service style */
@@ -108,6 +76,12 @@
 .icon-size {
 	font-size: 40px;
 	color: var(--tertiary-color);
+}
+
+@media (min-width: 960px) {
+	.service-style{
+		border: 1px solid rgb(223, 223, 236);
+	}
 }
 
 .delivery-title {
@@ -118,12 +92,6 @@
 
 .delivery-description {
 	font-size: 14px;
-}
-
-.service-style {
-	display: flex;
-	justify-content: space-around;
-	margin-top: 10px;
 }
 
 .slide-style {
@@ -171,8 +139,8 @@
 }
 
 .card-show-wrapper {
-	width: 400px;
-	height: 574px;
+	width: 100%;
+	height: 680px;
 	border-radius: 8px;
 	padding: 1.5rem;
 	background: white;
@@ -219,7 +187,7 @@
 }
 
 .card-show-wrapper-horizontal {
-	height: 277px;
+	height: 330px;
 	border-radius: 8px;
 	padding: 1.5rem;
 	background: white;
@@ -239,8 +207,8 @@
 }
 
 .image-show-wrapper-horizontal {
-	width: 402px;
-	height: 277px;
+	width: 502px;
+	height: 330px;
 	object-fit: cover;
 	position: absolute;
 	top: 0;
@@ -289,9 +257,9 @@
 }
 
 .discount-style {
-	width: 281px;
 	background-color: #f3de6d;
 	padding-top: 56px;
+	border-radius: 8px;
 }
 
 .discount-btn {
@@ -316,9 +284,6 @@
 	font-weight: 500;
 }
 
-.image-discount{
-	margin-top: 35px;
-}
 
 .active-tab {
 	border-bottom: 2px solid #f3de6d;
@@ -383,6 +348,7 @@
 .image-card {
 	display: block; 
 	transition: opacity 0.3s ease; 
+	width: 100%;
 }
 
 .icon-overlay {
@@ -480,19 +446,10 @@
 
 .bg-homepod{
 	background-color: #F2F4F5;
-	padding: 44px 32px;
 	border-radius: 8px;
 }
 
 .bg-Xiaomi{
 	background-color: var(--primary-color);
 	border-radius: 8px;
-}
-
-.new{
-	margin-left: 32px;
-}
-
-.xiaomi{
-	margin-top: 80px;
 }
