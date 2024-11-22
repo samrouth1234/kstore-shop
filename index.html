@@ -6,20 +6,23 @@
 		<title>Web Development RUPP</title>
 		<!-- Link CSS Flowbit -->
 		<link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+		<!-- Link Bootstrap Icon -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
 		<!-- Link CSS -->
 		<link rel="stylesheet" href="./css/mian.css" />
+		<!-- Link Tailwind CSS -->
+		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
 	<body>
 		<!-- Navigation Bar -->
-		<nav class="bg-white border-gray-200 dark:bg-gray-900">
-			<section class="flex justify-between nav-bar-style p-5 background-primary-color text-white font-medium flex-wrap">
+		<nav class="bg-white border-gray-200">
+			<section class="flex justify-between py-5 px-8 background-primary-color text-white font-medium flex-wrap">
 				<div class="flex items-center gap-5">
 					<a href="/"><i class="bi bi-telephone-plus"> </i>(+855) 9234234</a>
 					<a href="#"><i class="bi bi-envelope-check"></i> kstore@gmail.com</a>
 				</div>
 				<div>
-					<p>Follow us and get a chance to win 80% off</p>
+					<p class="hidden md:block">Follow us and get a chance to win 80% off</p>
 				</div>
 				<div>
 					<span class="flex items-center gap-4">
@@ -32,31 +35,26 @@
 				</div>
 			</section>
 			<section class="border">
-				<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+				<div class="container flex flex-wrap items-center justify-between mx-auto p-4">
 					<a href="/index.html">
-						<span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">KStore</span>
+						<span class="self-center text-2xl font-semibold whitespace-nowrap">KStore</span>
 					</a>
 					<div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-						<section class="flex items-center gap-5">
-							<p><i class="bi bi-person"></i> <a href="./login.html" class="style-navbar">Login</a> / <a href="./register.html" class="style-navbar">Register</a></p>
-							<a href=""><i class="bi bi-search"></i></a>
-							<a href=""><i class="bi bi-cart-plus"></i></a>
+						<section class="flex items-center gap-4">
+							<span class="hidden md:flex items-center gap-3">
+								<i class="bi bi-person text-2xl"></i>
+								<p><a href="./login.html" class="style-navbar text-lg font-medium">Login</a> / <a href="./register.html" class="style-navbar text-lg font-medium">Register</a></p>
+							</span>
+							<a href=""><i class="bi bi-search text-2xl"></i></a>
+							<a href=""><i class="bi bi-cart-plus text-2xl"></i></a>
 						</section>
-						<button
-							data-collapse-toggle="navbar-cta"
-							type="button"
-							class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-							aria-controls="navbar-cta"
-							aria-expanded="false"
-						>
+						<button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm md:hidden" aria-controls="navbar-cta" aria-expanded="false">
 							<span class="sr-only">Open main menu</span>
-							<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
-							</svg>
+							<i class="bi bi-list text-3xl"></i>
 						</button>
 					</div>
 					<div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
-						<ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
+						<ul class="flex flex-col font-medium md:p-0 mt-4 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
 							<li>
 								<a href="#" class="block py-2 px-3 md:p-0 rounded md:bg-transparent style-navbar">Home</a>
 							</li>
@@ -70,7 +68,13 @@
 								<a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">Blog</a>
 							</li>
 							<li>
-								<a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">Contact</a>
+								<a href="#" class="block px-3 md:p-0 text-gray-900 rounded style-navbar">Contact</a>
+							</li>
+							<li>
+								<a href="./login.html" class="md:hidden block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">Login</a>
+							</li>
+							<li>
+								<a href="./register.html" class="md:hidden block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">Register</a>
 							</li>
 						</ul>
 					</div>
@@ -80,115 +84,80 @@
 		<!-- End Navigation Bar -->
 
 		<!-- Hero section -->
-		<main class="container max-w-screen-xl mx-auto">
+		<main class="container mx-auto">
 			<!-- Carousel wrapper -->
-			<div id="default-carousel" class="relative w-full mt-5" data-carousel="slide">
-				<div class="relative h-56 overflow-hidden rounded-lg show-slide">
+			<div id="indicators-carousel" class="relative w-full" data-carousel="slide">
+				<!-- Carousel wrapper -->
+				<div class="relative h-96 overflow-hidden rounded-md slice-show my-5">
 					<!-- Item 1 -->
-					<div class="hidden duration-700 ease-in-out" data-carousel-item>
-						<section class="card-show">
-							<div class="carouusel-style">
+					<div class="hidden duration-700 ease-in-out bg-gray-50" data-carousel-item="active">
+						<section class="flex justify-around items-center p-5 md:mt-7">
+							<div>
 								<p class="text-sm text-tertiary-color">THE BEST PLACE TO PLAY</p>
-								<h3 class="pb-2 xbox-style">Xbox Consoles</h3>
-								<p class="text-medium-gray-color xbox-description-style">Save up to 50% on select Xbox games. Get 3 months of PC Game Pass for $2 USD.</p>
-								<button class="mt-3 py-2 px-5 background-primary-secondary-color btn-shop-new">SHOP NOW <i class="bi bi-arrow-right"></i></button>
+								<h3 class="text-3xl md:text-5xl font-bold pb-4 pt-2">Xbox Consoles</h3>
+								<p class="text-medium-gray-color text-sm md:text-xl">Save up to 50% on select Xbox games. Get 3 months of PC Game Pass for $2 USD.</p>
+								<button class="background-secondary-color py-3 px-5 rounded-lg font-medium mt-5 btn-shop-new">SHOP NOW <i class="bi bi-arrow-right"></i></button>
 							</div>
 							<div>
-								<img src="./img/banner.png" width="440" alt="image-not-found" />
-							</div>
-						</section>
-					</div>
-					<!-- Item 2 -->
-					<div class="hidden duration-700 ease-in-out" data-carousel-item>
-						<section class="card-show">
-							<div class="carouusel-style">
-								<p class="text-sm text-tertiary-color">THE BEST PLACE TO PLAY</p>
-								<h3 class="pb-2 xbox-style">Xbox Consoles</h3>
-								<p class="text-medium-gray-color xbox-description-style">Save up to 50% on select Xbox games. Get 3 months of PC Game Pass for $2 USD.</p>
-								<button class="mt-3 py-2 px-5 background-primary-secondary-color btn-shop-new">SHOP NOW <i class="bi bi-arrow-right"></i></button>
-							</div>
-							<div>
-								<img src="./img/banner.png" width="440" alt="image-not-found" />
-							</div>
-						</section>
-					</div>
-					<!-- Item 3 -->
-					<div class="hidden duration-700 ease-in-out" data-carousel-item>
-						<section class="card-show">
-							<div class="carouusel-style">
-								<p class="text-sm text-tertiary-color">THE BEST PLACE TO PLAY</p>
-								<h3 class="pb-2 xbox-style">Xbox Consoles</h3>
-								<p class="text-medium-gray-color xbox-description-style">Save up to 50% on select Xbox games. Get 3 months of PC Game Pass for $2 USD.</p>
-								<button class="mt-3 py-2 px-5 background-primary-secondary-color btn-shop-new">SHOP NOW <i class="bi bi-arrow-right"></i></button>
-							</div>
-							<div>
-								<img src="./img/banner.png" width="440" alt="image-not-found" />
-							</div>
-						</section>
-					</div>
-					<!-- Item 4 -->
-					<div class="hidden duration-700 ease-in-out" data-carousel-item>
-						<section class="card-show">
-							<div class="carouusel-style">
-								<p class="text-sm text-tertiary-color">THE BEST PLACE TO PLAY</p>
-								<h3 class="pb-2 xbox-style">Xbox Consoles</h3>
-								<p class="text-medium-gray-color xbox-description-style">Save up to 50% on select Xbox games. Get 3 months of PC Game Pass for $2 USD.</p>
-								<button class="mt-3 py-2 px-5 background-primary-secondary-color btn-shop-new">SHOP NOW <i class="bi bi-arrow-right"></i></button>
-							</div>
-							<div>
-								<img src="./img/banner.png" width="440" alt="image-not-found" />
-							</div>
-						</section>
-					</div>
-					<!-- Item 5 -->
-					<div class="hidden duration-700 ease-in-out" data-carousel-item>
-						<section class="card-show">
-							<div class="carouusel-style">
-								<p class="text-sm text-tertiary-color">THE BEST PLACE TO PLAY</p>
-								<h3 class="pb-2 xbox-style">Xbox Consoles</h3>
-								<p class="text-medium-gray-color xbox-description-style">Save up to 50% on select Xbox games. Get 3 months of PC Game Pass for $2 USD.</p>
-								<button class="mt-3 py-2 px-5 background-primary-secondary-color btn-shop-new">SHOP NOW <i class="bi bi-arrow-right"></i></button>
-							</div>
-							<div>
-								<img src="./img/banner.png" width="440" alt="image-not-found" />
+								<img src="./img/banner.png" class="md:w-96" alt="image-not-found" />
 							</div>
 						</section>
 					</div>
 				</div>
-
-				<div class="absolute z-30 flex -translate-x-1/2 slide-style space-x-3 rtl:space-x-reverse">
+				<!-- Slider indicators -->
+				<div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
 					<button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
 					<button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
 					<button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
 					<button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-					<button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
 				</div>
+				<!-- Slider controls -->
+				<button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+					<span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+						<svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+							<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
+						</svg>
+						<span class="sr-only">Previous</span>
+					</span>
+				</button>
+				<button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+					<span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+						<svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+							<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+						</svg>
+						<span class="sr-only">Next</span>
+					</span>
+				</button>
 			</div>
 
 			<!-- Service -->
-			<div class="border py-3 px-5 service-style">
-				<div class="flex items-center gap-4">
+			<div class="service-style grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 gap-8">
+				<!-- Fasted Delivery -->
+				<div class="flex items-center gap-4 border-r px-4 py-3">
 					<i class="bi bi-box-seam icon-size"></i>
 					<div>
 						<p class="delivery-title">Fasted Delivery</p>
 						<span class="delivery-description">Delivery in 24/H</span>
 					</div>
 				</div>
-				<div class="flex items-center gap-4">
+				<!-- 24 Hours Return -->
+				<div class="flex items-center gap-4 border-r px-5">
 					<i class="bi bi-trophy icon-size"></i>
 					<div>
 						<p class="delivery-title">24 Hours Return</p>
 						<span class="delivery-description">100% money-back guarantee</span>
 					</div>
 				</div>
-				<div class="flex items-center gap-4">
+				<!-- Secure Payment -->
+				<div class="flex items-center gap-4 border-r px-5">
 					<i class="bi bi-credit-card icon-size"></i>
 					<div>
 						<p class="delivery-title">Secure Payment</p>
 						<span class="delivery-description">Your money is safe</span>
 					</div>
 				</div>
-				<div class="flex items-center gap-4">
+				<!-- Support 24/7 -->
+				<div class="flex items-center gap-4 border-r px-5">
 					<i class="bi bi-headphones icon-size"></i>
 					<div>
 						<p class="delivery-title">Support 24/7</p>
@@ -200,15 +169,13 @@
 			<!-- Popular product -->
 			<div>
 				<h2 class="popular-title-style">Popular Product</h2>
-				<div class="grid grid-cols-3">
-					<div>
-						<div class="card-show-wrapper">
-							<img class="image-show-wrapper" src="./img/popular-card-01.png" alt="Mountain Landscape" />
-							<div class="info">
-								<h1 class="text-3xl font-medium">New Apple iPhone 13 Pro Max</h1>
-								<p>Jam-packed with innovation, iPhone 13 Pro Max delivers unexpectedly.</p>
-								<button class="background-primary-secondary-color btn-shop-new">SHOP NOW <i class="bi bi-arrow-right"></i></button>
-							</div>
+				<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-5 px-4">
+					<div class="card-show-wrapper">
+						<img class="image-show-wrapper" src="./img/popular-card-01.png" alt="Mountain Landscape" />
+						<div class="info">
+							<h1 class="text-3xl font-medium">New Apple iPhone 13 Pro Max</h1>
+							<p>Jam-packed with innovation, iPhone 13 Pro Max delivers unexpectedly.</p>
+							<button class="background-primary-secondary-color btn-shop-new">SHOP NOW <i class="bi bi-arrow-right"></i></button>
 						</div>
 					</div>
 					<div class="flex flex-col items-center gap-5">
@@ -229,14 +196,12 @@
 							</div>
 						</div>
 					</div>
-					<div>
-						<div class="card-show-wrapper">
-							<img class="image-show-wrapper" src="./img/popular-card-02.png" alt="Mountain Landscape" />
-							<div class="info">
-								<h1 class="text-3xl font-medium">New Apple Headerphone</h1>
-								<p>Jam-packed with innovation, iPhone 13 Pro Max delivers unexpectedly.</p>
-								<button class="background-primary-secondary-color btn-shop-new">SHOP NOW <i class="bi bi-arrow-right"></i></button>
-							</div>
+					<div class="card-show-wrapper">
+						<img class="image-show-wrapper" src="./img/popular-card-01.png" alt="Mountain Landscape" />
+						<div class="info">
+							<h1 class="text-3xl font-medium">New Apple iPhone 13 Pro Max</h1>
+							<p>Jam-packed with innovation, iPhone 13 Pro Max delivers unexpectedly.</p>
+							<button class="background-primary-secondary-color btn-shop-new">SHOP NOW <i class="bi bi-arrow-right"></i></button>
 						</div>
 					</div>
 				</div>
@@ -322,292 +287,293 @@
 
 			<!-- Featured Products  -->
 			<h2 class="popular-title-style">Featured Products</h2>
-			<div class="grid grid-cols-4 gap-4 featured-product">
-				<div class="discount-style text-center">
+			<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 md:gap-4 featured-product px-4">
+				<div class="discount-style text-center w-full">
 					<p class="p-2 title-discount">COMPUTER & ACCESSORIES</p>
 					<h3 class="text-3xl font-medium pb-2">32% Discount</h3>
 					<p class="text-base font-normal text-gray-500">For all ellectronics products</p>
 					<button class="background-primary-secondary-color discount-btn">SHOP NOW <i class="bi bi-arrow-right"></i></button>
-					<img src="./img/banner-discount.png" alt="" class="image-discount" />
+					<img src="./img/banner-discount.png" alt="" class="image-discount flex mx-auto" />
 				</div>
 				<div class="col-span-3">
-					<div>
-						<div class="mb-4 flex justify-between items-center">
-							<h3 class="title-featured-product">Featured Products</h3>
-							<ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
-								<li class="me-2" role="presentation">
-									<button class="inline-block text-black p-4 border-b-2 rounded-t-lg" id="all-product-tab" data-tabs-target="#all-product" type="button" role="tab" aria-controls="all-product" aria-selected="true">All Product</button>
-								</li>
-								<li class="me-2" role="presentation">
-									<button class="inline-block p-4 border-b-2 rounded-t-lg" id="smart-phone-tab" data-tabs-target="#smart-phone" type="button" role="tab" aria-controls="smart-phone" aria-selected="false">Smart Phone</button>
-								</li>
-								<li class="me-2" role="presentation">
-									<button class="inline-block p-4 border-b-2 rounded-t-lg" id="laptop-tab" data-tabs-target="#laptop" type="button" role="tab" aria-controls="laptop" aria-selected="false">Laptop</button>
-								</li>
-								<li class="me-2" role="presentation">
-									<button class="inline-block p-4 border-b-2 rounded-t-lg" id="headphone-tab" data-tabs-target="#headphone" type="button" role="tab" aria-controls="headphone" aria-selected="false">Headphone</button>
-								</li>
-								<li class="me-2" role="presentation">
-									<button class="inline-block p-4 border-b-2 rounded-t-lg" id="tv-tab" data-tabs-target="#tv" type="button" role="tab" aria-controls="tv" aria-selected="false">TV</button>
-								</li>
-								<li role="presentation">
-									<a>
-										<button class="inline-block p-4 border-b-2 rounded-t-lg" id="" data-tabs-target="" type="button" role="tab" aria-controls="" aria-selected="false">Browse All Product <i class="bi bi-arrow-right"></i></button>
+					<div class="mb-4 md:flex justify-between items-center">
+						<h3 class="title-featured-product mt-8 md:mt-0">Featured Products</h3>
+						<ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
+							<li class="me-2" role="presentation">
+								<button class="inline-block text-black p-4 border-b-2 rounded-t-lg" id="all-product-tab" data-tabs-target="#all-product" type="button" role="tab" aria-controls="all-product" aria-selected="true">All Product</button>
+							</li>
+							<li class="me-2" role="presentation">
+								<button class="inline-block p-4 border-b-2 rounded-t-lg" id="smart-phone-tab" data-tabs-target="#smart-phone" type="button" role="tab" aria-controls="smart-phone" aria-selected="false">Smart Phone</button>
+							</li>
+							<li class="me-2" role="presentation">
+								<button class="inline-block p-4 border-b-2 rounded-t-lg" id="laptop-tab" data-tabs-target="#laptop" type="button" role="tab" aria-controls="laptop" aria-selected="false">Laptop</button>
+							</li>
+							<li class="me-2" role="presentation">
+								<button class="inline-block p-4 border-b-2 rounded-t-lg" id="headphone-tab" data-tabs-target="#headphone" type="button" role="tab" aria-controls="headphone" aria-selected="false">Headphone</button>
+							</li>
+							<li class="me-2" role="presentation">
+								<button class="inline-block p-4 border-b-2 rounded-t-lg" id="tv-tab" data-tabs-target="#tv" type="button" role="tab" aria-controls="tv" aria-selected="false">TV</button>
+							</li>
+							<li role="presentation">
+								<a>
+									<button class="inline-block p-4 border-b-2 rounded-t-lg" id="" data-tabs-target="" type="button" role="tab" aria-controls="" aria-selected="false">Browse All Product <i class="bi bi-arrow-right"></i></button>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div id="default-tab-content">
+						<!-- All Product -->
+						<div class="hidden" id="all-product" role="tabpanel" aria-labelledby="all-product-tab">
+							<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 gap-4">
+								<!-- Card item 1 -->
+								<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
+									<a href="#">
+										<div class="image-container">
+											<img class="pb-4 image-card" src="./img/true.png" alt="product image" />
+											<div class="icon-overlay">
+												<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
+												<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
+											</div>
+										</div>
 									</a>
-								</li>
-							</ul>
-						</div>
-						<div id="default-tab-content">
-							<!-- All Product -->
-							<div class="hidden" id="all-product" role="tabpanel" aria-labelledby="all-product-tab">
-								<div class="grid grid-cols-4 gap-4">
-									<!-- Card item 1 -->
-									<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
-										<a href="#">
-											<div class="image-container">
-												<img class="pb-4 image-card" width="202" src="./img/true.png" alt="product image" />
-												<div class="icon-overlay">
-													<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
-													<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
-												</div>
+									<div>
+										<div class="flex items-center mt-2">
+											<div class="flex items-center space-x-1 rtl:space-x-reverse">
+												<i class="bi bi-star-fill text-secondary-color"></i>
+												<i class="bi bi-star-fill text-secondary-color"></i>
+												<i class="bi bi-star-fill text-secondary-color"></i>
+												<i class="bi bi-star-fill text-secondary-color"></i>
 											</div>
-										</a>
-										<div>
-											<div class="flex items-center mt-2">
-												<div class="flex items-center space-x-1 rtl:space-x-reverse">
-													<i class="bi bi-star-fill text-secondary-color"></i>
-													<i class="bi bi-star-fill text-secondary-color"></i>
-													<i class="bi bi-star-fill text-secondary-color"></i>
-													<i class="bi bi-star-fill text-secondary-color"></i>
-												</div>
-												<span class="text-xs font-normal px-1 py-0.5 rounded ms-1">(456)</span>
-											</div>
-											<p class="description-card-featured">TOZO T6 True Wireless Earbuds Bluetooth Headphon...</p>
-											<p class="price-card mt-2">$ 790</p>
+											<span class="text-xs font-normal px-1 py-0.5 rounded ms-1">(456)</span>
 										</div>
+										<p class="description-card-featured">TOZO T6 True Wireless Earbuds Bluetooth Headphon...</p>
+										<p class="price-card mt-2">$ 790</p>
 									</div>
-									<!-- Card item 2 -->
-									<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
-										<a href="#">
-											<div class="image-container">
-												<img class="pb-4 image-card" width="202" src="./img/true.png" alt="product image" />
-												<div class="icon-overlay">
-													<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
-													<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
-												</div>
+								</div>
+								<!-- Card item 2 -->
+								<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
+									<a href="#">
+										<div class="image-container">
+											<img class="pb-4 image-card" width="202" src="./img/true.png" alt="product image" />
+											<div class="icon-overlay">
+												<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
+												<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
 											</div>
-										</a>
-										<div>
-											<div class="flex items-center mt-2">
-												<div class="flex items-center space-x-1 rtl:space-x-reverse">
-													<i class="bi bi-star-fill text-secondary-color"></i>
-													<i class="bi bi-star-fill text-secondary-color"></i>
-													<i class="bi bi-star-fill text-secondary-color"></i>
-													<i class="bi bi-star-fill text-secondary-color"></i>
-												</div>
-												<span class="text-xs font-normal px-1 py-0.5 rounded ms-1">(456)</span>
-											</div>
-											<p class="description-card-featured">TOZO T6 True Wireless Earbuds Bluetooth Headphon...</p>
-											<p class="price-card mt-2">$ 790</p>
 										</div>
+									</a>
+									<div>
+										<div class="flex items-center mt-2">
+											<div class="flex items-center space-x-1 rtl:space-x-reverse">
+												<i class="bi bi-star-fill text-secondary-color"></i>
+												<i class="bi bi-star-fill text-secondary-color"></i>
+												<i class="bi bi-star-fill text-secondary-color"></i>
+												<i class="bi bi-star-fill text-secondary-color"></i>
+											</div>
+											<span class="text-xs font-normal px-1 py-0.5 rounded ms-1">(456)</span>
+										</div>
+										<p class="description-card-featured">TOZO T6 True Wireless Earbuds Bluetooth Headphon...</p>
+										<p class="price-card mt-2">$ 790</p>
 									</div>
-									<!-- Card item 3 -->
-									<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
-										<a href="#">
-											<div class="image-container">
-												<img class="pb-4 image-card" width="202" src="./img/true.png" alt="product image" />
-												<div class="icon-overlay">
-													<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
-													<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
-												</div>
+								</div>
+								<!-- Card item 3 -->
+								<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
+									<a href="#">
+										<div class="image-container">
+											<img class="pb-4 image-card" width="202" src="./img/true.png" alt="product image" />
+											<div class="icon-overlay">
+												<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
+												<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
 											</div>
-										</a>
-										<div>
-											<div class="flex items-center mt-2">
-												<div class="flex items-center space-x-1 rtl:space-x-reverse">
-													<i class="bi bi-star-fill text-secondary-color"></i>
-													<i class="bi bi-star-fill text-secondary-color"></i>
-													<i class="bi bi-star-fill text-secondary-color"></i>
-													<i class="bi bi-star-fill text-secondary-color"></i>
-												</div>
-												<span class="text-xs font-normal px-1 py-0.5 rounded ms-1">(456)</span>
-											</div>
-											<p class="description-card-featured">TOZO T6 True Wireless Earbuds Bluetooth Headphon...</p>
-											<p class="price-card mt-2">$ 790</p>
 										</div>
+									</a>
+									<div>
+										<div class="flex items-center mt-2">
+											<div class="flex items-center space-x-1 rtl:space-x-reverse">
+												<i class="bi bi-star-fill text-secondary-color"></i>
+												<i class="bi bi-star-fill text-secondary-color"></i>
+												<i class="bi bi-star-fill text-secondary-color"></i>
+												<i class="bi bi-star-fill text-secondary-color"></i>
+											</div>
+											<span class="text-xs font-normal px-1 py-0.5 rounded ms-1">(456)</span>
+										</div>
+										<p class="description-card-featured">TOZO T6 True Wireless Earbuds Bluetooth Headphon...</p>
+										<p class="price-card mt-2">$ 790</p>
 									</div>
-									<!-- Card item 4 -->
-									<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
-										<a href="#">
-											<div class="image-container">
-												<img class="pb-4 image-card" width="202" src="./img/true.png" alt="product image" />
-												<div class="icon-overlay">
-													<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
-													<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
-												</div>
+								</div>
+								<!-- Card item 4 -->
+								<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
+									<a href="#">
+										<div class="image-container">
+											<img class="pb-4 image-card" width="202" src="./img/true.png" alt="product image" />
+											<div class="icon-overlay">
+												<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
+												<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
 											</div>
-										</a>
-										<div>
-											<div class="flex items-center mt-2">
-												<div class="flex items-center space-x-1 rtl:space-x-reverse">
-													<i class="bi bi-star-fill text-secondary-color"></i>
-													<i class="bi bi-star-fill text-secondary-color"></i>
-													<i class="bi bi-star-fill text-secondary-color"></i>
-													<i class="bi bi-star-fill text-secondary-color"></i>
-												</div>
-												<span class="text-xs font-normal px-1 py-0.5 rounded ms-1">(456)</span>
-											</div>
-											<p class="description-card-featured">TOZO T6 True Wireless Earbuds Bluetooth Headphon...</p>
-											<p class="price-card mt-2">$ 790</p>
 										</div>
+									</a>
+									<div>
+										<div class="flex items-center mt-2">
+											<div class="flex items-center space-x-1 rtl:space-x-reverse">
+												<i class="bi bi-star-fill text-secondary-color"></i>
+												<i class="bi bi-star-fill text-secondary-color"></i>
+												<i class="bi bi-star-fill text-secondary-color"></i>
+												<i class="bi bi-star-fill text-secondary-color"></i>
+											</div>
+											<span class="text-xs font-normal px-1 py-0.5 rounded ms-1">(456)</span>
+										</div>
+										<p class="description-card-featured">TOZO T6 True Wireless Earbuds Bluetooth Headphon...</p>
+										<p class="price-card mt-2">$ 790</p>
 									</div>
-									<!-- Card item 5 -->
-									<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
-										<a href="#">
-											<div class="image-container">
-												<img class="pb-4 image-card" width="202" src="./img/true.png" alt="product image" />
-												<div class="icon-overlay">
-													<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
-													<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
-												</div>
+								</div>
+								<!-- Card item 5 -->
+								<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
+									<a href="#">
+										<div class="image-container">
+											<img class="pb-4 image-card" width="202" src="./img/true.png" alt="product image" />
+											<div class="icon-overlay">
+												<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
+												<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
 											</div>
-										</a>
-										<div>
-											<div class="flex items-center mt-2">
-												<div class="flex items-center space-x-1 rtl:space-x-reverse">
-													<i class="bi bi-star-fill text-secondary-color"></i>
-													<i class="bi bi-star-fill text-secondary-color"></i>
-													<i class="bi bi-star-fill text-secondary-color"></i>
-													<i class="bi bi-star-fill text-secondary-color"></i>
-												</div>
-												<span class="text-xs font-normal px-1 py-0.5 rounded ms-1">(456)</span>
-											</div>
-											<p class="description-card-featured">TOZO T6 True Wireless Earbuds Bluetooth Headphon...</p>
-											<p class="price-card mt-2">$ 790</p>
 										</div>
+									</a>
+									<div>
+										<div class="flex items-center mt-2">
+											<div class="flex items-center space-x-1 rtl:space-x-reverse">
+												<i class="bi bi-star-fill text-secondary-color"></i>
+												<i class="bi bi-star-fill text-secondary-color"></i>
+												<i class="bi bi-star-fill text-secondary-color"></i>
+												<i class="bi bi-star-fill text-secondary-color"></i>
+											</div>
+											<span class="text-xs font-normal px-1 py-0.5 rounded ms-1">(456)</span>
+										</div>
+										<p class="description-card-featured">TOZO T6 True Wireless Earbuds Bluetooth Headphon...</p>
+										<p class="price-card mt-2">$ 790</p>
 									</div>
-									<!-- Card item 6 -->
-									<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
-										<a href="#">
-											<div class="image-container">
-												<img class="pb-4 image-card" width="202" src="./img/true.png" alt="product image" />
-												<div class="icon-overlay">
-													<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
-													<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
-												</div>
+								</div>
+								<!-- Card item 6 -->
+								<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
+									<a href="#">
+										<div class="image-container">
+											<img class="pb-4 image-card" width="202" src="./img/true.png" alt="product image" />
+											<div class="icon-overlay">
+												<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
+												<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
 											</div>
-										</a>
-										<div>
-											<div class="flex items-center mt-2">
-												<div class="flex items-center space-x-1 rtl:space-x-reverse">
-													<i class="bi bi-star-fill text-secondary-color"></i>
-													<i class="bi bi-star-fill text-secondary-color"></i>
-													<i class="bi bi-star-fill text-secondary-color"></i>
-													<i class="bi bi-star-fill text-secondary-color"></i>
-												</div>
-												<span class="text-xs font-normal px-1 py-0.5 rounded ms-1">(456)</span>
-											</div>
-											<p class="description-card-featured">TOZO T6 True Wireless Earbuds Bluetooth Headphon...</p>
-											<p class="price-card mt-2">$ 790</p>
 										</div>
+									</a>
+									<div>
+										<div class="flex items-center mt-2">
+											<div class="flex items-center space-x-1 rtl:space-x-reverse">
+												<i class="bi bi-star-fill text-secondary-color"></i>
+												<i class="bi bi-star-fill text-secondary-color"></i>
+												<i class="bi bi-star-fill text-secondary-color"></i>
+												<i class="bi bi-star-fill text-secondary-color"></i>
+											</div>
+											<span class="text-xs font-normal px-1 py-0.5 rounded ms-1">(456)</span>
+										</div>
+										<p class="description-card-featured">TOZO T6 True Wireless Earbuds Bluetooth Headphon...</p>
+										<p class="price-card mt-2">$ 790</p>
 									</div>
-									<!-- Card item 7 -->
-									<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
-										<a href="#">
-											<div class="image-container">
-												<img class="pb-4 image-card" width="202" src="./img/true.png" alt="product image" />
-												<div class="icon-overlay">
-													<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
-													<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
-												</div>
+								</div>
+								<!-- Card item 7 -->
+								<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
+									<a href="#">
+										<div class="image-container">
+											<img class="pb-4 image-card" width="202" src="./img/true.png" alt="product image" />
+											<div class="icon-overlay">
+												<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
+												<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
 											</div>
-										</a>
-										<div>
-											<div class="flex items-center mt-2">
-												<div class="flex items-center space-x-1 rtl:space-x-reverse">
-													<i class="bi bi-star-fill text-secondary-color"></i>
-													<i class="bi bi-star-fill text-secondary-color"></i>
-													<i class="bi bi-star-fill text-secondary-color"></i>
-													<i class="bi bi-star-fill text-secondary-color"></i>
-												</div>
-												<span class="text-xs font-normal px-1 py-0.5 rounded ms-1">(456)</span>
-											</div>
-											<p class="description-card-featured">TOZO T6 True Wireless Earbuds Bluetooth Headphon...</p>
-											<p class="price-card mt-2">$ 790</p>
 										</div>
+									</a>
+									<div>
+										<div class="flex items-center mt-2">
+											<div class="flex items-center space-x-1 rtl:space-x-reverse">
+												<i class="bi bi-star-fill text-secondary-color"></i>
+												<i class="bi bi-star-fill text-secondary-color"></i>
+												<i class="bi bi-star-fill text-secondary-color"></i>
+												<i class="bi bi-star-fill text-secondary-color"></i>
+											</div>
+											<span class="text-xs font-normal px-1 py-0.5 rounded ms-1">(456)</span>
+										</div>
+										<p class="description-card-featured">TOZO T6 True Wireless Earbuds Bluetooth Headphon...</p>
+										<p class="price-card mt-2">$ 790</p>
 									</div>
-									<!-- Card item 8 -->
-									<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
-										<a href="#">
-											<div class="image-container">
-												<img class="pb-4 image-card" width="202" src="./img/true.png" alt="product image" />
-												<div class="icon-overlay">
-													<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
-													<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
-												</div>
+								</div>
+								<!-- Card item 8 -->
+								<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
+									<a href="#">
+										<div class="image-container">
+											<img class="pb-4 image-card" width="202" src="./img/true.png" alt="product image" />
+											<div class="icon-overlay">
+												<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
+												<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
 											</div>
-										</a>
-										<div>
-											<div class="flex items-center mt-2">
-												<div class="flex items-center space-x-1 rtl:space-x-reverse">
-													<i class="bi bi-star-fill text-secondary-color"></i>
-													<i class="bi bi-star-fill text-secondary-color"></i>
-													<i class="bi bi-star-fill text-secondary-color"></i>
-													<i class="bi bi-star-fill text-secondary-color"></i>
-												</div>
-												<span class="text-xs font-normal px-1 py-0.5 rounded ms-1">(456)</span>
-											</div>
-											<p class="description-card-featured">TOZO T6 True Wireless Earbuds Bluetooth Headphon...</p>
-											<p class="price-card mt-2">$ 790</p>
 										</div>
+									</a>
+									<div>
+										<div class="flex items-center mt-2">
+											<div class="flex items-center space-x-1 rtl:space-x-reverse">
+												<i class="bi bi-star-fill text-secondary-color"></i>
+												<i class="bi bi-star-fill text-secondary-color"></i>
+												<i class="bi bi-star-fill text-secondary-color"></i>
+												<i class="bi bi-star-fill text-secondary-color"></i>
+											</div>
+											<span class="text-xs font-normal px-1 py-0.5 rounded ms-1">(456)</span>
+										</div>
+										<p class="description-card-featured">TOZO T6 True Wireless Earbuds Bluetooth Headphon...</p>
+										<p class="price-card mt-2">$ 790</p>
 									</div>
 								</div>
 							</div>
-							<!-- Smart Phone -->
-							<div class="hidden p-4 rounded-lg bg-gray-50" id="smart-phone" role="tabpanel" aria-labelledby="smart-phone-tab">
-								<p class="text-sm text-gray-500 dark:text-gray-400">Smart Phone</p>
-							</div>
-							<div class="hidden p-4 rounded-lg bg-gray-50" id="laptop" role="tabpanel" aria-labelledby="laptop-tab">
-								<p class="text-sm text-gray-500 dark:text-gray-400">Laptop</p>
-							</div>
-							<div class="hidden p-4 rounded-lg bg-gray-50" id="headphone" role="tabpanel" aria-labelledby="headphone-tab">
-								<p class="text-sm text-gray-500 dark:text-gray-400">Headphone</p>
-							</div>
-							<div class="hidden p-4 rounded-lg bg-gray-50" id="tv" role="tabpanel" aria-labelledby="tv-tab">
-								<p class="text-sm text-gray-500 dark:text-gray-400">Tv</p>
-							</div>
+						</div>
+						<!-- Smart Phone -->
+						<div class="hidden p-4 rounded-lg bg-gray-50" id="smart-phone" role="tabpanel" aria-labelledby="smart-phone-tab">
+							<p class="text-sm text-gray-500 dark:text-gray-400">Smart Phone</p>
+						</div>
+						<!-- Laptop -->
+						<div class="hidden p-4 rounded-lg bg-gray-50" id="laptop" role="tabpanel" aria-labelledby="laptop-tab">
+							<p class="text-sm text-gray-500 dark:text-gray-400">Laptop</p>
+						</div>
+						<!-- Headphone -->
+						<div class="hidden p-4 rounded-lg bg-gray-50" id="headphone" role="tabpanel" aria-labelledby="headphone-tab">
+							<p class="text-sm text-gray-500 dark:text-gray-400">Headphone</p>
+						</div>
+						<!-- Tv -->
+						<div class="hidden p-4 rounded-lg bg-gray-50" id="tv" role="tabpanel" aria-labelledby="tv-tab">
+							<p class="text-sm text-gray-500 dark:text-gray-400">Tv</p>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<!-- INTRODUCING -->
+			<!-- New Feed -->
 			<h2 class="popular-title-style">New Feed</h2>
-			<div class="grid grid-cols-2 gap-4">
-				<div class="flex justify-between items-center bg-homepod">
+			<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-4 px-4">
+				<div class="flex justify-between items-center bg-homepod px-8 py-5">
 					<div>
 						<button class="introducing-btn">INTRODUCING</button>
 						<h3 class="introducing-title">New Apple Homepod Mini</h3>
 						<p class="introducing-description">Jam-packed with innovation, HomePod mini delivers unexpectedly.</p>
 						<button class="background-primary-secondary-color btn-introducing-shop-new">SHOP NOW <i class="bi bi-arrow-right"></i></button>
 					</div>
-					<img src="./img/Homepod.png" width="240px" alt="" />
+					<img src="./img/Homepod.png" class="hidden md:block md:w-64" alt="" />
 				</div>
-				<div class="flex justify-between items-center bg-Xiaomi">
-					<div class="new">
+				<div class="flex justify-between items-center bg-Xiaomi px-8 py-5">
+					<div>
 						<button class="introducing-btn-new">INTRODUCING NEW</button>
 						<h3 class="introducing-title-new">Xiaomi Mi 11 Ultra 12GB+256GB</h3>
 						<p class="introducing-description-new">*Data provided by internal laboratories. Industry measurment.</p>
 						<button class="background-primary-secondary-color btn-introducing-new-shop">SHOP NOW <i class="bi bi-arrow-right"></i></button>
 					</div>
-					<img src="./img/xiaomi mi 11 ultra.png" class="xiaomi" alt="image-not-found" />
+					<img src="./img/xiaomi mi 11 ultra.png" class="hidden md:block md:w-60	" alt="image-not-found" />
 				</div>
 			</div>
 
 			<!-- Computer Accessories -->
 			<h2 class="popular-title-style">Computer Accessories</h2>
 			<div>
-				<div class="mb-4 flex justify-between items-center">
+				<div class="mb-4 flex flex-wrap justify-between items-center px-4">
 					<h3 class="title-featured-product">Computer Accessories</h3>
 					<ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="featured-tab" data-tabs-toggle="#featured-tab-content" role="tablist">
 						<li class="me-2" role="presentation">
@@ -635,7 +601,7 @@
 				<div id="featured-tab-content">
 					<!-- All Product -->
 					<div class="hidden" id="all-product-two" role="tabpanel" aria-labelledby="all-product-two-tab">
-						<div class="grid grid-cols-5 gap-4">
+						<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-5 gap-4 px-4">
 							<!-- Card item 1 -->
 							<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
 								<a href="#">
@@ -859,14 +825,14 @@
 
 			<!-- Frequently Asked Questions -->
 			<h2 class="popular-title-style">Frequently Asked Questions</h2>
-			<div class="grid grid-cols-3 mb-8">
+			<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 mb-8 px-4">
 				<img src="./img/Online test-pana 1.png" alt="image-not-found" class="px-8" />
 				<div class="col-span-2">
-					<div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
+					<div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white text-gray-900" data-inactive-classes="text-gray-500 ">
 						<h2 id="accordion-flush-heading-1">
 							<button
 								type="button"
-								class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 gap-3"
+								class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3"
 								data-accordion-target="#accordion-flush-body-1"
 								aria-expanded="true"
 								aria-controls="accordion-flush-body-1"
@@ -878,17 +844,17 @@
 							</button>
 						</h2>
 						<div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
-							<div class="py-5 border-b border-gray-200 dark:border-gray-700">
-								<p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
-								<p class="text-gray-500 dark:text-gray-400">
-									Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.
+							<div class="py-5 border-b border-gray-200 ">
+								<p class="mb-2 text-gray-500 ">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
+								<p class="text-gray-500 ">
+									Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.
 								</p>
 							</div>
 						</div>
 						<h2 id="accordion-flush-heading-2">
 							<button
 								type="button"
-								class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 gap-3"
+								class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3"
 								data-accordion-target="#accordion-flush-body-2"
 								aria-expanded="false"
 								aria-controls="accordion-flush-body-2"
@@ -900,15 +866,15 @@
 							</button>
 						</h2>
 						<div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
-							<div class="py-5 border-b border-gray-200 dark:border-gray-700">
-								<p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-								<p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+							<div class="py-5 border-b border-gray-200">
+								<p class="mb-2 text-gray-500">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
+								<p class="text-gray-500 ">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
 							</div>
 						</div>
 						<h2 id="accordion-flush-heading-3">
 							<button
 								type="button"
-								class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 gap-3"
+								class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3"
 								data-accordion-target="#accordion-flush-body-3"
 								aria-expanded="false"
 								aria-controls="accordion-flush-body-3"
@@ -920,15 +886,15 @@
 							</button>
 						</h2>
 						<div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
-							<div class="py-5 border-b border-gray-200 dark:border-gray-700">
-								<p class="mb-2 text-gray-500 dark:text-gray-400">
+							<div class="py-5 border-b border-gray-200">
+								<p class="mb-2 text-gray-500 ">
 									The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.
 								</p>
-								<p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
-								<p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-								<ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
-									<li><a href="https://flowbite.com/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
-									<li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
+								<p class="mb-2 text-gray-500">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
+								<p class="mb-2 text-gray-500">Learn more about these technologies:</p>
+								<ul class="ps-5 text-gray-500 list-disc">
+									<li><a href="https://flowbite.com/pro/" class="text-blue-600 hover:underline">Flowbite Pro</a></li>
+									<li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 hover:underline">Tailwind UI</a></li>
 								</ul>
 							</div>
 						</div>
