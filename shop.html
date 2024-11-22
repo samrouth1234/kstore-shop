@@ -10,17 +10,19 @@
 		<!-- Link CSS -->
 		<link rel="stylesheet" href="./css/mian.css" />
 		<link rel="stylesheet" href="./css/shop.css" />
+		<!-- Link Tailwind CSS -->
+		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
 	<body>
 		<!-- Navigation Bar -->
-		<nav class="bg-white border-gray-200 dark:bg-gray-900">
-			<section class="flex justify-between nav-bar-style p-5 background-primary-color text-white font-medium flex-wrap">
+		<nav class="bg-white border-gray-200">
+			<section class="flex justify-between py-5 px-8 background-primary-color text-white font-medium flex-wrap">
 				<div class="flex items-center gap-5">
 					<a href="/"><i class="bi bi-telephone-plus"> </i>(+855) 9234234</a>
 					<a href="#"><i class="bi bi-envelope-check"></i> kstore@gmail.com</a>
 				</div>
 				<div>
-					<p>Follow us and get a chance to win 80% off</p>
+					<p class="hidden md:block">Follow us and get a chance to win 80% off</p>
 				</div>
 				<div>
 					<span class="flex items-center gap-4">
@@ -33,31 +35,26 @@
 				</div>
 			</section>
 			<section class="border">
-				<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+				<div class="container flex flex-wrap items-center justify-between mx-auto p-4">
 					<a href="/index.html">
-						<span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">KStore</span>
+						<span class="self-center text-2xl font-semibold whitespace-nowrap">KStore</span>
 					</a>
 					<div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-						<section class="flex items-center gap-5">
-							<p><i class="bi bi-person"></i> <a href="#" class="style-navbar">Login</a> / <a href="#" class="style-navbar">Register</a></p>
-							<a href=""><i class="bi bi-search"></i></a>
-							<a href=""><i class="bi bi-cart-plus"></i></a>
+						<section class="flex items-center gap-4">
+							<span class="hidden md:flex items-center gap-3">
+								<i class="bi bi-person text-2xl"></i>
+								<p><a href="./login.html" class="style-navbar text-lg font-medium">Login</a> / <a href="./register.html" class="style-navbar text-lg font-medium">Register</a></p>
+							</span>
+							<a href=""><i class="bi bi-search text-2xl"></i></a>
+							<a href=""><i class="bi bi-cart-plus text-2xl"></i></a>
 						</section>
-						<button
-							data-collapse-toggle="navbar-cta"
-							type="button"
-							class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-							aria-controls="navbar-cta"
-							aria-expanded="false"
-						>
+						<button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm md:hidden" aria-controls="navbar-cta" aria-expanded="false">
 							<span class="sr-only">Open main menu</span>
-							<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
-							</svg>
+							<i class="bi bi-list text-3xl"></i>
 						</button>
 					</div>
 					<div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
-						<ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
+						<ul class="flex flex-col font-medium md:p-0 mt-4 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
 							<li>
 								<a href="#" class="block py-2 px-3 md:p-0 rounded md:bg-transparent style-navbar">Home</a>
 							</li>
@@ -71,7 +68,13 @@
 								<a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">Blog</a>
 							</li>
 							<li>
-								<a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">Contact</a>
+								<a href="#" class="block px-3 md:p-0 text-gray-900 rounded style-navbar">Contact</a>
+							</li>
+							<li>
+								<a href="./login.html" class="md:hidden block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">Login</a>
+							</li>
+							<li>
+								<a href="./register.html" class="md:hidden block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">Register</a>
 							</li>
 						</ul>
 					</div>
@@ -80,7 +83,7 @@
 		</nav>
 		<!-- End Navigation Bar -->
 
-		<section class="flex gap-3 bg-gray-200 py-5 text-gray-600 font-medium breadcrumb-nav">
+		<section class="flex gap-3 bg-gray-200 py-5 text-gray-600 font-medium pl-4 md:pl-44">
 			<i class="bi bi-house-door"></i>
 			<a href="./index.html">Home</a>
 			<i class="bi bi-chevron-right"></i>
@@ -88,7 +91,7 @@
 		</section>
 
 		<main class="container mx-auto mt-5">
-			<section class="w-full">
+			<section class="w-full px-4 md:px-0">
 				<div class="flex">
 					<label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only">Your Email</label>
 					<button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-10 gap-3 inline-flex items-center py-3 px-4 text-sm font-bold text-center text-white background-primary-color rounded-s-md" type="button">
@@ -96,7 +99,7 @@
 						<i class="bi bi-chevron-down"></i>
 					</button>
 					<div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-48">
-						<ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
+						<ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdown-button">
 							<li>
 								<a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100">
 									<img class="w-8 h-8 me-3 rounded-full" src="/img/computer.png" alt="Jese image" />
@@ -128,18 +131,79 @@
 					</div>
 				</div>
 			</section>
-			
-			<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 gap-5 my-5">
+
+			<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 md:gap-5 my-5">
 				<!-- Card Product -->
 				<div class="col-span-3">
-					<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-						<div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+					<!-- drawer init and toggle -->
+					<button data-drawer-target="drawer-search" data-drawer-show="drawer-search" aria-controls="drawer-search" class="md:hidden z-10 gap-3 inline-flex items-center py-2 px-4 text-2xl rounded-lg mb-5 ml-4 font-bold text-center background-primary-color text-white" type="button">
+						<i class="bi bi-funnel"></i>
+					</button>
+					<!-- drawer component -->
+					<div id="drawer-search" tabindex="-1" aria-labelledby="drawer-label" class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-80">
+						<div id="accordion-color" data-accordion="collapse">
+							<!-- Category -->
+							<h2 id="sub-category">
+								<button 
+									type="button" 
+									class="flex items-center justify-between w-full p-5 font-medium text-gray-500 border border-b-0 gap-3" 
+									data-accordion-target="#category-body" 
+									aria-expanded="true" 
+									aria-controls="category-body"
+									>
+									<span>SubCategory</span>
+									<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+										<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+									</svg>
+								</button>
+							</h2>
+							<div id="category-body" class="hidden" aria-labelledby="sub-category">
+								<div class="p-5 border border-b-0 border-gray-200">
+									<div class="flex items-center mb-4">
+										<input id="default-checkbox-01" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-1" />
+										<label for="default-checkbox-01" class="ms-2 text-sm font-medium text-gray-900">Apparel</label>
+									</div>
+									<div class="flex items-center mb-4">
+										<input id="default-checkbox-02" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-1" />
+										<label for="default-checkbox-02" class="ms-2 text-sm font-medium text-gray-900">Sneakers</label>
+									</div>
+									<div class="flex items-center mb-4">
+										<input id="default-checkbox-03" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-1" />
+										<label for="default-checkbox-03" class="ms-2 text-sm font-medium text-gray-900">Bags & Luggage</label>
+									</div>
+									<div class="flex items-center mb-4">
+										<input id="default-checkbox-04" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-1" />
+										<label for="default-checkbox-04" class="ms-2 text-sm font-medium text-gray-900">Handbags</label>
+									</div>
+									<div class="flex items-center mb-4">
+										<input id="default-checkbox-05" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-1" />
+										<label for="default-checkbox-05" class="ms-2 text-sm font-medium text-gray-900">Watches</label>
+									</div>
+									<div class="flex items-center mb-4">
+										<input id="default-checkbox-06" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-1" />
+										<label for="default-checkbox-06" class="ms-2 text-sm font-medium text-gray-900">Men Fashion</label>
+									</div>
+									<div class="flex items-center mb-4">
+										<input id="default-checkbox-07" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-1" />
+										<label for="default-checkbox-07" class="ms-2 text-sm font-medium text-gray-900">Women Bags</label>
+									</div>
+									<div class="flex items-center mb-4">
+										<input id="default-checkbox-08" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-1" />
+										<label for="default-checkbox-08" class="ms-2 text-sm font-medium text-gray-900">Women Fashion</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="grid sm:grid-cols-1 md:grid-cols-3 gap-5 px-4 md:px-0">
+						<div class="w-full bg-white border border-gray-200 rounded-lg shadow">
 							<a href="#">
 								<img class="rounded-t-lg w-full" src="./img/shop/shopping-01.png" alt="product image" />
 							</a>
 							<div class="px-4 py-5">
 								<a href="#">
-									<h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
+									<h5 class="text-xl font-semibold tracking-tight text-gray-900">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
 								</a>
 								<div class="flex items-center mt-2.5 mb-5">
 									<div class="flex items-center space-x-2 rtl:space-x-reverse">
@@ -152,18 +216,18 @@
 									<span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">5.0</span>
 								</div>
 								<div class="flex items-center justify-between">
-									<span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+									<span class="text-3xl font-bold text-gray-900">$599</span>
 									<button class="text-white background-primary-color font-medium rounded-lg text-md px-5 py-2.5 text-center">Add to cart</button>
 								</div>
 							</div>
 						</div>
-						<div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+						<div class="w-full bg-white border border-gray-200 rounded-lg shadow">
 							<a href="#">
 								<img class="rounded-t-lg w-full" src="./img/shop/shopping-01.png" alt="product image" />
 							</a>
 							<div class="px-4 py-5">
 								<a href="#">
-									<h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
+									<h5 class="text-xl font-semibold tracking-tight text-gray-900">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
 								</a>
 								<div class="flex items-center mt-2.5 mb-5">
 									<div class="flex items-center space-x-2 rtl:space-x-reverse">
@@ -176,18 +240,18 @@
 									<span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">5.0</span>
 								</div>
 								<div class="flex items-center justify-between">
-									<span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+									<span class="text-3xl font-bold text-gray-900">$599</span>
 									<button class="text-white background-primary-color font-medium rounded-lg text-md px-5 py-2.5 text-center">Add to cart</button>
 								</div>
 							</div>
 						</div>
-						<div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+						<div class="w-full bg-white border border-gray-200 rounded-lg shadow">
 							<a href="#">
 								<img class="rounded-t-lg w-full" src="./img/shop/shopping-01.png" alt="product image" />
 							</a>
 							<div class="px-4 py-5">
 								<a href="#">
-									<h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
+									<h5 class="text-xl font-semibold tracking-tight text-gray-900">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
 								</a>
 								<div class="flex items-center mt-2.5 mb-5">
 									<div class="flex items-center space-x-2 rtl:space-x-reverse">
@@ -200,7 +264,7 @@
 									<span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">5.0</span>
 								</div>
 								<div class="flex items-center justify-between">
-									<span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+									<span class="text-3xl font-bold text-gray-900">$599</span>
 									<button class="text-white background-primary-color font-medium rounded-lg text-md px-5 py-2.5 text-center">Add to cart</button>
 								</div>
 							</div>
@@ -208,20 +272,12 @@
 					</div>
 				</div>
 				<!-- Search -->
-				<div class="w-full">
+				<div class="hidden md:block w-full">
 					<div id="accordion-color" data-accordion="collapse">
-						<h2 class=" w-full p-5 font-semibold text-lg border border-b-0 border-gray-200 rounded-t-lg gap-3">
-							Shop Category
-						</h2>
+						<h2 class="w-full p-5 font-semibold text-lg border border-b-0 border-gray-200 rounded-t-lg gap-3">Shop Category</h2>
 						<!-- Category -->
 						<h2 id="sub-category-1">
-							<button
-								type="button"
-								class="flex items-center justify-between w-full p-5 font-medium text-gray-500 border border-b-0 gap-3"
-								data-accordion-target="#sub-category-body"
-								aria-expanded="true"
-								aria-controls="sub-category-body"
-							>
+							<button type="button" class="flex items-center justify-between w-full p-5 font-medium text-gray-500 border border-b-0 gap-3" data-accordion-target="#sub-category-body" aria-expanded="true" aria-controls="sub-category-body">
 								<span>SubCategory</span>
 								<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
 									<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
@@ -232,47 +288,41 @@
 							<div class="p-5 border border-b-0 border-gray-200">
 								<div class="flex items-center mb-4">
 									<input id="default-checkbox-01" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-1" />
-									<label for="default-checkbox-01" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Apparel</label>
+									<label for="default-checkbox-01" class="ms-2 text-sm font-medium text-gray-900">Apparel</label>
 								</div>
 								<div class="flex items-center mb-4">
 									<input id="default-checkbox-02" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-1" />
-									<label for="default-checkbox-02" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Sneakers</label>
+									<label for="default-checkbox-02" class="ms-2 text-sm font-medium text-gray-900">Sneakers</label>
 								</div>
 								<div class="flex items-center mb-4">
 									<input id="default-checkbox-03" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-1" />
-									<label for="default-checkbox-03" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Bags & Luggage</label>
+									<label for="default-checkbox-03" class="ms-2 text-sm font-medium text-gray-900">Bags & Luggage</label>
 								</div>
 								<div class="flex items-center mb-4">
 									<input id="default-checkbox-04" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-1" />
-									<label for="default-checkbox-04" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Handbags</label>
+									<label for="default-checkbox-04" class="ms-2 text-sm font-medium text-gray-900">Handbags</label>
 								</div>
 								<div class="flex items-center mb-4">
 									<input id="default-checkbox-05" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-1" />
-									<label for="default-checkbox-05" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Watches</label>
+									<label for="default-checkbox-05" class="ms-2 text-sm font-medium text-gray-900">Watches</label>
 								</div>
 								<div class="flex items-center mb-4">
 									<input id="default-checkbox-06" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-1" />
-									<label for="default-checkbox-06" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Men Fashion</label>
+									<label for="default-checkbox-06" class="ms-2 text-sm font-medium text-gray-900">Men Fashion</label>
 								</div>
 								<div class="flex items-center mb-4">
 									<input id="default-checkbox-07" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-1" />
-									<label for="default-checkbox-07" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Women Bags</label>
+									<label for="default-checkbox-07" class="ms-2 text-sm font-medium text-gray-900">Women Bags</label>
 								</div>
 								<div class="flex items-center mb-4">
 									<input id="default-checkbox-08" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-1" />
-									<label for="default-checkbox-08" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Women Fashion</label>
+									<label for="default-checkbox-08" class="ms-2 text-sm font-medium text-gray-900">Women Fashion</label>
 								</div>
 							</div>
 						</div>
 						<!-- Manufacturer -->
 						<h2 id="manufacturer">
-							<button
-								type="button"
-								class="flex items-center justify-between w-full p-5 font-medium text-gray-500 border border-b-0 gap-3"
-								data-accordion-target="#manufacturer-body"
-								aria-expanded="false"
-								aria-controls="manufacturer-body"
-							>
+							<button type="button" class="flex items-center justify-between w-full p-5 font-medium text-gray-500 border border-b-0 gap-3" data-accordion-target="#manufacturer-body" aria-expanded="false" aria-controls="manufacturer-body">
 								<span>Manufacturer</span>
 								<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
 									<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
@@ -280,34 +330,28 @@
 							</button>
 						</h2>
 						<div id="manufacturer-body" class="hidden" aria-labelledby="manufacturer">
-							<div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+							<div class="p-5 border border-b-0 border-gray-200">
 								<div class="flex items-center mb-4">
-									<input id="clinic" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-									<label for="clinic" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Clinic</label>
+									<input id="clinic" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2" />
+									<label for="clinic" class="ms-2 text-sm font-medium text-gray-900">Clinic</label>
 								</div>
 								<div class="flex items-center mb-4">
-									<input id="guerlain" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-									<label for="guerlain" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Guerlain</label>
+									<input id="guerlain" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2" />
+									<label for="guerlain" class="ms-2 text-sm font-medium text-gray-900">Guerlain</label>
 								</div>
 								<div class="flex items-center mb-4">
-									<input id="farmasi" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-									<label for="farmasi" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Farmasi</label>
+									<input id="farmasi" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2" />
+									<label for="farmasi" class="ms-2 text-sm font-medium text-gray-900">Farmasi</label>
 								</div>
 								<div class="flex items-center mb-4">
-									<input id="salon-chic" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-									<label for="salon-chic" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Salon CHIC</label>
+									<input id="salon-chic" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2" />
+									<label for="salon-chic" class="ms-2 text-sm font-medium text-gray-900">Salon CHIC</label>
 								</div>
 							</div>
 						</div>
 						<!-- Color -->
 						<h2 id="color">
-							<button
-								type="button"
-								class="flex items-center justify-between w-full p-5 font-medium text-gray-500 border border-b-0 gap-3"
-								data-accordion-target="#color-body"
-								aria-expanded="false"
-								aria-controls="color-body"
-							>
+							<button type="button" class="flex items-center justify-between w-full p-5 font-medium text-gray-500 border border-b-0 gap-3" data-accordion-target="#color-body" aria-expanded="false" aria-controls="color-body">
 								<span>Color</span>
 								<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
 									<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
@@ -315,42 +359,36 @@
 							</button>
 						</h2>
 						<div id="color-body" class="hidden" aria-labelledby="color">
-							<div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+							<div class="p-5 border border-t-0 border-gray-200">
 								<div class="flex items-center mb-4">
-									<input id="blue" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-									<label for="blue" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blue</label>
+									<input id="blue" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2" />
+									<label for="blue" class="ms-2 text-sm font-medium text-gray-900">Blue</label>
 								</div>
 								<div class="flex items-center mb-4">
-									<input id="lime" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-									<label for="lime" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Lime</label>
+									<input id="lime" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2" />
+									<label for="lime" class="ms-2 text-sm font-medium text-gray-900">Lime</label>
 								</div>
 								<div class="flex items-center mb-4">
-									<input id="pink" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-									<label for="pink" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Pink</label>
+									<input id="pink" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2" />
+									<label for="pink" class="ms-2 text-sm font-medium text-gray-900">Pink</label>
 								</div>
 								<div class="flex items-center mb-4">
-									<input id="silver" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-									<label for="silver" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Silver</label>
+									<input id="silver" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2" />
+									<label for="silver" class="ms-2 text-sm font-medium text-gray-900">Silver</label>
 								</div>
 								<div class="flex items-center mb-4">
-									<input id="yellow" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-									<label for="yellow" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Yellow</label>
+									<input id="yellow" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2" />
+									<label for="yellow" class="ms-2 text-sm font-medium text-gray-900">Yellow</label>
 								</div>
 								<div class="flex items-center mb-4">
-									<input id="metal" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-									<label for="metal" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Metal</label>
+									<input id="metal" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2" />
+									<label for="metal" class="ms-2 text-sm font-medium text-gray-900">Metal</label>
 								</div>
 							</div>
 						</div>
 						<!-- Size -->
 						<h2 id="size">
-							<button
-								type="button"
-								class="flex items-center justify-between w-full p-5 font-medium text-gray-500 border border-b-1 gap-3"
-								data-accordion-target="#size-body"
-								aria-expanded="false"
-								aria-controls="size-body"
-							>
+							<button type="button" class="flex items-center justify-between w-full p-5 font-medium text-gray-500 border border-b-1 gap-3" data-accordion-target="#size-body" aria-expanded="false" aria-controls="size-body">
 								<span>Size 2</span>
 								<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
 									<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
@@ -358,30 +396,29 @@
 							</button>
 						</h2>
 						<div id="size-body" class="hidden" aria-labelledby="size">
-							<div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+							<div class="p-5 border border-t-0 border-gray-200">
 								<div class="flex items-center mb-4">
-									<input id="size-42" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-									<label for="size-42" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">42</label>
+									<input id="size-42" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500" />
+									<label for="size-42" class="ms-2 text-sm font-medium text-gray-900">42</label>
 								</div>
 								<div class="flex items-center mb-4">
-									<input id="size-43" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-									<label for="size-43" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">43</label>
+									<input id="size-43" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500" />
+									<label for="size-43" class="ms-2 text-sm font-medium text-gray-900">43</label>
 								</div>
 								<div class="flex items-center mb-4">
-									<input id="size-39" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-									<label for="size-39" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">39</label>
+									<input id="size-39" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500" />
+									<label for="size-39" class="ms-2 text-sm font-medium text-gray-900">39</label>
 								</div>
 								<div class="flex items-center mb-4">
-									<input id="size-40" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-									<label for="size-40" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">40</label>
+									<input id="size-40" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500" />
+									<label for="size-40" class="ms-2 text-sm font-medium text-gray-900">40</label>
 								</div>
 								<div class="flex items-center mb-4">
-									<input id="size-41" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-									<label for="size-41" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">41</label>
+									<input id="size-41" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500" />
+									<label for="size-41" class="ms-2 text-sm font-medium text-gray-900">41</label>
 								</div>
 							</div>
 						</div>
-
 					</div>
 				</div>
 			</div>
@@ -433,7 +470,7 @@
 							</ul>
 						</div>
 						<div>
-							<h2 class="mb-5 text-xl font-medium text-white uppercase dark:text-white">CONTACT US</h2>
+							<h2 class="mb-5 text-xl font-medium text-white uppercase">CONTACT US</h2>
 							<ul class="text-white">
 								<li class="mb-3">
 									<a href="#" class="hover:underline">Privacy Policy</a>
