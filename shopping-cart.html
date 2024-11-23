@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Sample Structure</title>
+		<title>Shopping Card</title>
 		<!-- Link CSS Flowbit -->
 		<link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
@@ -82,88 +82,263 @@
 		</nav>
 		<!-- End Navigation Bar -->
 
-		<main>
-      <div class="max-w-6xl mx-auto">
-        <!-- Shopping Cart Header -->
-        <h1 class="text-3xl font-bold mb-4">Shopping Cart</h1>
-        <p class="text-lg mb-6">4 Courses in Cart</p>
-        
-        <!-- Cart Items and Summary -->
-        <div class="flex flex-col lg:flex-row gap-8">
-          <!-- Cart Items -->
-          <div class="flex-1">
-            <div class="space-y-4">
-              <!-- Single Cart Item -->
-              <div class="bg-white p-4 rounded-lg shadow">
-                <div class="flex items-center gap-4">
-                  <img src="./img/home/computer.png" alt="Course Image" class="w-24 h-24 rounded">
-                  <div class="flex-1">
-                    <h2 class="text-lg font-semibold">Introduction HTML</h2>
-                    <p class="text-sm text-gray-500">By bich Samrouth</p>
-                    <div class="flex items-center text-yellow-500 text-sm mt-1">
-                      <span>⭐ 4.0/5.0</span>
-                      <span class="text-gray-500 ml-2">(8,168 ratings)</span>
-                    </div>
-                    <button class="text-red-500 mt-2">Remove</button>
-                    <button class="text-blue-500 ml-4">Save for later</button>
-                  </div>
-                  <div class="text-right">
-                    <p class="text-xl font-bold text-purple-600">120.45 $</p>
-                    <p class="text-sm line-through text-gray-400">200.34$</p>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Repeat similar structure for other items -->
-              <div class="bg-white p-4 rounded-lg shadow">
-                <div class="flex items-center gap-4">
-                  <img src="./img/home/Homepod.png" alt="Course Image" class="w-24 h-24 rounded">
-                  <div class="flex-1">
-                    <h2 class="text-lg font-semibold">Introduction HTML</h2>
-                    <p class="text-sm text-gray-500">By bich Samrouth</p>
-                    <div class="flex items-center text-yellow-500 text-sm mt-1">
-                      <span>⭐ 4.0/5.0</span>
-                      <span class="text-gray-500 ml-2">(8,168 ratings)</span>
-                    </div>
-                    <button class="text-red-500 mt-2">Remove</button>
-                    <button class="text-blue-500 ml-4">Save for later</button>
-                  </div>
-                  <div class="text-right">
-                    <p class="text-xl font-bold text-purple-600">120.45 $</p>
-                    <p class="text-sm line-through text-gray-400">200.34$</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Cart Summary -->
-          <div class="bg-white p-6 rounded-lg shadow w-full lg:w-80">
-            <h2 class="text-xl font-bold mb-4">Cart Total</h2>
-            <div class="space-y-2">
-              <div class="flex justify-between text-gray-700">
-                <span>Original Price:</span>
-                <span>$74.99</span>
-              </div>
-              <div class="flex justify-between text-gray-700">
-                <span>Discounts:</span>
-                <span class="text-red-500">-$63.00</span>
-              </div>
-              <hr class="my-4">
-              <div class="flex justify-between text-lg font-bold">
-                <span>Total:</span>
-                <span>$11.99</span>
-              </div>
-            </div>
-            <button class="w-full bg-black text-white text-center py-2 rounded mt-4 hover:bg-gray-800">
-              Checkout
-            </button>
-            <p class="text-sm text-center text-gray-500 mt-4">
-              By completing your purchase, you agree to these 
-              <a href="#" class="text-blue-500">Terms Of Service</a>.
-            </p>
-          </div>
-        </div>
+		<main class="container mx-auto px-4 pb-8">
+			<!-- Shopping Cart Header -->
+			<h1 class="text-4xl font-semibold my-8">Shopping Cart</h1>
+			<!-- Cart Items and Summary -->
+			<div class="flex flex-col lg:flex-row gap-8">
+				<!-- Cart Items -->
+				<section class="flex-1">
+					<div>
+						<p class="text-lg font-medium border-b pb-2">4 Courses in Cart</p>
+						<div class="p-4 border-b">
+							<div class="flex justify-between md:items-center gap-4">
+								<div class="flex items-center gap-4">
+									<img src="./img/home/computer.png" alt="Course Image" class="w-24 h-24 rounded" />
+									<article>
+										<h2 class="text-lg font-semibold">Introduction HTML</h2>
+										<p class="text-sm text-gray-500">By bich Samrouth</p>
+										<div class="flex items-center text-yellow-500 text-sm mt-1">
+											<span><i class="bi bi-star-fill text-yellow-300 text-md"></i> 4.0/5.0</span>
+											<span class="text-gray-500 ml-2">(8,168 ratings)</span>
+										</div>
+										<div class="md:hidden flex gap-3">
+											<button class="text-red-500 hover:underline">Remove</button>
+											<button class="text-blue-500 hover:underline">Save for later</button>
+										</div>
+									</article>
+								</div>
+								<div class="hidden md:block">
+									<div class="flex flex-col">
+										<button class="text-red-500 mt-2 hover:underline">Remove</button>
+										<button class="text-blue-500 ml-4 hover:underline">Save for later</button>
+									</div>
+								</div>
+								<div class="text-right">
+									<p class="text-md md:text-xl font-bold text-purple-600">120.45 $</p>
+									<p class="text-sm md:text-sm line-through text-gray-400">200.34$</p>
+								</div>
+							</div>
+						</div>
+						<!-- Cart 2 -->
+						<div class="p-4 border-b">
+							<div class="flex justify-between md:items-center gap-4">
+								<div class="flex items-center gap-4">
+									<img src="./img/home/Homepod.png" alt="Course Image" class="w-24 h-24 rounded" />
+									<article>
+										<h2 class="text-lg font-semibold">Introduction HTML</h2>
+										<p class="text-sm text-gray-500">By bich Samrouth</p>
+										<div class="flex items-center text-yellow-500 text-sm mt-1">
+											<span><i class="bi bi-star-fill text-yellow-300 text-md"></i> 4.0/5.0</span>
+											<span class="text-gray-500 ml-2">(8,168 ratings)</span>
+										</div>
+										<div class="md:hidden flex gap-3">
+											<button class="text-red-500 hover:underline">Remove</button>
+											<button class="text-blue-500 hover:underline">Save for later</button>
+										</div>
+									</article>
+								</div>
+								<div class="hidden md:block">
+									<div class="flex flex-col">
+										<button class="text-red-500 mt-2 hover:underline">Remove</button>
+										<button class="text-blue-500 ml-4 hover:underline">Save for later</button>
+									</div>
+								</div>
+								<div class="text-right">
+									<p class="text-md md:text-xl font-bold text-purple-600">120.45 $</p>
+									<p class="text-sm md:text-sm line-through text-gray-400">200.34$</p>
+								</div>
+							</div>
+						</div>
+						<!-- Cart 3 -->
+						<div class="p-4 border-b">
+							<div class="flex justify-between md:items-center gap-4">
+								<div class="flex items-center gap-4">
+									<img src="./img/home/camera.png" alt="Course Image" class="w-24 h-24 rounded" />
+									<article>
+										<h2 class="text-lg font-semibold">Introduction HTML</h2>
+										<p class="text-sm text-gray-500">By bich Samrouth</p>
+										<div class="flex items-center text-yellow-500 text-sm mt-1">
+											<span><i class="bi bi-star-fill text-yellow-300 text-md"></i> 4.0/5.0</span>
+											<span class="text-gray-500 ml-2">(8,168 ratings)</span>
+										</div>
+										<div class="md:hidden flex gap-3">
+											<button class="text-red-500 hover:underline">Remove</button>
+											<button class="text-blue-500 hover:underline">Save for later</button>
+										</div>
+									</article>
+								</div>
+								<div class="hidden md:block">
+									<div class="flex flex-col">
+										<button class="text-red-500 mt-2 hover:underline">Remove</button>
+										<button class="text-blue-500 ml-4 hover:underline">Save for later</button>
+									</div>
+								</div>
+								<div class="text-right">
+									<p class="text-md md:text-xl font-bold text-purple-600">120.45 $</p>
+									<p class="text-sm md:text-sm line-through text-gray-400">200.34$</p>
+								</div>
+							</div>
+						</div>
+						<!-- Cart 4 -->
+						<div class="p-4 border-b">
+							<div class="flex justify-between md:items-center gap-4">
+								<div class="flex items-center gap-4">
+									<img src="./img/home/keyborad.png" alt="Course Image" class="w-24 h-24 rounded" />
+									<article>
+										<h2 class="text-lg font-semibold">Introduction HTML</h2>
+										<p class="text-sm text-gray-500">By bich Samrouth</p>
+										<div class="flex items-center text-yellow-500 text-sm mt-1">
+											<span><i class="bi bi-star-fill text-yellow-300 text-md"></i> 4.0/5.0</span>
+											<span class="text-gray-500 ml-2">(8,168 ratings)</span>
+										</div>
+										<div class="md:hidden flex gap-3">
+											<button class="text-red-500 hover:underline">Remove</button>
+											<button class="text-blue-500 hover:underline">Save for later</button>
+										</div>
+									</article>
+								</div>
+								<div class="hidden md:block">
+									<div class="flex flex-col">
+										<button class="text-red-500 mt-2 hover:underline">Remove</button>
+										<button class="text-blue-500 ml-4 hover:underline">Save for later</button>
+									</div>
+								</div>
+								<div class="text-right">
+									<p class="text-md md:text-xl font-bold text-purple-600">120.45 $</p>
+									<p class="text-sm md:text-sm line-through text-gray-400">200.34$</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- Cart Summary -->
+				<article>
+					<section class="bg-white rounded-lg shadow w-full p-5 lg:w-96">
+						<h2 class="text-2xl font-semibold mb-4">Cart Total</h2>
+						<div class="space-y-2">
+							<div class="flex justify-between text-gray-700 text-lg pt-3">
+								<span>Original Price:</span>
+								<span>$74.99</span>
+							</div>
+							<div class="flex justify-between text-gray-700 text-lg pt-3">
+								<span>Discounts:</span>
+								<span class="text-red-500">-$63.00</span>
+							</div>
+							<hr class="my-4" />
+							<div class="flex justify-between text-xl font-bold pt-4">
+								<span>Total:</span>
+								<span>$11.99</span>
+							</div>
+						</div>
+						<button class="w-full background-primary-color text-white text-xl font-semibold text-center py-4 rounded-lg mt-4 hover:bg-gray-800">Checkout</button>
+						<p class="text-sm text-center text-gray-500 mt-4">
+							By completing your purchase, you agree to these
+							<a href="#" class="text-blue-500">Terms Of Service</a>.
+						</p>
+					</section>
+				</article>
+			</div>
+			<!-- You might also like  -->
+			<h2 class="text-xl font-semibold my-5">You might also like</h2>
+			<div class="grid sm:grid-cols-1 md:grid-cols-4 gap-5 md:px-0">
+				<div class="w-full bg-white border border-gray-200 rounded-lg shadow">
+					<a href="#">
+						<img class="rounded-t-lg w-full" src="./img/shop/shopping-09.png" alt="product image" />
+					</a>
+					<div class="px-4 py-5">
+						<a href="#">
+							<h5 class="text-xl font-semibold tracking-tight text-gray-900">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
+						</a>
+						<div class="flex items-center mt-2.5 mb-5">
+							<div class="flex items-center space-x-2 rtl:space-x-reverse">
+								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+								<i class="bi bi-star text-gray-200 text-xl"></i>
+							</div>
+							<span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">5.0</span>
+						</div>
+						<div class="flex items-center justify-between">
+							<span class="text-3xl font-bold text-gray-900">$599</span>
+							<button class="text-white background-primary-color font-medium rounded-lg text-md px-5 py-2.5 text-center">Add to cart</button>
+						</div>
+					</div>
+				</div>
+				<div class="w-full bg-white border border-gray-200 rounded-lg shadow">
+					<a href="#">
+						<img class="rounded-t-lg w-full" src="./img/shop/shopping-10.png" alt="product image" />
+					</a>
+					<div class="px-4 py-5">
+						<a href="#">
+							<h5 class="text-xl font-semibold tracking-tight text-gray-900">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
+						</a>
+						<div class="flex items-center mt-2.5 mb-5">
+							<div class="flex items-center space-x-2 rtl:space-x-reverse">
+								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+								<i class="bi bi-star text-gray-200 text-xl"></i>
+							</div>
+							<span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">5.0</span>
+						</div>
+						<div class="flex items-center justify-between">
+							<span class="text-3xl font-bold text-gray-900">$599</span>
+							<button class="text-white background-primary-color font-medium rounded-lg text-md px-5 py-2.5 text-center">Add to cart</button>
+						</div>
+					</div>
+				</div>
+				<div class="w-full bg-white border border-gray-200 rounded-lg shadow">
+					<a href="#">
+						<img class="rounded-t-lg w-full" src="./img/shop/shopping-11.png" alt="product image" />
+					</a>
+					<div class="px-4 py-5">
+						<a href="#">
+							<h5 class="text-xl font-semibold tracking-tight text-gray-900">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
+						</a>
+						<div class="flex items-center mt-2.5 mb-5">
+							<div class="flex items-center space-x-2 rtl:space-x-reverse">
+								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+								<i class="bi bi-star text-gray-200 text-xl"></i>
+							</div>
+							<span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">5.0</span>
+						</div>
+						<div class="flex items-center justify-between">
+							<span class="text-3xl font-bold text-gray-900">$599</span>
+							<button class="text-white background-primary-color font-medium rounded-lg text-md px-5 py-2.5 text-center">Add to cart</button>
+						</div>
+					</div>
+				</div>
+				<div class="w-full bg-white border border-gray-200 rounded-lg shadow">
+					<a href="#">
+						<img class="rounded-t-lg w-full" src="./img/shop/shopping-12.png" alt="product image" />
+					</a>
+					<div class="px-4 py-5">
+						<a href="#">
+							<h5 class="text-xl font-semibold tracking-tight text-gray-900">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
+						</a>
+						<div class="flex items-center mt-2.5 mb-5">
+							<div class="flex items-center space-x-2 rtl:space-x-reverse">
+								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
+								<i class="bi bi-star text-gray-200 text-xl"></i>
+							</div>
+							<span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">5.0</span>
+						</div>
+						<div class="flex items-center justify-between">
+							<span class="text-3xl font-bold text-gray-900">$599</span>
+							<button class="text-white background-primary-color font-medium rounded-lg text-md px-5 py-2.5 text-center">Add to cart</button>
+						</div>
+					</div>
+				</div>
+			</div>
 		</main>
 
 		<!-- Footer -->
