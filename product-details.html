@@ -81,86 +81,89 @@
 			</section>
 		</nav>
 		<!-- End Navigation Bar -->
-		<main>
-			<div class="max-w-7xl mx-auto py-12 px-6">
-        <div class="bg-white p-6 rounded-lg shadow-md grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- Left Section: Product Images -->
-          <div>
-            <img src="./img/shop/product/product-image-01.png" alt="Product Image" class="w-full rounded-lg border">
-            <div class="flex space-x-2 mt-5 cursor-pointer">
-							<a href="" class="border bg-gray-50 focus:ring-blue-500 focus:border-blue-500">
-								<img src="./img/shop/product/product-image-02.png" />
-							</a>
-							<img src="./img/shop/product/product-image-02.png"/>
-							<img src="./img/shop/product/product-image-02.png"/>
-							<img src="./img/shop/product/product-image-02.png"/>
-							<img src="./img/shop/product/product-image-02.png"/>
-							<img src="./img/shop/product/product-image-02.png"/>
-              <!-- <img src="/img/shop/product/product-image-02.png" alt="Thumbnail 4" class=" rounded-lg border cursor-pointer"> -->
-            </div>
-          </div>
-          
-          <!-- Right Section: Product Details -->
-          <div>
-            <h2 class="text-2xl font-semibold text-gray-800">2020 Apple MacBook Pro with Apple M1 Chip (13-inch, 8GB RAM, 256GB SSD Storage) - Space Gray</h2>
-            <div class="mt-2 flex items-center space-x-2">
-              <span class="text-yellow-500">
-                ⭐⭐⭐⭐⭐
-              </span>
-              <span class="text-gray-600 text-sm">(4.7 Star Rating, 21,671 User Feedback)</span>
-            </div>
-            <p class="mt-4 text-gray-600">
-              Stock keeping unit: <span class="font-semibold text-gray-800">A264671</span> <br>
-              Availability: <span class="text-green-600 font-semibold">In Stock</span> <br>
-              Brand: <span class="font-semibold text-gray-800">Apple</span> <br>
-              Category: <span class="font-semibold text-gray-800">Electronics Devices</span>
-            </p>
-            
-            <div class="mt-6 flex items-center space-x-4">
-              <span class="text-2xl font-bold text-green-600">$1699</span>
-              <span class="text-gray-500 line-through">$1999</span>
-              <span class="bg-yellow-200 text-yellow-700 px-2 py-1 rounded-lg text-sm font-semibold">21% OFF</span>
-            </div>
-            
-            <!-- Color Options -->
-            <div class="mt-6">
-              <h3 class="font-medium text-gray-800">Color</h3>
-              <div class="flex items-center space-x-4 mt-2">
-                <button class="w-8 h-8 bg-gray-200 rounded-full border border-gray-400"></button>
-                <button class="w-8 h-8 bg-black rounded-full border border-gray-400"></button>
-              </div>
-            </div>
-            
-            <!-- Size Dropdown -->
-            <div class="mt-4">
-              <label for="size" class="block font-medium text-gray-800">Size</label>
-              <select id="size" class="w-full border border-gray-300 p-3 rounded-lg mt-2 focus:outline-none focus:ring focus:ring-blue-300">
-                <option>14-inch Liquid Retina XDR display</option>
-                <option>16-inch Liquid Retina XDR display</option>
-              </select>
-            </div>
-            
-            <!-- Quantity Selector -->
-            <div class="mt-4">
-              <h3 class="font-medium text-gray-800">Quantity</h3>
-              <div class="flex items-center space-x-2 mt-2">
-                <button class="w-8 h-8 bg-gray-200 rounded-lg font-bold text-gray-600">-</button>
-                <input type="text" value="1" class="w-12 border text-center border-gray-300 rounded-lg">
-                <button class="w-8 h-8 bg-gray-200 rounded-lg font-bold text-gray-600">+</button>
-              </div>
-            </div>
-            
-            <!-- Action Buttons -->
-            <div class="mt-6 flex space-x-4">
-              <button class="bg-gray-800 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition">
-                ADD TO CART
-              </button>
-              <button class="bg-orange-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-orange-600 transition">
-                BUY NOW
-              </button>
-            </div>
-          </div>
-        </div>
+		<main class="container mx-auto py-12">
+			<div class="bg-white overflow-hidden">
+				<div class="flex flex-col lg:flex-row">
+					<!-- Image Section -->
+					<div class="w-full lg:w-1/2 p-6">
+						<img src="/img/shop/product/product-image-01.png" alt="Product Image" class="w-full h-auto rounded-md mb-4" />
+						<div class="flex gap-5 pl-2 overflow-x-auto pb-4 md:pb-0">
+							<img src="/img/shop/product/product-image-05.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+							<img src="/img/shop/product/product-image-03.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+							<img src="/img/shop/product/product-image-04.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+							<img src="/img/shop/product/product-image-07.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+							<img src="/img/shop/product/product-image-02.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+							<img src="/img/shop/product/product-image-02.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+						</div>
+					</div>
+					<!-- Product Info Section -->
+					<div class="w-full lg:w-1/2 p-6">
+						<article class="flex items-center mb-4 flex-wrap">
+							<div class="flex items-center space-x-2 rtl:space-x-reverse">
+								<i class="bi bi-star-fill text-yellow-300 text-lg"></i>
+								<i class="bi bi-star-fill text-yellow-300 text-lg"></i>
+								<i class="bi bi-star-fill text-yellow-300 text-lg"></i>
+								<i class="bi bi-star-fill text-yellow-300 text-lg"></i>
+								<i class="bi bi-star text-gray-200 text-lg"></i>
+							</div>
+							<p class="ml-2 md:text-md font-medium">4.7 Star Rating</p>
+							<p class="md:ml-2 pt-2 md:pt-0 text-gray-600">( 21,671 User feedback )</p>
+						</article>
+
+						<h1 class="text-3xl font-semibold text-start text-gray-800 mb-2">2020 Apple MacBook Pro with Apple M1 Chip (13-inch, 8GB RAM, 256GB SSD Storage) - Space Gray</h1>
+						<section class="grid grid-cols-1 md:grid-cols-2 my-5 gap-3">
+							<div>
+								<p class="text-gray-800 mb-2">Stock keeping unit: <span class="font-semibold">A264671</span></p>
+								<p class="text-gray-800">Brand: <span class="font-semibold">Apple</span></p>
+							</div>
+							<div>
+								<p class="text-gray-800 mb-2">Availability: <span class="text-green-600 font-semibold">In Stock</span></p>
+								<p class="text-gray-800">Category: <span class="font-semibold"> Electronics Devices</span></p>
+							</div>
+						</section>
+						<article class="flex items-center mb-5">
+							<p class="text-3xl font-bold text-[#2EB8B8]">$1699</p>
+							<p class="text-lg text-gray-400 line-through ml-4">$1999</p>
+							<p class="ml-4 px-2 py-1 bg-[#ffd050] text-primary-color font-semibold text-sm rounded">21% OFF</p>
+						</article>
+						<section class="grid grid-cols-1 md:grid-cols-2 mb-5">
+							<div>
+								<p class="text-gray-600 mb-2">Color:</p>
+								<div class="flex items-center space-x-2">
+									<button class="w-8 h-8 rounded-full background-secondary-color border-2 focus:outline-none focus:ring focus:border-[#ffd050]"></button>
+									<button class="w-8 h-8 rounded-full background-primary-color border-2 focus:outline-none focus:ring focus:border-[#232536]"></button>
+								</div>
+							</div>
+							<div>
+								<p class="text-gray-600 mb-2">Size:</p>
+								<select class="w-full p-2 border border-gray-300 rounded">
+									<option>14-inch Liquid Retina XDR display</option>
+									<option>15-inch Retina XDR display</option>
+									<option>16-inch Retina XDR display</option>
+									<option>17-inch Retina XDR display</option>
+									<option>18-inch Retina XDR display</option>
+								</select>
+							</div>
+						</section>
+						<section>
+							<p class="font-medium mb-3">Quantity</p>
+							<div class="grid grid-cols-3 gap-4">
+								<div class="flex justify-center items-center gap-8 text-xl font-semibold mb-4 border bg-gray-200 rounded-md px-4 py-2.5">
+									<button>-</button>
+									<span>1</span>
+									<button>+</button>
+								</div>
+								<div>
+									<button class="w-full px-6 py-3 bg-black text-white font-semibold rounded hover:bg-gray-800">BUY NOW</button>
+								</div>
+								<div>
+									<button class="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700">ADD TO CART</button>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
 		</main>
 
 		<!-- Footer -->
