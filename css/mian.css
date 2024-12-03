@@ -134,7 +134,8 @@
 	text-align: center;
 	font-size: 32px;
 	font-weight: 600;
-	margin: 50px 0px;
+	margin-top: 50px;
+	margin-bottom: 40px;
 }
 
 .card-show-wrapper {
