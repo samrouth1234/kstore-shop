@@ -12,6 +12,8 @@
 		<link rel="stylesheet" href="./css/mian.css" />
 		<!-- Link Tailwind CSS -->
 		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- Jquery -->
+		<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<!-- Navigation Bar -->
@@ -48,7 +50,18 @@
 								<p><a href="./login.html" class="style-navbar text-lg font-medium">Login</a> / <a href="./register.html" class="style-navbar text-lg font-medium">Register</a></p>
 							</span>
 							<a href=""><i class="bi bi-search text-2xl"></i></a>
-							<a href=""><i class="bi bi-cart-plus text-2xl"></i></a>
+							<a href="#" class="cart-icon relative inline-flex items-center p-3 text-sm font-medium text-center text-black rounded-lg">
+								<i class="bi bi-cart-plus text-2xl"></i>
+								<span class="cart-count absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2">0</span>
+							</a>
+							<!-- Cart Dropdown -->
+							<div class="cart-dropdown absolute right-0 mt-2 w-72 bg-white border border-gray-300 rounded-lg shadow-lg hidden">
+								<div class="cart-items p-4 space-y-4 max-h-64 overflow-y-auto"></div>
+								<div class="cart-actions p-4 border-t border-gray-300 flex justify-between items-center">
+									<button class="view-cart bg-gray-800 text-white px-4 py-2 rounded-lg text-sm hover:bg-gray-700">View Cart</button>
+									<button class="checkout bg-green-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-500">Checkout</button>
+								</div>
+							</div>
 						</section>
 						<button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm md:hidden" aria-controls="navbar-cta" aria-expanded="false">
 							<span class="sr-only">Open main menu</span>
@@ -383,212 +396,11 @@
 					</div>
 					<div id="default-tab-content">
 						<!-- All Product -->
-						<div class="hidden" id="all-product" role="tabpanel" aria-labelledby="all-product-tab">
-							<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 gap-4">
-								<!-- Card item 1 -->
-								<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
-									<a href="#">
-										<div class="image-container">
-											<img class="pb-4 image-card w-full md:h-44 object-contain" src="./img/shop/Phone/Phone1.png" alt="product image" />
-											<div class="icon-overlay">
-												<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
-												<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
-											</div>
-										</div>
-									</a>
-									<div>
-										<div class="flex items-center mt-2">
-											<div class="flex items-center space-x-1 rtl:space-x-reverse">
-												<i class="bi bi-star-fill text-secondary-color"></i>
-												<i class="bi bi-star-fill text-secondary-color"></i>
-												<i class="bi bi-star-fill text-secondary-color"></i>
-												<i class="bi bi-star-fill text-secondary-color"></i>
-											</div>
-											<span class="text-xs font-normal px-1 py-0.5 rounded ms-1">(456)</span>
-										</div>
-										<p class="description-card-featured">Apple iPhone 13 Pro Max, 128GB, Sierra Blue - Unlo ..</p>
-										<p class="price-card mt-2">$ 1059</p>
-									</div>
-								</div>
-								<!-- Card item 2 -->
-								<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
-									<a href="#">
-										<div class="image-container">
-											<img class="pb-4 image-card w-full md:h-44 object-contain" src="./img/shop/Laptop/Laptop1.png" alt="product image" />
-											<div class="icon-overlay">
-												<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
-												<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
-											</div>
-										</div>
-									</a>
-									<div>
-										<div class="flex items-center mt-2">
-											<div class="flex items-center space-x-1 rtl:space-x-reverse">
-												<i class="bi bi-star-fill text-secondary-color"></i>
-												<i class="bi bi-star-fill text-secondary-color"></i>
-												<i class="bi bi-star-fill text-secondary-color"></i>
-												<i class="bi bi-star-fill text-secondary-color"></i>
-											</div>
-											<span class="text-xs font-normal px-1 py-0.5 rounded ms-1">(456)</span>
-										</div>
-										<p class="description-card-featured">Apple MacBook Air 15-inch Laptop with M3 chip 8-Co ..</p>
-										<p class="price-card mt-2">$ 1,299</p>
-									</div>
-								</div>
-								<!-- Card item 3 -->
-								<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
-									<a href="#">
-										<div class="image-container">
-											<img class="pb-4 image-card w-full md:h-44 object-contain" src="./img/shop/Headphone/Headphone1.png" alt="product image" />
-											<div class="icon-overlay">
-												<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
-												<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
-											</div>
-										</div>
-									</a>
-									<div>
-										<div class="flex items-center mt-2">
-											<div class="flex items-center space-x-1 rtl:space-x-reverse">
-												<i class="bi bi-star-fill text-secondary-color"></i>
-												<i class="bi bi-star-fill text-secondary-color"></i>
-												<i class="bi bi-star-fill text-secondary-color"></i>
-												<i class="bi bi-star-fill text-secondary-color"></i>
-											</div>
-											<span class="text-xs font-normal px-1 py-0.5 rounded ms-1">(456)</span>
-										</div>
-										<p class="description-card-featured">Baseus Bass 35 Max Wireless Headphones</p>
-										<p class="price-card mt-2">$ 109</p>
-									</div>
-								</div>
-								<!-- Card item 4 -->
-								<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
-									<a href="#">
-										<div class="image-container">
-											<img class="pb-4 image-card w-full md:h-44 object-contain" src="./img/shop/TV/TV1.png" alt="product image" />
-											<div class="icon-overlay">
-												<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
-												<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
-											</div>
-										</div>
-									</a>
-									<div>
-										<div class="flex items-center mt-2">
-											<div class="flex items-center space-x-1 rtl:space-x-reverse">
-												<i class="bi bi-star-fill text-secondary-color"></i>
-												<i class="bi bi-star-fill text-secondary-color"></i>
-												<i class="bi bi-star-fill text-secondary-color"></i>
-												<i class="bi bi-star-fill text-secondary-color"></i>
-											</div>
-											<span class="text-xs font-normal px-1 py-0.5 rounded ms-1">(456)</span>
-										</div>
-										<p class="description-card-featured">Hisense Tv Hisense 32A49n A4 Series</p>
-										<p class="price-card mt-2">$ 299</p>
-									</div>
-								</div>
-								<!-- Card item 5 -->
-								<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
-									<a href="#">
-										<div class="image-container">
-											<img class="pb-4 image-card w-full md:h-44 object-contain" src="./img/shop/Phone/Phone2.png" alt="product image" />
-											<div class="icon-overlay">
-												<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
-												<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
-											</div>
-										</div>
-									</a>
-									<div>
-										<div class="flex items-center mt-2">
-											<div class="flex items-center space-x-1 rtl:space-x-reverse">
-												<i class="bi bi-star-fill text-secondary-color"></i>
-												<i class="bi bi-star-fill text-secondary-color"></i>
-												<i class="bi bi-star-fill text-secondary-color"></i>
-												<i class="bi bi-star-fill text-secondary-color"></i>
-											</div>
-											<span class="text-xs font-normal px-1 py-0.5 rounded ms-1">(456)</span>
-										</div>
-										<p class="description-card-featured">Apple iPhone 16 Pro Max, 128GB, Sierra Blue - Unloc ..</p>
-										<p class="price-card mt-2">$ 1,199</p>
-									</div>
-								</div>
-								<!-- Card item 6 -->
-								<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
-									<a href="#">
-										<div class="image-container">
-											<img class="pb-4 image-card w-full md:h-44 object-contain" src="./img/shop/Headphone/Headphone7.png" alt="product image" />
-											<div class="icon-overlay">
-												<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
-												<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
-											</div>
-										</div>
-									</a>
-									<div>
-										<div class="flex items-center mt-2">
-											<div class="flex items-center space-x-1 rtl:space-x-reverse">
-												<i class="bi bi-star-fill text-secondary-color"></i>
-												<i class="bi bi-star-fill text-secondary-color"></i>
-												<i class="bi bi-star-fill text-secondary-color"></i>
-												<i class="bi bi-star-fill text-secondary-color"></i>
-											</div>
-											<span class="text-xs font-normal px-1 py-0.5 rounded ms-1">(456)</span>
-										</div>
-										<p class="description-card-featured">The JBL Tune 520BT headphones stream ...</p>
-										<p class="price-card mt-2">$ 109</p>
-									</div>
-								</div>
-								<!-- Card item 7 -->
-								<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
-									<a href="#">
-										<div class="image-container">
-											<img class="pb-4 image-card w-full md:h-44 object-contain" src="./img/shop/TV/TV6.png" alt="product image" />
-											<div class="icon-overlay">
-												<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
-												<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
-											</div>
-										</div>
-									</a>
-									<div>
-										<div class="flex items-center mt-2">
-											<div class="flex items-center space-x-1 rtl:space-x-reverse">
-												<i class="bi bi-star-fill text-secondary-color"></i>
-												<i class="bi bi-star-fill text-secondary-color"></i>
-												<i class="bi bi-star-fill text-secondary-color"></i>
-												<i class="bi bi-star-fill text-secondary-color"></i>
-											</div>
-											<span class="text-xs font-normal px-1 py-0.5 rounded ms-1">(456)</span>
-										</div>
-										<p class="description-card-featured">Vizio Quality P-Series 4K HDR TV ..</p>
-										<p class="price-card mt-2">$ 299</p>
-									</div>
-								</div>
-								<!-- Card item 8 -->
-								<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
-									<a href="#">
-										<div class="image-container">
-											<img class="pb-4 image-card w-full md:h-44 object-contain" src="./img/shop/Laptop/Laptop6.png" alt="product image" />
-											<div class="icon-overlay">
-												<p class="background-heart-icon"><i class="bi bi-heart text-xl"></i></p>
-												<p class="background-cart-icon"><i class="bi bi-cart-plus text-xl"></i></p>
-											</div>
-										</div>
-									</a>
-									<div>
-										<div class="flex items-center mt-2">
-											<div class="flex items-center space-x-1 rtl:space-x-reverse">
-												<i class="bi bi-star-fill text-secondary-color"></i>
-												<i class="bi bi-star-fill text-secondary-color"></i>
-												<i class="bi bi-star-fill text-secondary-color"></i>
-												<i class="bi bi-star-fill text-secondary-color"></i>
-											</div>
-											<span class="text-xs font-normal px-1 py-0.5 rounded ms-1">(456)</span>
-										</div>
-										<p class="description-card-featured">HP Probook 450 G8 Notebook PC ..</p>
-										<p class="price-card mt-2">$ 379</p>
-									</div>
-								</div>
-							</div>
+						<div class="hidden filter-btn" id="all-product" data-category="All" role="tabpanel" aria-labelledby="all-product-tab">
+							<div id="product-container" class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 gap-4"></div>
 						</div>
 						<!-- Smart Phone -->
-						<div class="hidden rounded-lg" id="smart-phone" role="tabpanel" aria-labelledby="smart-phone-tab">
+						<div class="hidden rounded-lg filter-btn" id="smart-phone" data-category="Smartphone" role="tabpanel" aria-labelledby="smart-phone-tab">
 							<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 gap-4">
 								<!-- Card item 1 -->
 								<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
@@ -793,8 +605,8 @@
 							</div>
 						</div>
 						<!-- Laptop -->
-						<div class="hidden rounded-lg" id="laptop" role="tabpanel" aria-labelledby="laptop-tab">
-							<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 gap-4">
+						<div class="hidden rounded-lg filter-btn" id="laptop" data-category="Laptop" role="tabpanel" aria-labelledby="laptop-tab">
+							<div id="product-container" class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 gap-4">
 								<!-- Card item 1 -->
 								<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
 									<a href="#">
@@ -998,7 +810,7 @@
 							</div>
 						</div>
 						<!-- Headphone -->
-						<div class="hidden rounded-lg" id="headphone" role="tabpanel" aria-labelledby="headphone-tab">
+						<div class="hidden rounded-lg filter-btn" id="headphone" data-category="Headphone" role="tabpanel" aria-labelledby="headphone-tab">
 							<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 gap-4">
 								<!-- Card item 1 -->
 								<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
@@ -1203,7 +1015,7 @@
 							</div>
 						</div>
 						<!-- Tv -->
-						<div class="hidden rounded-lg" id="tv" role="tabpanel" aria-labelledby="tv-tab">
+						<div class="hidden rounded-lg filter-btn" id="tv" data-category="TV" role="tabpanel" aria-labelledby="tv-tab">
 							<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 gap-4">
 								<!-- Card item 1 -->
 								<div class="card-featured-product bg-white border border-gray-200 rounded-lg shadow relative">
@@ -2743,76 +2555,79 @@
 
 			<!-- Frequently Asked Questions -->
 			<h2 class="popular-title-style">Q & A</h2>
-			<div class="flex justify-center mb-20 px-4">
-				<div id="accordion-flush" data-accordion="collapse" class="w-full md:px-48" data-active-classes="bg-gray-100 p-4">
-					<!-- Qustion 1 -->
-					<h2 id="accordion-flush-heading-1">
-						<button type="button" class="flex items-center justify-between w-full py-5 font-medium rtl:text-right border-b border-gray-200 gap-3" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
-							<span>Do I need an account to place an order ?</span>
-							<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-							</svg>
-						</button>
-					</h2>
-					<div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
-						<div class="py-5 px-2 border-b border-gray-200">
-							<p>No, you can check out as a guest. However, creating an account allows you to track orders, save payment details, and access exclusive member perks.</p>
+			<div class="grid grid-cols-1 md:grid-cols-3">
+				<img src="./img/home/qnswer-and-question.png" class="w-96" alt="imag-not-found" />
+				<div class="flex justify-center mb-20 px-4 col-span-2 md:pl-12">
+					<div id="accordion-flush" data-accordion="collapse" class="w-full" data-active-classes="p-4">
+						<!-- Qustion 1 -->
+						<h2 id="accordion-flush-heading-1">
+							<button type="button" class="flex items-center justify-between w-full py-5 font-medium rtl:text-right border-b border-gray-200 gap-3" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
+								<span>Do I need an account to place an order ?</span>
+								<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+									<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+								</svg>
+							</button>
+						</h2>
+						<div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
+							<div class="py-5 px-2 border-b border-gray-200 bg-gray-50">
+								<p>No, you can check out as a guest. However, creating an account allows you to track orders, save payment details, and access exclusive member perks.</p>
+							</div>
 						</div>
-					</div>
-					<!-- Qustion 2 -->
-					<h2 id="accordion-flush-heading-2">
-						<button type="button" class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
-							<span>Do you offer discount or promotions ?</span>
-							<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-							</svg>
-						</button>
-					</h2>
-					<div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
-						<div class="py-5 px-2 border-b border-gray-200">
-							<p>We frequently offer special discounts and promotions. Subscribe to our newsletter or follow us on social media to stay updated.</p>
+						<!-- Qustion 2 -->
+						<h2 id="accordion-flush-heading-2">
+							<button type="button" class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
+								<span>Do you offer discount or promotions ?</span>
+								<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+									<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+								</svg>
+							</button>
+						</h2>
+						<div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
+							<div class="py-5 px-2 border-b border-gray-200 bg-gray-50">
+								<p>We frequently offer special discounts and promotions. Subscribe to our newsletter or follow us on social media to stay updated.</p>
+							</div>
 						</div>
-					</div>
-					<!-- Question 3 -->
-					<h2 id="accordion-flush-heading-3">
-						<button type="button" class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
-							<span> What payment methods do you accept ?</span>
-							<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-							</svg>
-						</button>
-					</h2>
-					<div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
-						<div class="py-5 px-2 border-b border-gray-200">
-							<p>We accept all major credit and debit cards, PayPal, and other secure payment methods like Google Pay and Apple Pay. Additional payment options may vary based on your location.</p>
+						<!-- Question 3 -->
+						<h2 id="accordion-flush-heading-3">
+							<button type="button" class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
+								<span> What payment methods do you accept ?</span>
+								<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+									<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+								</svg>
+							</button>
+						</h2>
+						<div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
+							<div class="py-5 px-2 border-b border-gray-200 bg-gray-50">
+								<p>We accept all major credit and debit cards, PayPal, and other secure payment methods like Google Pay and Apple Pay. Additional payment options may vary based on your location.</p>
+							</div>
 						</div>
-					</div>
-					<!-- Question 4 -->
-					<h2 id="accordion-flush-heading-4">
-						<button type="button" class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3" data-accordion-target="#accordion-flush-body-4" aria-expanded="false" aria-controls="accordion-flush-body-4">
-							<span> Can I change or cancel my order after placing it ?</span>
-							<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-							</svg>
-						</button>
-					</h2>
-					<div id="accordion-flush-body-4" class="hidden" aria-labelledby="accordion-flush-heading-4">
-						<div class="py-5 border-b border-gray-200">
-							<p>If your order has not yet been processed or shipped, you can modify or cancel it. Contact our support team as soon as possible to make changes.</p>
+						<!-- Question 4 -->
+						<h2 id="accordion-flush-heading-4">
+							<button type="button" class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3" data-accordion-target="#accordion-flush-body-4" aria-expanded="false" aria-controls="accordion-flush-body-4">
+								<span> Can I change or cancel my order after placing it ?</span>
+								<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+									<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+								</svg>
+							</button>
+						</h2>
+						<div id="accordion-flush-body-4" class="hidden" aria-labelledby="accordion-flush-heading-4">
+							<div class="py-5 border-b border-gray-200 bg-gray-50">
+								<p>If your order has not yet been processed or shipped, you can modify or cancel it. Contact our support team as soon as possible to make changes.</p>
+							</div>
 						</div>
-					</div>
-					<!-- Question 5 -->
-					<h2 id="accordion-flush-heading-5">
-						<button type="button" class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3" data-accordion-target="#accordion-flush-body-5" aria-expanded="false" aria-controls="accordion-flush-body-5">
-							<span> Are my personal and payment details secure ?</span>
-							<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-							</svg>
-						</button>
-					</h2>
-					<div id="accordion-flush-body-5" class="hidden" aria-labelledby="accordion-flush-heading-5">
-						<div class="py-5 px-2 border-b border-gray-200">
-							<p>Absolutely. We use industry-standard encryption and secure payment gateways to protect your information. For more details, see our Privacy Policy.</p>
+						<!-- Question 5 -->
+						<h2 id="accordion-flush-heading-5">
+							<button type="button" class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-gray-200 gap-3" data-accordion-target="#accordion-flush-body-5" aria-expanded="false" aria-controls="accordion-flush-body-5">
+								<span> Are my personal and payment details secure ?</span>
+								<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+									<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+								</svg>
+							</button>
+						</h2>
+						<div id="accordion-flush-body-5" class="hidden" aria-labelledby="accordion-flush-heading-5">
+							<div class="py-5 px-2 border-gray-200 bg-gray-50">
+								<p>Absolutely. We use industry-standard encryption and secure payment gateways to protect your information. For more details, see our Privacy Policy.</p>
+							</div>
 						</div>
 					</div>
 				</div>

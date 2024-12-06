@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "title": "Apple Watch Series 9 Pink",
+    "price": 499,
+    "image": "./img/shop/Phone/Phone1.png",
+    "rating": 4,
+    "reviews": 456,
+    "description": "Apple iPhone 13 Pro Max, 128GB, Sierra Blue - Unlocked",
+    "category": "Smartphone"
+  },
+  {
+    "id": 2,
+    "title": "Samsung Galaxy S21 Ultra",
+    "price": 1199,
+    "image": "./img/shop/Phone/Phone2.png",
+    "rating": 5,
+    "reviews": 1023,
+    "description": "Samsung Galaxy S21 Ultra 256GB Phantom Black",
+    "category": "Smartphone"
+  },
+  {
+    "id": 3,
+    "title": "Dell XPS 13",
+    "price": 1299,
+    "image": "./img/shop/Laptop/Laptop1.png",
+    "rating": 4,
+    "reviews": 321,
+    "description": "Dell XPS 13, 16GB RAM, 512GB SSD",
+    "category": "Laptop"
+  },
+  {
+    "id": 4,
+    "title": "Sony WH-1000XM4",
+    "price": 349,
+    "image": "./img/shop/Headphone/Headphone1.png",
+    "rating": 5,
+    "reviews": 128,
+    "description": "Sony WH-1000XM4 Wireless Noise-Cancelling Headphones",
+    "category": "Headphone"
+  },
+  {
+    "id": 5,
+    "title": "Samsung 55-Inch 4K Smart TV",
+    "price": 699,
+    "image": "./img/shop/TV/TV1.png",
+    "rating": 5,
+    "reviews": 654,
+    "description": "Samsung 55-Inch QLED 4K Smart TV with Alexa Built-In",
+    "category": "TV"
+  },
+  {
+    "id": 6,
+    "title": "Apple iPad Pro 11",
+    "price": 299,
+    "image": "./img/shop/Headphone/Headphone1.png",
+    "rating": 4,
+    "reviews": 234,
+    "description": "Baseus Bass 35 Max Wireless Headphones",
+    "category": "Headphone"
+  },
+  {
+    "id": 7,
+    "title": "Acer Predator Helios 300",
+    "price": 1499,
+    "image": "./img/shop/TV/TV1.png",
+    "rating": 5,
+    "reviews": 789,
+    "description": "Hisense Tv Hisense 32A49n A4 Series",
+    "category": "TV"
+  },
+  {
+    "id": 8,
+    "title": "Lenovo Legion Y540",
+    "price": 1099,
+    "image": "./img/shop/Phone/Phone2.png",
+    "rating": 4,
+    "reviews": 567,
+    "description": "Apple iPhone 16 Pro Max, 128GB, Sierra Blue - Unloc",
+    "category": "Smartphone"
+  },
+  {
+    "id": 9,
+    "title": "HP Spectre 15",
+    "price": 999,
+    "image": "./img/shop/Headphone/Headphone7.png",
+    "rating": 5,
+    "reviews": 456,
+    "description": "The JBL Tune 520BT headphones stream",
+    "category": "Headphone"
+  },
+  {
+    "id": 10,
+    "title": "ASUS VivoBook X509",
+    "price": 1299,
+    "image": "./img/shop/TV/TV6.png",
+    "rating": 4,
+    "reviews": 321,
+    "description": "Vizio Quality P-Series 4K HDR TV",
+    "category": "TV"
+  },
+  {
+    "id": 11,
+    "title": "Google Pixel 6",
+    "price": 799,
+    "image": "./img/shop/Laptop/Laptop6.png",
+    "rating": 5,
+    "reviews": 128,
+    "description": "HP Probook 450 G8 Notebook PC",
+    "category": "Laptop"
+  }
+]
