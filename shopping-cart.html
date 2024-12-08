@@ -11,11 +11,13 @@
 		<link rel="stylesheet" href="./css/mian.css" />
 		<!-- Link Tailwind CSS -->
 		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- Jquery -->
+		<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<!-- Navigation Bar -->
 		<nav class="bg-white border-gray-200">
-			<section class=" py-5 px-4 background-primary-color text-white font-medium ">
+			<section class="py-5 px-4 background-primary-color text-white font-medium">
 				<div class="container flex justify-between flex-wrap mx-auto">
 					<div class="flex items-center gap-5">
 						<a href="/"><i class="bi bi-telephone-plus pe-2"> </i>(+855) 9234234</a>
@@ -27,10 +29,10 @@
 					<div>
 						<span class="flex items-center gap-4">
 							Follow Us :
-							<a a href="#"><i class="bi bi-instagram"></i> </a>
-							<a a href="#"><i class="bi bi-youtube"></i></a>
-							<a a href="#"><i class="bi bi-facebook"></i></a>
-							<a a href="#"><i class="bi bi-twitter"></i></a>
+							<a href="#"><i class="bi bi-instagram"></i> </a>
+							<a href="#"><i class="bi bi-youtube"></i></a>
+							<a href="#"><i class="bi bi-facebook"></i></a>
+							<a href="#"><i class="bi bi-twitter"></i></a>
 						</span>
 					</div>
 				</div>
@@ -47,7 +49,21 @@
 								<p><a href="./login.html" class="style-navbar text-lg font-medium">Login</a> / <a href="./register.html" class="style-navbar text-lg font-medium">Register</a></p>
 							</span>
 							<a href=""><i class="bi bi-search text-2xl"></i></a>
-							<a href=""><i class="bi bi-cart-plus text-2xl"></i></a>
+							<!-- Cart Icon -->
+							<button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" class="relative inline-flex items-center p-3 text-sm font-medium text-center text-black rounded-lg cart-icon">
+								<i class="bi bi-cart-plus text-2xl"></i>
+								<span class="cart-count absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2">0</span>
+							</button>
+							<!-- Cart Dropdown -->
+							<div id="dropdownDots" class="cart-dropdown bg-white border shadow-md w-[420px] p-3 rounded-lg hidden">
+								<div class="cart-items h-56 space-y-2 overflow-y-auto">
+									<!-- Cart items will be dynamically inserted here -->
+								</div>
+								<div class="flex justify-between gap-5 mt-5">
+									<button id="view-cart-btn" type="button" class="w-full text-center py-2.5 text-md font-medium text-white bg-gray-800 rounded-md">View Cart</button>
+									<button type="button" class="w-full text-center py-2.5 text-md font-medium text-black bg-gray-200 rounded-md">Checkout</button>
+								</div>
+							</div>
 						</section>
 						<button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm md:hidden" aria-controls="navbar-cta" aria-expanded="false">
 							<span class="sr-only">Open main menu</span>
@@ -63,13 +79,13 @@
 								<a href="./shop.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">Shop</a>
 							</li>
 							<li>
-								<a href="./about-us.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">About Us</a>
-							</li>
-							<li>
 								<a href="./blog.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">Blog</a>
 							</li>
 							<li>
 								<a href="./cantact.html" class="block px-3 md:p-0 text-gray-900 rounded style-navbar">Contact</a>
+							</li>
+							<li>
+								<a href="./about-us.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">About Us</a>
 							</li>
 							<li>
 								<a href="./login.html" class="md:hidden block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">Login</a>
@@ -84,7 +100,7 @@
 		</nav>
 		<!-- End Navigation Bar -->
 
-		<main class="container mx-auto px-4 pb-8">
+		<main class="container max-w-screen-xl mx-auto px-4 pb-8">
 			<!-- Shopping Cart Header -->
 			<h1 class="text-4xl font-semibold my-8">Shopping Cart</h1>
 			<!-- Cart Items and Summary -->
@@ -93,130 +109,12 @@
 				<section class="flex-1">
 					<div>
 						<p class="text-lg font-medium border-b pb-2">4 Courses in Cart</p>
-						<div class="p-4 border-b">
-							<div class="flex justify-between md:items-center gap-4">
-								<div class="flex items-center gap-4">
-									<img src="./img/home/computer.png" alt="Course Image" class="w-24 h-24 rounded" />
-									<article>
-										<h2 class="text-lg font-semibold">Introduction HTML</h2>
-										<p class="text-sm text-gray-500">By bich Samrouth</p>
-										<div class="flex items-center text-yellow-500 text-sm mt-1">
-											<span><i class="bi bi-star-fill text-yellow-300 text-md"></i> 4.0/5.0</span>
-											<span class="text-gray-500 ml-2">(8,168 ratings)</span>
-										</div>
-										<div class="md:hidden flex gap-3">
-											<button class="text-red-500 hover:underline">Remove</button>
-											<button class="text-blue-500 hover:underline">Save for later</button>
-										</div>
-									</article>
-								</div>
-								<div class="hidden md:block">
-									<div class="flex flex-col">
-										<button class="text-red-500 mt-2 hover:underline">Remove</button>
-										<button class="text-blue-500 ml-4 hover:underline">Save for later</button>
-									</div>
-								</div>
-								<div class="text-right">
-									<p class="text-md md:text-xl font-bold text-purple-600">120.45 $</p>
-									<p class="text-sm md:text-sm line-through text-gray-400">200.34$</p>
-								</div>
-							</div>
-						</div>
-						<!-- Cart 2 -->
-						<div class="p-4 border-b">
-							<div class="flex justify-between md:items-center gap-4">
-								<div class="flex items-center gap-4">
-									<img src="./img/home/Homepod.png" alt="Course Image" class="w-24 h-24 rounded" />
-									<article>
-										<h2 class="text-lg font-semibold">Introduction HTML</h2>
-										<p class="text-sm text-gray-500">By bich Samrouth</p>
-										<div class="flex items-center text-yellow-500 text-sm mt-1">
-											<span><i class="bi bi-star-fill text-yellow-300 text-md"></i> 4.0/5.0</span>
-											<span class="text-gray-500 ml-2">(8,168 ratings)</span>
-										</div>
-										<div class="md:hidden flex gap-3">
-											<button class="text-red-500 hover:underline">Remove</button>
-											<button class="text-blue-500 hover:underline">Save for later</button>
-										</div>
-									</article>
-								</div>
-								<div class="hidden md:block">
-									<div class="flex flex-col">
-										<button class="text-red-500 mt-2 hover:underline">Remove</button>
-										<button class="text-blue-500 ml-4 hover:underline">Save for later</button>
-									</div>
-								</div>
-								<div class="text-right">
-									<p class="text-md md:text-xl font-bold text-purple-600">120.45 $</p>
-									<p class="text-sm md:text-sm line-through text-gray-400">200.34$</p>
-								</div>
-							</div>
-						</div>
-						<!-- Cart 3 -->
-						<div class="p-4 border-b">
-							<div class="flex justify-between md:items-center gap-4">
-								<div class="flex items-center gap-4">
-									<img src="./img/home/camera.png" alt="Course Image" class="w-24 h-24 rounded" />
-									<article>
-										<h2 class="text-lg font-semibold">Introduction HTML</h2>
-										<p class="text-sm text-gray-500">By bich Samrouth</p>
-										<div class="flex items-center text-yellow-500 text-sm mt-1">
-											<span><i class="bi bi-star-fill text-yellow-300 text-md"></i> 4.0/5.0</span>
-											<span class="text-gray-500 ml-2">(8,168 ratings)</span>
-										</div>
-										<div class="md:hidden flex gap-3">
-											<button class="text-red-500 hover:underline">Remove</button>
-											<button class="text-blue-500 hover:underline">Save for later</button>
-										</div>
-									</article>
-								</div>
-								<div class="hidden md:block">
-									<div class="flex flex-col">
-										<button class="text-red-500 mt-2 hover:underline">Remove</button>
-										<button class="text-blue-500 ml-4 hover:underline">Save for later</button>
-									</div>
-								</div>
-								<div class="text-right">
-									<p class="text-md md:text-xl font-bold text-purple-600">120.45 $</p>
-									<p class="text-sm md:text-sm line-through text-gray-400">200.34$</p>
-								</div>
-							</div>
-						</div>
-						<!-- Cart 4 -->
-						<div class="p-4 border-b">
-							<div class="flex justify-between md:items-center gap-4">
-								<div class="flex items-center gap-4">
-									<img src="./img/home/keyborad.png" alt="Course Image" class="w-24 h-24 rounded" />
-									<article>
-										<h2 class="text-lg font-semibold">Introduction HTML</h2>
-										<p class="text-sm text-gray-500">By bich Samrouth</p>
-										<div class="flex items-center text-yellow-500 text-sm mt-1">
-											<span><i class="bi bi-star-fill text-yellow-300 text-md"></i> 4.0/5.0</span>
-											<span class="text-gray-500 ml-2">(8,168 ratings)</span>
-										</div>
-										<div class="md:hidden flex gap-3">
-											<button class="text-red-500 hover:underline">Remove</button>
-											<button class="text-blue-500 hover:underline">Save for later</button>
-										</div>
-									</article>
-								</div>
-								<div class="hidden md:block">
-									<div class="flex flex-col">
-										<button class="text-red-500 mt-2 hover:underline">Remove</button>
-										<button class="text-blue-500 ml-4 hover:underline">Save for later</button>
-									</div>
-								</div>
-								<div class="text-right">
-									<p class="text-md md:text-xl font-bold text-purple-600">120.45 $</p>
-									<p class="text-sm md:text-sm line-through text-gray-400">200.34$</p>
-								</div>
-							</div>
-						</div>
+						<div id="shopping-cart"></div>
 					</div>
 				</section>
 				<!-- Cart Summary -->
-				<article>
-					<section class="bg-white rounded-lg shadow w-full p-5 lg:w-96">
+				<section>
+					<div class="bg-white rounded-lg shadow w-full p-5 lg:w-96">
 						<h2 class="text-2xl font-semibold mb-4">Cart Total</h2>
 						<div class="space-y-2">
 							<div class="flex justify-between text-gray-700 text-lg pt-3">
@@ -233,13 +131,13 @@
 								<span>$11.99</span>
 							</div>
 						</div>
-						<button class="w-full background-primary-color text-white text-xl font-semibold text-center py-4 rounded-lg mt-4 hover:bg-gray-800">Checkout</button>
+						<button class="w-full background-primary-color text-white text-xl font-semibold text-center py-3 rounded-lg mt-4 hover:bg-gray-800">Checkout</button>
 						<p class="text-sm text-center text-gray-500 mt-4">
 							By completing your purchase, you agree to these
 							<a href="#" class="text-blue-500">Terms Of Service</a>.
 						</p>
-					</section>
-				</article>
+					</div>
+				</section>
 			</div>
 			<!-- You might also like  -->
 			<h2 class="text-xl font-semibold my-5">You might also like</h2>
@@ -349,8 +247,8 @@
 				<div class="md:flex md:justify-between">
 					<div class="mb-6 md:mb-0">
 						<a href="#" class="flex flex-col items-center pb-10">
-							<img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="FlowBite Logo" />
-							<span class="self-center text-white text-2xl font-semibold whitespace-nowrap">Flowbite</span>
+							<img src="./img/home/footer.png" class="h-24 w-24" alt="FlowBite Logo" />
+							<span class="self-center text-white text-2xl font-semibold whitespace-nowrap mt-3">KStore</span>
 						</a>
 					</div>
 					<div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 style-footer logo-image">
@@ -418,5 +316,78 @@
 		<!--CDN Javascript Flowbite -->
 		<script src="./js/main.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+		<script>
+			
+		$(document).ready(function () {
+    // Retrieve cart data from localStorage
+    const cartData = JSON.parse(localStorage.getItem('cart'));
+    // Display cart items
+    const cartItemsContainer = $('#shopping-cart');
+    cartItemsContainer.empty();
+
+    if (cartData && typeof cartData === 'object') {
+			Object.entries(cartData).forEach(([productId, item]) => {
+				const cartItemHtml = `
+					<div class="p-4 border-b">
+						<div class="flex justify-between md:items-center gap-4">
+							<div class="flex items-center gap-4">
+								<img src="${item.image}" alt="${item.image}" class="w-24 h-24 rounded" />
+								<article>
+									<h2 class="text-lg font-semibold">${item.title}</h2>
+									<p class="text-sm text-gray-500">By bich Samrouth</p>
+									<div class="flex items-center text-yellow-500 text-sm mt-1">
+										<span><i class="bi bi-star-fill text-yellow-300 text-md"></i> 4.0/5.0</span>
+										<span class="text-gray-500 ml-2">(8,168 ratings)</span>
+									</div>
+									<div class="md:hidden flex gap-3">
+										<button class="text-red-500 hover:underline">Remove</button>
+										<button class="text-blue-500 hover:underline">Save for later</button>
+									</div>
+								</article>
+							</div>
+							<div class="hidden md:block">
+								<div class="flex flex-col">
+									<button class="text-red-500 mt-2 hover:underline">Remove</button>
+									<button class="text-blue-500 ml-4 hover:underline">Save for later</button>
+								</div>
+							</div>
+							<div class="text-right">
+								<p class="text-md md:text-xl font-bold text-purple-600">$${item.price}</p>
+								<p class="text-sm md:text-sm line-through text-gray-400">$${item.price * 1.5}</p>
+							</div>
+						</div>
+					</div>
+				`;
+				cartItemsContainer.append(cartItemHtml);
+			});
+    } else {
+      console.log("No cart data found");
+    }
+
+		function removeItemFromCart(productId) {
+			if (!cartData[productId]) return;
+			delete cartData[productId];
+			updateCartUI();
+			localStorage.setItem('cart', JSON.stringify(cartData));
+		}
+
+		function saveForLater(productId) {
+			if (!cartData[productId]) return;
+			// Create a 'saved' object if it doesn't exist
+			if (!localStorage.getItem('saved')) {
+					localStorage.setItem('saved', JSON.stringify({}));
+			}
+			const savedItems = JSON.parse(localStorage.getItem('saved'));
+			// Add item to saved items
+			savedItems[productId] = cartData[productId];
+			// Save updated saved items back to localStorage
+			localStorage.setItem('saved', JSON.stringify(savedItems));
+			// Update UI
+			updateCartUI();
+			alert(`Item "${cartData[productId].title}" has been saved for later.`);
+		}
+});
+
+		</script>
 	</body>
 </html>

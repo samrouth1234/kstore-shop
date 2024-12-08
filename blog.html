@@ -15,7 +15,7 @@
 	<body>
 		<!-- Navigation Bar -->
 		<nav class="bg-white border-gray-200">
-			<section class=" py-5 px-4 background-primary-color text-white font-medium ">
+			<section class="py-5 px-4 background-primary-color text-white font-medium">
 				<div class="container flex justify-between flex-wrap mx-auto">
 					<div class="flex items-center gap-5">
 						<a href="/"><i class="bi bi-telephone-plus pe-2"> </i>(+855) 9234234</a>
@@ -27,10 +27,10 @@
 					<div>
 						<span class="flex items-center gap-4">
 							Follow Us :
-							<a a href="#"><i class="bi bi-instagram"></i> </a>
-							<a a href="#"><i class="bi bi-youtube"></i></a>
-							<a a href="#"><i class="bi bi-facebook"></i></a>
-							<a a href="#"><i class="bi bi-twitter"></i></a>
+							<a href="#"><i class="bi bi-instagram"></i> </a>
+							<a href="#"><i class="bi bi-youtube"></i></a>
+							<a href="#"><i class="bi bi-facebook"></i></a>
+							<a href="#"><i class="bi bi-twitter"></i></a>
 						</span>
 					</div>
 				</div>
@@ -47,7 +47,21 @@
 								<p><a href="./login.html" class="style-navbar text-lg font-medium">Login</a> / <a href="./register.html" class="style-navbar text-lg font-medium">Register</a></p>
 							</span>
 							<a href=""><i class="bi bi-search text-2xl"></i></a>
-							<a href=""><i class="bi bi-cart-plus text-2xl"></i></a>
+							<!-- Cart Icon -->
+							<button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" class="relative inline-flex items-center p-3 text-sm font-medium text-center text-black rounded-lg cart-icon">
+								<i class="bi bi-cart-plus text-2xl"></i>
+								<span class="cart-count absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2">0</span>
+							</button>
+							<!-- Cart Dropdown -->
+							<div id="dropdownDots" class="cart-dropdown bg-white border shadow-md w-[420px] p-3 rounded-lg hidden">
+								<div class="cart-items h-56 space-y-2 overflow-y-auto">
+									<!-- Cart items will be dynamically inserted here -->
+								</div>
+								<div class="flex justify-between gap-5 mt-5">
+									<button id="view-cart-btn" type="button" class="w-full text-center py-2.5 text-md font-medium text-white bg-gray-800 rounded-md">View Cart</button>
+									<button type="button" class="w-full text-center py-2.5 text-md font-medium text-black bg-gray-200 rounded-md">Checkout</button>
+								</div>
+							</div>
 						</section>
 						<button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm md:hidden" aria-controls="navbar-cta" aria-expanded="false">
 							<span class="sr-only">Open main menu</span>
@@ -63,13 +77,13 @@
 								<a href="./shop.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">Shop</a>
 							</li>
 							<li>
-								<a href="./about-us.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">About Us</a>
-							</li>
-							<li>
 								<a href="./blog.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">Blog</a>
 							</li>
 							<li>
 								<a href="./cantact.html" class="block px-3 md:p-0 text-gray-900 rounded style-navbar">Contact</a>
+							</li>
+							<li>
+								<a href="./about-us.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">About Us</a>
 							</li>
 							<li>
 								<a href="./login.html" class="md:hidden block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">Login</a>
@@ -237,8 +251,8 @@
 				<div class="md:flex md:justify-between">
 					<div class="mb-6 md:mb-0">
 						<a href="#" class="flex flex-col items-center pb-10">
-							<img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="FlowBite Logo" />
-							<span class="self-center text-white text-2xl font-semibold whitespace-nowrap">Flowbite</span>
+							<img src="./img/home/footer.png" class="h-24 w-24" alt="FlowBite Logo" />
+							<span class="self-center text-white text-2xl font-semibold whitespace-nowrap mt-3">KStore</span>
 						</a>
 					</div>
 					<div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 style-footer logo-image">

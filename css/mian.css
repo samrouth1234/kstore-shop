@@ -370,6 +370,13 @@
 	display: flex; 
 }
 
+.cart-dropdown {
+	position: absolute;
+	top: 60px; 
+	right: 20px; 
+	z-index: 1000;
+}
+
 /* Change image opacity when hovering over icons */
 
 .image-container:hover .image-card,
