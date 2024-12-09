@@ -61,7 +61,7 @@
 								</div>
 								<div class="flex justify-between gap-5 mt-5">
 									<button id="view-cart-btn" type="button" class="w-full text-center py-2.5 text-md font-medium text-white bg-gray-800 rounded-md">View Cart</button>
-									<button type="button" class="w-full text-center py-2.5 text-md font-medium text-black bg-gray-200 rounded-md">Checkout</button>
+									<button id="checkout-cart-btn" type="button" class="w-full text-center py-2.5 text-md font-medium text-black bg-gray-200 rounded-md">Checkout</button>
 								</div>
 							</div>
 						</section>
@@ -100,145 +100,48 @@
 		</nav>
 		<!-- End Navigation Bar -->
 
-		<main class="container max-w-screen-xl mx-auto px-4 pb-8">
+		<main class="container max-w-screen-xl mx-auto px-4 pb-20">
 			<!-- Shopping Cart Header -->
-			<h1 class="text-4xl font-semibold my-8">Shopping Cart</h1>
+			<h1 class="text-4xl font-semibold my-8 ">Shopping Cart</h1>
 			<!-- Cart Items and Summary -->
 			<div class="flex flex-col lg:flex-row gap-8">
 				<!-- Cart Items -->
 				<section class="flex-1">
 					<div>
-						<p class="text-lg font-medium border-b pb-2">4 Courses in Cart</p>
+						<p class="text-lg font-medium border-b pb-2"> <span class="text-xl font-semibold total-count-shopping-cart">0</span> Courses in Cart</p>
 						<div id="shopping-cart"></div>
 					</div>
 				</section>
 				<!-- Cart Summary -->
 				<section>
 					<div class="bg-white rounded-lg shadow w-full p-5 lg:w-96">
-						<h2 class="text-2xl font-semibold mb-4">Cart Total</h2>
-						<div class="space-y-2">
-							<div class="flex justify-between text-gray-700 text-lg pt-3">
-								<span>Original Price:</span>
-								<span>$74.99</span>
+							<h2 class="text-2xl font-semibold mb-4">Cart Total</h2>
+							<div class="space-y-2">
+									<div class="flex justify-between text-gray-700 text-lg pt-3">
+											<span>Original Price:</span>
+											<span class="cart-total-original-price">$0.00</span>
+									</div>
+									<div class="flex justify-between text-gray-700 text-lg pt-3">
+											<span>Discounts:</span>
+											<span class="cart-total-discounts text-red-500">-$0.00</span>
+									</div>
+									<hr class="my-4" />
+									<div class="flex justify-between text-xl font-bold pt-4">
+											<span>Total:</span>
+											<span class="cart-total-final">$0.00</span>
+									</div>
 							</div>
-							<div class="flex justify-between text-gray-700 text-lg pt-3">
-								<span>Discounts:</span>
-								<span class="text-red-500">-$63.00</span>
-							</div>
-							<hr class="my-4" />
-							<div class="flex justify-between text-xl font-bold pt-4">
-								<span>Total:</span>
-								<span>$11.99</span>
-							</div>
-						</div>
-						<button class="w-full background-primary-color text-white text-xl font-semibold text-center py-3 rounded-lg mt-4 hover:bg-gray-800">Checkout</button>
-						<p class="text-sm text-center text-gray-500 mt-4">
-							By completing your purchase, you agree to these
-							<a href="#" class="text-blue-500">Terms Of Service</a>.
-						</p>
+							<button id="checkout-btn" class="w-full background-primary-color text-white text-lg font-semibold text-center py-3 rounded-lg mt-4 hover:bg-gray-700">Checkout</button>
+							<p class="text-sm text-center text-gray-500 mt-4">
+									By completing your purchase, you agree to these
+									<a href="#" class="text-blue-500">Terms Of Service</a>.
+							</p>
 					</div>
 				</section>
 			</div>
 			<!-- You might also like  -->
 			<h2 class="text-xl font-semibold my-5">You might also like</h2>
-			<div class="grid sm:grid-cols-1 md:grid-cols-4 gap-5 md:px-0">
-				<div class="w-full bg-white border border-gray-200 rounded-lg shadow">
-					<a href="#">
-						<img class="rounded-t-lg w-full" src="./img/shop/shopping-09.png" alt="product image" />
-					</a>
-					<div class="px-4 py-5">
-						<a href="#">
-							<h5 class="text-xl font-semibold tracking-tight text-gray-900">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
-						</a>
-						<div class="flex items-center mt-2.5 mb-5">
-							<div class="flex items-center space-x-2 rtl:space-x-reverse">
-								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-								<i class="bi bi-star text-gray-200 text-xl"></i>
-							</div>
-							<span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">5.0</span>
-						</div>
-						<div class="flex items-center justify-between">
-							<span class="text-3xl font-bold text-gray-900">$599</span>
-							<button class="text-white background-primary-color font-medium rounded-lg text-md px-5 py-2.5 text-center">Add to cart</button>
-						</div>
-					</div>
-				</div>
-				<div class="w-full bg-white border border-gray-200 rounded-lg shadow">
-					<a href="#">
-						<img class="rounded-t-lg w-full" src="./img/shop/shopping-10.png" alt="product image" />
-					</a>
-					<div class="px-4 py-5">
-						<a href="#">
-							<h5 class="text-xl font-semibold tracking-tight text-gray-900">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
-						</a>
-						<div class="flex items-center mt-2.5 mb-5">
-							<div class="flex items-center space-x-2 rtl:space-x-reverse">
-								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-								<i class="bi bi-star text-gray-200 text-xl"></i>
-							</div>
-							<span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">5.0</span>
-						</div>
-						<div class="flex items-center justify-between">
-							<span class="text-3xl font-bold text-gray-900">$599</span>
-							<button class="text-white background-primary-color font-medium rounded-lg text-md px-5 py-2.5 text-center">Add to cart</button>
-						</div>
-					</div>
-				</div>
-				<div class="w-full bg-white border border-gray-200 rounded-lg shadow">
-					<a href="#">
-						<img class="rounded-t-lg w-full" src="./img/shop/shopping-11.png" alt="product image" />
-					</a>
-					<div class="px-4 py-5">
-						<a href="#">
-							<h5 class="text-xl font-semibold tracking-tight text-gray-900">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
-						</a>
-						<div class="flex items-center mt-2.5 mb-5">
-							<div class="flex items-center space-x-2 rtl:space-x-reverse">
-								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-								<i class="bi bi-star text-gray-200 text-xl"></i>
-							</div>
-							<span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">5.0</span>
-						</div>
-						<div class="flex items-center justify-between">
-							<span class="text-3xl font-bold text-gray-900">$599</span>
-							<button class="text-white background-primary-color font-medium rounded-lg text-md px-5 py-2.5 text-center">Add to cart</button>
-						</div>
-					</div>
-				</div>
-				<div class="w-full bg-white border border-gray-200 rounded-lg shadow">
-					<a href="#">
-						<img class="rounded-t-lg w-full" src="./img/shop/shopping-12.png" alt="product image" />
-					</a>
-					<div class="px-4 py-5">
-						<a href="#">
-							<h5 class="text-xl font-semibold tracking-tight text-gray-900">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
-						</a>
-						<div class="flex items-center mt-2.5 mb-5">
-							<div class="flex items-center space-x-2 rtl:space-x-reverse">
-								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-								<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-								<i class="bi bi-star text-gray-200 text-xl"></i>
-							</div>
-							<span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">5.0</span>
-						</div>
-						<div class="flex items-center justify-between">
-							<span class="text-3xl font-bold text-gray-900">$599</span>
-							<button class="text-white background-primary-color font-medium rounded-lg text-md px-5 py-2.5 text-center">Add to cart</button>
-						</div>
-					</div>
-				</div>
-			</div>
+			<div class="grid sm:grid-cols-1 md:grid-cols-5 gap-5 md:px-0 items-might-like"></div>
 		</main>
 
 		<!-- Footer -->
@@ -316,78 +219,7 @@
 		<!--CDN Javascript Flowbite -->
 		<script src="./js/main.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
-		<script>
-			
-		$(document).ready(function () {
-    // Retrieve cart data from localStorage
-    const cartData = JSON.parse(localStorage.getItem('cart'));
-    // Display cart items
-    const cartItemsContainer = $('#shopping-cart');
-    cartItemsContainer.empty();
-
-    if (cartData && typeof cartData === 'object') {
-			Object.entries(cartData).forEach(([productId, item]) => {
-				const cartItemHtml = `
-					<div class="p-4 border-b">
-						<div class="flex justify-between md:items-center gap-4">
-							<div class="flex items-center gap-4">
-								<img src="${item.image}" alt="${item.image}" class="w-24 h-24 rounded" />
-								<article>
-									<h2 class="text-lg font-semibold">${item.title}</h2>
-									<p class="text-sm text-gray-500">By bich Samrouth</p>
-									<div class="flex items-center text-yellow-500 text-sm mt-1">
-										<span><i class="bi bi-star-fill text-yellow-300 text-md"></i> 4.0/5.0</span>
-										<span class="text-gray-500 ml-2">(8,168 ratings)</span>
-									</div>
-									<div class="md:hidden flex gap-3">
-										<button class="text-red-500 hover:underline">Remove</button>
-										<button class="text-blue-500 hover:underline">Save for later</button>
-									</div>
-								</article>
-							</div>
-							<div class="hidden md:block">
-								<div class="flex flex-col">
-									<button class="text-red-500 mt-2 hover:underline">Remove</button>
-									<button class="text-blue-500 ml-4 hover:underline">Save for later</button>
-								</div>
-							</div>
-							<div class="text-right">
-								<p class="text-md md:text-xl font-bold text-purple-600">$${item.price}</p>
-								<p class="text-sm md:text-sm line-through text-gray-400">$${item.price * 1.5}</p>
-							</div>
-						</div>
-					</div>
-				`;
-				cartItemsContainer.append(cartItemHtml);
-			});
-    } else {
-      console.log("No cart data found");
-    }
-
-		function removeItemFromCart(productId) {
-			if (!cartData[productId]) return;
-			delete cartData[productId];
-			updateCartUI();
-			localStorage.setItem('cart', JSON.stringify(cartData));
-		}
-
-		function saveForLater(productId) {
-			if (!cartData[productId]) return;
-			// Create a 'saved' object if it doesn't exist
-			if (!localStorage.getItem('saved')) {
-					localStorage.setItem('saved', JSON.stringify({}));
-			}
-			const savedItems = JSON.parse(localStorage.getItem('saved'));
-			// Add item to saved items
-			savedItems[productId] = cartData[productId];
-			// Save updated saved items back to localStorage
-			localStorage.setItem('saved', JSON.stringify(savedItems));
-			// Update UI
-			updateCartUI();
-			alert(`Item "${cartData[productId].title}" has been saved for later.`);
-		}
-});
-
-		</script>
+		<!-- Shopping JS -->
+		<script src="./js/shopping.js"></script>
 	</body>
 </html>

@@ -11,6 +11,9 @@
 		<link rel="stylesheet" href="./css/mian.css" />
 		<!-- Link Tailwind CSS -->
 		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- Jquery -->
+		<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
 	</head>
 	<body>
 		<!-- Navigation Bar -->
@@ -59,7 +62,7 @@
 								</div>
 								<div class="flex justify-between gap-5 mt-5">
 									<button id="view-cart-btn" type="button" class="w-full text-center py-2.5 text-md font-medium text-white bg-gray-800 rounded-md">View Cart</button>
-									<button type="button" class="w-full text-center py-2.5 text-md font-medium text-black bg-gray-200 rounded-md">Checkout</button>
+									<button id="checkout-cart-btn" type="button" class="w-full text-center py-2.5 text-md font-medium text-black bg-gray-200 rounded-md">Checkout</button>
 								</div>
 							</div>
 						</section>
@@ -117,25 +120,25 @@
 						<ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdown-button">
 							<li>
 								<a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100">
-									<img class="w-8 h-8 me-3 rounded-full" src="/img/computer.png" alt="Jese image" />
+									<img class="w-8 h-8 me-3 rounded-full" src="/img/shop/shopping-08.png" alt="Jese image" />
 									Fashion
 								</a>
 							</li>
 							<li>
 								<a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100">
-									<img class="w-8 h-8 me-3 rounded-full" src="/img/computer.png" alt="Jese image" />
+									<img class="w-8 h-8 me-3 rounded-full" src="/img/home/Samsung.png" alt="Jese image" />
 									Health & Games
 								</a>
 							</li>
 							<li>
 								<a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100">
-									<img class="w-8 h-8 me-3 rounded-full" src="/img/computer.png" alt="Jese image" />
+									<img class="w-8 h-8 me-3 rounded-full" src="/img/home/computer-accessories/toys-baby/toy-01.png" alt="Jese image" />
 									Mom & Baby
 								</a>
 							</li>
 							<li>
 								<a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100">
-									<img class="w-8 h-8 me-3 rounded-full" src="/img/computer.png" alt="Jese image" />
+									<img class="w-8 h-8 me-3 rounded-full" src="/img/home/popular-product/car.png" alt="Jese image" />
 									Cars & Motorbikes
 								</a>
 							</li>
@@ -147,7 +150,7 @@
 				</div>
 			</section>
 
-			<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 md:gap-5 my-5">
+			<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 md:gap-4 my-5">
 				<div class="col-span-3">
 					<!-- drawer init and toggle -->
 					<button data-drawer-target="drawer-search" data-drawer-show="drawer-search" aria-controls="drawer-search" class="md:hidden z-10 gap-3 inline-flex items-center py-2 px-4 text-2xl rounded-lg mb-5 ml-4 font-bold text-center background-primary-color text-white" type="button">
@@ -267,146 +270,7 @@
 						<h2 class="py-3 px-4 border text-white background-primary-color text-xl font-medium">Price</h2>
 					</div>
 					<!-- Shop Card -->
-					<div class="grid sm:grid-cols-1 md:grid-cols-3 gap-5 px-4 md:px-0">
-						<!-- Item 1 -->
-						<div class="w-full md:h-[425px] bg-white border border-gray-200 rounded-lg shadow">
-							<a href="#">
-								<img class="rounded-t-lg w-full" src="./img/shop/shopping-01.png" alt="product image" />
-							</a>
-							<div class="px-4 py-5">
-								<h5 class="text-xl font-semibold tracking-tight text-gray-900 hover:underline cursor-pointer">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5>
-								<div class="flex items-center mt-2.5 mb-5">
-									<div class="flex items-center space-x-2 rtl:space-x-reverse">
-										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-										<i class="bi bi-star text-gray-200 text-xl"></i>
-									</div>
-									<span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">5.0</span>
-								</div>
-								<div class="flex items-center justify-between">
-									<span class="text-3xl font-bold text-gray-900">$599</span>
-									<button class="text-white background-primary-color font-medium rounded-lg text-md px-5 py-2.5 text-center hover:bg-[#ffd050] hover:text-[#232536]">Add to cart</button>
-								</div>
-							</div>
-						</div>
-						<!-- Item 2 -->
-						<div class="w-full md:h-[425px] bg-white border border-gray-200 rounded-lg shadow">
-							<a href="#">
-								<img class="rounded-t-lg w-full" src="./img/shop/shopping-02.png" alt="product image" />
-							</a>
-							<div class="px-4 py-5">
-								<h5 class="text-xl font-semibold tracking-tight text-gray-900 hover:underline cursor-pointer">BICYCLE | English meaning - Cambridge Dictionary - New Prodcut</h5>
-								<div class="flex items-center mt-2.5 mb-5">
-									<div class="flex items-center space-x-2 rtl:space-x-reverse">
-										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-										<i class="bi bi-star text-gray-200 text-xl"></i>
-									</div>
-									<span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">5.0</span>
-								</div>
-								<div class="flex items-center justify-between">
-									<span class="text-3xl font-bold text-gray-900">$499</span>
-									<button class="text-white background-primary-color font-medium rounded-lg text-md px-5 py-2.5 text-center hover:bg-[#ffd050] hover:text-[#232536]">Add to cart</button>
-								</div>
-							</div>
-						</div>
-						<!-- Item 3 -->
-						<div class="w-full md:h-[425px] bg-white border border-gray-200 rounded-lg shadow">
-							<a href="#">
-								<img class="rounded-t-lg w-full" src="./img/shop/shopping-03.png" alt="product image" />
-							</a>
-							<div class="px-4 py-5">
-								<h5 class="text-xl font-semibold tracking-tight text-gray-900 hover:underline cursor-pointer">Shop the Best Range of Bicycles - Bikes Online New Product</h5>
-								<div class="flex items-center mt-2.5 mb-5">
-									<div class="flex items-center space-x-2 rtl:space-x-reverse">
-										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-										<i class="bi bi-star text-gray-200 text-xl"></i>
-									</div>
-									<span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">5.0</span>
-								</div>
-								<div class="flex items-center justify-between">
-									<span class="text-3xl font-bold text-gray-900">$699</span>
-									<button class="text-white background-primary-color font-medium rounded-lg text-md px-5 py-2.5 text-center hover:bg-[#ffd050] hover:text-[#232536]">Add to cart</button>
-								</div>
-							</div>
-						</div>
-						<!-- Item 4 -->
-						<div class="w-full md:h-[425px] bg-white border border-gray-200 rounded-lg shadow">
-							<a href="#">
-								<img class="rounded-t-lg w-full" src="./img/shop/shopping-04.png" alt="product image" />
-							</a>
-							<div class="px-4 py-5">
-								<h5 class="text-xl font-semibold tracking-tight text-gray-900 hover:underline cursor-pointer">2024 Polygon Siskiu T7 Dual Suspension Mountain Bike - New Prodcut</h5>
-								<div class="flex items-center mt-2.5 mb-5">
-									<div class="flex items-center space-x-2 rtl:space-x-reverse">
-										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-										<i class="bi bi-star text-gray-200 text-xl"></i>
-									</div>
-									<span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">5.0</span>
-								</div>
-								<div class="flex items-center justify-between">
-									<span class="text-3xl font-bold text-gray-900">$899</span>
-									<button class="text-white background-primary-color font-medium rounded-lg text-md px-5 py-2.5 text-center hover:bg-[#ffd050] hover:text-[#232536]">Add to cart</button>
-								</div>
-							</div>
-						</div>
-						<!-- Item 5 -->
-						<div class="w-full md:h-[425px] bg-white border border-gray-200 rounded-lg shadow">
-							<a href="#">
-								<img class="rounded-t-lg w-full" src="./img/shop/shopping-05.png" alt="product image" />
-							</a>
-							<div class="px-4 py-5">
-								<h5 class="text-xl font-semibold tracking-tight text-gray-900 hover:underline cursor-pointer">2024 Polygon Siskiu T8 Dual Suspension Mountain Bike - New Prodcut</h5>
-								<div class="flex items-center mt-2.5 mb-5">
-									<div class="flex items-center space-x-2 rtl:space-x-reverse">
-										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-										<i class="bi bi-star text-gray-200 text-xl"></i>
-									</div>
-									<span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">5.0</span>
-								</div>
-								<div class="flex items-center justify-between">
-									<span class="text-3xl font-bold text-gray-900">$799</span>
-									<button class="text-white background-primary-color font-medium rounded-lg text-md px-5 py-2.5 text-center hover:bg-[#ffd050] hover:text-[#232536]">Add to cart</button>
-								</div>
-							</div>
-						</div>
-						<!-- Item 6 -->
-						<div class="w-full md:h-[425px] bg-white border border-gray-200 rounded-lg shadow">
-							<a href="#">
-								<img class="rounded-t-lg w-full" src="./img/shop/shopping-06.png" alt="product image" />
-							</a>
-							<div class="px-4 py-5">
-								<h5 class="text-xl font-semibold tracking-tight text-gray-900 hover:underline cursor-pointer">Camera Drones Capture your moments from above with a mini drone</h5>
-								<div class="flex items-center mt-2.5 mb-5">
-									<div class="flex items-center space-x-2 rtl:space-x-reverse">
-										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-										<i class="bi bi-star-fill text-yellow-300 text-xl"></i>
-										<i class="bi bi-star text-gray-200 text-xl"></i>
-									</div>
-									<span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">5.0</span>
-								</div>
-								<div class="flex items-center justify-between">
-									<span class="text-3xl font-bold text-gray-900">$499</span>
-									<button class="text-white background-primary-color font-medium rounded-lg text-md px-5 py-2.5 text-center hover:bg-[#ffd050] hover:text-[#232536]">Add to cart</button>
-								</div>
-							</div>
-						</div>
-					</div>
+					<div id="shopping-container" class="grid sm:grid-cols-1 md:grid-cols-4 gap-4 px-4 md:px-0"></div>
 					<!-- Pagination -->
 					<div class="flex justify-center items-center space-x-2 my-8 font-medium">
 						<button class="px-3 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">Previous</button>
