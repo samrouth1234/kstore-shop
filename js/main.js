@@ -40,8 +40,16 @@ $(document).ready(function () {
 		}
 		localStorage.setItem('cart', JSON.stringify(cart));
 		updateCartUI();
+
+		// Show the confirmation modal
+		$('#popup-modal').fadeIn();
 	}
 
+	// Close modal on "Continue Shopping" button
+	$('#continue-shopping-btn').on('click', function () {
+		$('#popup-modal').fadeOut();
+	});
+	
 	// Update the cart UI
 	function updateCartUI() {
 		const cartItemsContainer = $('.cart-items');
@@ -102,6 +110,12 @@ $(document).ready(function () {
 		window.location.href = '/shopping-cart.html';
 	});
 
+	// Redirect to cart page on "View Cart" button in modal
+	$('#view-cart-btn-modal').on('click', function () {
+		$('#add-to-cart-modal').fadeOut();
+		window.location.href = '/shopping-cart.html';
+	});
+
 	// Redirect to checkout page
 	$('#checkout-cart-btn').on('click', function () {
 		localStorage.setItem('cart', JSON.stringify(cart));
@@ -158,6 +172,8 @@ $(document).ready(function () {
 												<div class='icon-overlay'>
 													<p class='background-heart-icon'><i class='bi bi-heart text-xl'></i></p>
 													<button 
+															data-modal-target="popup-modal" 
+															data-modal-toggle="popup-modal"
 															data-id='${product.id}'
 															data-title='${product.title}'
 															data-price='${product.price}'
