@@ -41,14 +41,18 @@ $(document).ready(function () {
 		localStorage.setItem('cart', JSON.stringify(cart));
 		updateCartUI();
 
-		// Show the confirmation modal
-		$('#popup-modal').fadeIn();
+		// Show alert message
+		showAlertMessage();
 	}
 
-	// Close modal on "Continue Shopping" button
-	$('#continue-shopping-btn').on('click', function () {
-		$('#popup-modal').fadeOut();
-	});
+	// Function to show alert message
+	function showAlertMessage() {
+		const alertMessage = $('#alert-message');
+		alertMessage.removeClass('hidden'); // Show the alert
+		setTimeout(() => {
+			alertMessage.addClass('hidden'); // Hide after 3 seconds
+		}, 3000);
+  }
 	
 	// Update the cart UI
 	function updateCartUI() {
@@ -110,18 +114,6 @@ $(document).ready(function () {
 		window.location.href = '/shopping-cart.html';
 	});
 
-	// Redirect to cart page on "View Cart" button in modal
-	$('#view-cart-btn-modal').on('click', function () {
-		$('#add-to-cart-modal').fadeOut();
-		window.location.href = '/shopping-cart.html';
-	});
-
-	// Redirect to checkout page
-	$('#checkout-cart-btn').on('click', function () {
-		localStorage.setItem('cart', JSON.stringify(cart));
-		window.location.href = '/payment.html';
-	});
-
 	// Add item to cart button click handler
 	$(document).on('click', '.add-to-cart', function () {
 		const productDetails = {
@@ -172,17 +164,15 @@ $(document).ready(function () {
 												<div class='icon-overlay'>
 													<p class='background-heart-icon'><i class='bi bi-heart text-xl'></i></p>
 													<button 
-															data-modal-target="popup-modal" 
-															data-modal-toggle="popup-modal"
-															data-id='${product.id}'
-															data-title='${product.title}'
-															data-price='${product.price}'
-															data-image='${product.image}'
-															data-rating='${product.rating}'
-															data-reviews='${product.reviews}'
-															data-category='${product.category}'
-															class='add-to-cart background-cart-icon'>
-															<i class='bi bi-cart-plus text-xl'></i>
+														data-id='${product.id}'
+														data-title='${product.title}'
+														data-price='${product.price}'
+														data-image='${product.image}'
+														data-rating='${product.rating}'
+														data-reviews='${product.reviews}'
+														data-category='${product.category}'
+														class='add-to-cart background-cart-icon'>
+														<i class='bi bi-cart-plus text-xl'></i>
 													</button>
 												</div>
 											</div>
@@ -257,7 +247,7 @@ $(document).ready(function () {
 			const shoppingPageContainer = $('#shopping-container');
 			shoppingPageContainer.empty();
 
-			const randomProducts = [...products].sort(() => 0.5 - Math.random()).slice(0, 8);
+			const randomProducts = [...products].sort(() => 0.5 - Math.random()).slice(0, 9);
 
 			randomProducts.forEach((product) => {
 					const shoppingItemHtml = `
@@ -267,9 +257,9 @@ $(document).ready(function () {
 							</div>
 							<div class="px-4 py-5">
 								<h5 class="text-xl font-semibold tracking-tight text-gray-900 cursor-pointer" title="${product.description}">
-									${product.description.length > 30 ? product.description.slice(0, 30) + '...' : product.description}
+									${product.description.length > 40 ? product.description.slice(0, 35) + '...' : product.description}
 								</h5>
-								<div class="flex items-center mt-2.5 mb-3">
+								<div class="flex items-center mt-2.5 mb-4">
 									<div class="flex items-center space-x-2 rtl:space-x-reverse">
 										${renderStars(product.rating)} 
 										<span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded ms-3">${product.rating}.0</span>
@@ -278,7 +268,7 @@ $(document).ready(function () {
 								<div class="flex items-center justify-between">
 									<span class="text-2xl font-bold text-gray-900">$ ${product.price}</span>
 									<button 
-										class=" add-to-cart text-white background-primary-color font-medium rounded-lg text-md px-3 py-2 text-center hover:bg-[#ffd050] hover:text-[#232536]" 
+										class="add-to-cart text-white background-primary-color font-medium rounded-lg text-md px-3 py-2 text-center hover:bg-[#ffd050] hover:text-[#232536]" 
 										data-id='${product.id}'
 										data-title='${product.title}'
 										data-price='${product.price}'

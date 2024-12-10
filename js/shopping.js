@@ -53,6 +53,8 @@ $(document).ready(function () {
 
       // Update cart summary
       calculateCartTotal();
+    } else {
+      cartItemsContainer.html('<p class="text-gray-500">No items to display.</p>');
     }
   }
 

@@ -13,7 +13,6 @@
 		<script src="https://cdn.tailwindcss.com"></script>
 		<!-- Jquery -->
 		<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-
 	</head>
 	<body>
 		<!-- Navigation Bar -->
@@ -62,9 +61,15 @@
 								</div>
 								<div class="flex justify-between gap-5 mt-5">
 									<button id="view-cart-btn" type="button" class="w-full text-center py-2.5 text-md font-medium text-white bg-gray-800 rounded-md">View Cart</button>
-									<button id="checkout-cart-btn" type="button" class="w-full text-center py-2.5 text-md font-medium text-black bg-gray-200 rounded-md">Checkout</button>
+									<button id="" type="button" class="w-full text-center py-2.5 text-md font-medium text-black bg-gray-200 rounded-md">Checkout</button>
 								</div>
 							</div>
+
+							<div id="alert-message" class="hidden fixed flex justify-center items-center md:inset-10 bg-green-200 rounded-md text-center w-60 h-10" role="alert">
+								<i class="bi bi-check-circle flex-shrink-0 inline w-4 me-3 text-xl text-green-500 font-semibold"></i>
+								<span class="font-medium">Item added to cart!</span>
+							</div>
+
 						</section>
 						<button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm md:hidden" aria-controls="navbar-cta" aria-expanded="false">
 							<span class="sr-only">Open main menu</span>
@@ -102,10 +107,10 @@
 		<!-- End Navigation Bar -->
 
 		<section class="flex gap-3 bg-gray-200 py-5 text-gray-600 font-medium pl-4 md:pl-80">
-				<i class="bi bi-house-door"></i>
-				<a href="./index.html">Home</a>
-				<i class="bi bi-chevron-right"></i>
-				<a href="./shop.html" class="text-secondary-color">Shop</a>
+			<i class="bi bi-house-door"></i>
+			<a href="./index.html">Home</a>
+			<i class="bi bi-chevron-right"></i>
+			<a href="./shop.html" class="text-secondary-color">Shop</a>
 		</section>
 
 		<main class="container max-w-screen-xl mx-auto mt-5">
@@ -270,7 +275,7 @@
 						<h2 class="py-3 px-4 border text-white background-primary-color text-xl font-medium">Price</h2>
 					</div>
 					<!-- Shop Card -->
-					<div id="shopping-container" class="grid sm:grid-cols-1 md:grid-cols-4 gap-4 px-4 md:px-0"></div>
+					<div id="shopping-container" class="grid sm:grid-cols-1 md:grid-cols-3 gap-4 px-4 md:px-0"></div>
 					<!-- Pagination -->
 					<div class="flex justify-center items-center space-x-2 my-8 font-medium">
 						<button class="px-3 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">Previous</button>
@@ -508,7 +513,9 @@
 			</div>
 		</footer>
 		<!-- End Footer -->
-
+		
+		<!-- Shopping JS -->
+		<script src="./js/shopping.js"></script>
 		<!--CDN Javascript Flowbite -->
 		<script src="./js/main.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
