@@ -10,18 +10,9 @@ $(document).ready(function () {
 		}
 		localStorage.setItem('cart', JSON.stringify(cart));
 		updateCartUI();
-
+		console.log(productDetails)
 		// Show alert message
-		showAlertMessage();
-	}
-
-	// Function to show alert message
-	function showAlertMessage() {
-		const alertMessage = $('#alert-message');
-		alertMessage.removeClass('hidden'); // Show the alert
-		setTimeout(() => {
-			alertMessage.addClass('hidden'); // Hide after 3 seconds
-		}, 3000);
+		alert(`${productDetails.title}, has been added to cart successfully !!!`);
 	}
 
 	// Update the cart UI

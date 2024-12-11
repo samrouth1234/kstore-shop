@@ -24,7 +24,7 @@
 						<a href="#"><i class="bi bi-envelope-check pe-2"></i> kstore@gmail.com</a>
 					</div>
 					<div>
-						<p class="hidden md:block">Follow us and get a chance to win 80% off</p>
+						<p class="hidden md:block">Follow us and get a chance to win <span class="text-secondary-color">80%</span> off</p>
 					</div>
 					<div>
 						<span class="flex items-center gap-4">
@@ -65,16 +65,11 @@
 								</div>
 							</div>
 
-							<div id="alert-message" class="hidden fixed flex justify-center items-center md:inset-10 bg-green-200 rounded-md text-center w-60 h-10" role="alert">
-								<i class="bi bi-check-circle flex-shrink-0 inline w-4 me-3 text-xl text-green-500 font-semibold"></i>
-								<span class="font-medium">Item added to cart!</span>
-							</div>
-
+							<button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm md:hidden" aria-controls="navbar-cta" aria-expanded="false">
+								<span class="sr-only">Open main menu</span>
+								<i class="bi bi-list text-3xl"></i>
+							</button>
 						</section>
-						<button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm md:hidden" aria-controls="navbar-cta" aria-expanded="false">
-							<span class="sr-only">Open main menu</span>
-							<i class="bi bi-list text-3xl"></i>
-						</button>
 					</div>
 					<div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
 						<ul class="flex flex-col font-medium md:p-0 mt-4 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
@@ -88,7 +83,7 @@
 								<a href="./blog.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">Blog</a>
 							</li>
 							<li>
-								<a href="./cantact.html" class="block px-3 md:p-0 text-gray-900 rounded style-navbar">Contact</a>
+								<a href="./cantact.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">Contact</a>
 							</li>
 							<li>
 								<a href="./about-us.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">About Us</a>
@@ -106,14 +101,16 @@
 		</nav>
 		<!-- End Navigation Bar -->
 		
-		<section class="flex gap-3 bg-gray-200 py-5 text-gray-600 font-medium pl-4 md:pl-80">
-			<i class="bi bi-house-door"></i>
-			<a href="./index.html">Home</a>
-			<i class="bi bi-chevron-right"></i>
-			<a href="./cantact.html" class="text-secondary-color">Contact Us</a>
+		<section class=" bg-gray-200">
+			<div class="container max-w-screen-xl mx-auto flex gap-3 py-5 text-gray-600 font-medium pl-4">
+				<i class="bi bi-house-door"></i>
+				<a href="./index.html">Home</a>
+				<i class="bi bi-chevron-right"></i>
+				<a href="./shop.html" class="text-secondary-color">Shop</a>
+			</div>
 		</section>
 
-		<main class="container  max-w-screen-xl py-10 md:mb-10 mx-auto px-4 md:px-0">
+		<main class="container  max-w-screen-xl py-10 md:mb-10 mx-auto px-4">
 			<h1 class="text-4xl font-semibold text-center uppercase text-secondary-color">Contact Us!</h1>
 			<p class="text-lg text-center text-gray-600 mt-4">Any question or remarks ? Just write us a message!</p>
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">

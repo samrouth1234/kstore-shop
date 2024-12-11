@@ -24,7 +24,7 @@
 						<a href="#"><i class="bi bi-envelope-check pe-2"></i> kstore@gmail.com</a>
 					</div>
 					<div>
-						<p class="hidden md:block">Follow us and get a chance to win 80% off</p>
+						<p class="hidden md:block">Follow us and get a chance to win <span class="text-secondary-color">80%</span> off</p>
 					</div>
 					<div>
 						<span class="flex items-center gap-4">
@@ -65,16 +65,11 @@
 								</div>
 							</div>
 
-							<div id="alert-message" class="hidden fixed flex justify-center items-center md:inset-10 bg-green-200 rounded-md text-center w-60 h-10" role="alert">
-								<i class="bi bi-check-circle flex-shrink-0 inline w-4 me-3 text-xl text-green-500 font-semibold"></i>
-								<span class="font-medium">Item added to cart!</span>
-							</div>
-
+							<button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm md:hidden" aria-controls="navbar-cta" aria-expanded="false">
+								<span class="sr-only">Open main menu</span>
+								<i class="bi bi-list text-3xl"></i>
+							</button>
 						</section>
-						<button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm md:hidden" aria-controls="navbar-cta" aria-expanded="false">
-							<span class="sr-only">Open main menu</span>
-							<i class="bi bi-list text-3xl"></i>
-						</button>
 					</div>
 					<div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
 						<ul class="flex flex-col font-medium md:p-0 mt-4 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
@@ -88,7 +83,7 @@
 								<a href="./blog.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">Blog</a>
 							</li>
 							<li>
-								<a href="./cantact.html" class="block px-3 md:p-0 text-gray-900 rounded style-navbar">Contact</a>
+								<a href="./cantact.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">Contact</a>
 							</li>
 							<li>
 								<a href="./about-us.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">About Us</a>
@@ -106,15 +101,17 @@
 		</nav>
 		<!-- End Navigation Bar -->
 
-		<section class="flex gap-3 bg-gray-200 py-5 text-gray-600 font-medium pl-4 md:pl-80">
-			<i class="bi bi-house-door"></i>
-			<a href="./index.html">Home</a>
-			<i class="bi bi-chevron-right"></i>
-			<a href="./shop.html" class="text-secondary-color">Shop</a>
+		<section class=" bg-gray-200">
+			<div class="container max-w-screen-xl mx-auto flex gap-3 py-5 text-gray-600 font-medium pl-4">
+				<i class="bi bi-house-door"></i>
+				<a href="./index.html">Home</a>
+				<i class="bi bi-chevron-right"></i>
+				<a href="./shop.html" class="text-secondary-color">Shop</a>
+			</div>
 		</section>
 
-		<main class="container max-w-screen-xl mx-auto mt-5">
-			<section class="w-full px-4 md:px-0">
+		<main class="container max-w-screen-xl mx-auto mt-5 px-4">
+			<section class="w-full md:px-0">
 				<div class="flex">
 					<label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only">Your Email</label>
 					<button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-10 gap-3 inline-flex items-center py-3 px-4 text-sm font-bold text-center text-white background-primary-color rounded-s-md" type="button">
@@ -158,7 +155,7 @@
 			<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 md:gap-4 my-5">
 				<div class="col-span-3">
 					<!-- drawer init and toggle -->
-					<button data-drawer-target="drawer-search" data-drawer-show="drawer-search" aria-controls="drawer-search" class="md:hidden z-10 gap-3 inline-flex items-center py-2 px-4 text-2xl rounded-lg mb-5 ml-4 font-bold text-center background-primary-color text-white" type="button">
+					<button data-drawer-target="drawer-search" data-drawer-show="drawer-search" aria-controls="drawer-search" class="md:hidden z-10 gap-3 inline-flex items-center py-2 px-4 text-2xl rounded-lg mb-5 font-bold text-center background-primary-color text-white" type="button">
 						<i class="bi bi-funnel"></i>
 					</button>
 					<!-- drawer component -->
@@ -275,15 +272,15 @@
 						<h2 class="py-3 px-4 border text-white background-primary-color text-xl font-medium">Price</h2>
 					</div>
 					<!-- Shop Card -->
-					<div id="shopping-container" class="grid sm:grid-cols-1 md:grid-cols-3 gap-4 px-4 md:px-0"></div>
+					<div id="shopping-container" class="grid sm:grid-cols-1 md:grid-cols-3 gap-4 md:px-0"></div>
 					<!-- Pagination -->
-					<div class="flex justify-center items-center space-x-2 my-8 font-medium">
+					<div class="flex justify-center items-center space-x-2 mt-4 font-medium">
 						<button class="px-3 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">Previous</button>
 						<!-- Page Numbers -->
-						<button class="px-5 py-2 background-primary-color text-white rounded-md hover:bg-[#ffd050]">1</button>
-						<button class="px-5 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">2</button>
-						<button class="px-5 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">3</button>
-						<span class="px-5 py-2">...</span>
+						<button class="px-3 py-2 background-primary-color text-white rounded-md hover:bg-[#ffd050]">1</button>
+						<button class="px-3 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">2</button>
+						<button class="px-3 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">3</button>
+						<span class="px-3 py-2">...</span>
 						<button class="px-3 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">10</button>
 						<!-- Next Button -->
 						<button class="px-3 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">Next</button>

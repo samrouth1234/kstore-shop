@@ -24,7 +24,7 @@
 						<a href="#"><i class="bi bi-envelope-check pe-2"></i> kstore@gmail.com</a>
 					</div>
 					<div>
-						<p class="hidden md:block">Follow us and get a chance to win 80% off</p>
+						<p class="hidden md:block">Follow us and get a chance to win <span class="text-secondary-color">80%</span> off</p>
 					</div>
 					<div>
 						<span class="flex items-center gap-4">
@@ -69,12 +69,11 @@
 								<i class="bi bi-check-circle flex-shrink-0 inline w-4 me-3 text-xl text-green-500 font-semibold"></i>
 								<span class="font-medium">Item added to cart!</span>
 							</div>
-
+							<button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm md:hidden" aria-controls="navbar-cta" aria-expanded="false">
+								<span class="sr-only">Open main menu</span>
+								<i class="bi bi-list text-3xl"></i>
+							</button>
 						</section>
-						<button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm md:hidden" aria-controls="navbar-cta" aria-expanded="false">
-							<span class="sr-only">Open main menu</span>
-							<i class="bi bi-list text-3xl"></i>
-						</button>
 					</div>
 					<div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
 						<ul class="flex flex-col font-medium md:p-0 mt-4 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
@@ -88,7 +87,7 @@
 								<a href="./blog.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">Blog</a>
 							</li>
 							<li>
-								<a href="./cantact.html" class="block px-3 md:p-0 text-gray-900 rounded style-navbar">Contact</a>
+								<a href="./cantact.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">Contact</a>
 							</li>
 							<li>
 								<a href="./about-us.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded style-navbar">About Us</a>
@@ -106,7 +105,10 @@
 		</nav>
 		<!-- End Navigation Bar -->
 		<main class="container max-w-screen-xl mx-auto py-8 px-4 md:px-0">
-			<div id="product-detail-container" class="bg-white overflow-hidden"></div>
+			<div id="product-detail-container" class="bg-white overflow-hidden">
+				<button class="checkout-btn px-6 py-3 border font-semibold text-[#2EB8B8] rounded-lg hover:bg-gray-100 md:ml-8 ">Checkout</button>
+			</div>
+			
 		</main>
 
 		<!-- Footer -->
@@ -198,12 +200,12 @@
 														<img id src="${product.image}" alt="${product.title}" class="h-96 rounded-md mb-4" />
 													</section>
 													<div class="flex gap-5 pl-2 overflow-x-auto pb-4 md:pb-0">
-														<img src="/img/shop/product/product-image-02.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
-														<img src="/img/shop/product/product-image-03.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
-														<img src="/img/shop/product/product-image-04.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
-														<img src="/img/shop/product/product-image-07.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
-														<img src="/img/shop/product/product-image-02.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
-														<img src="/img/shop/product/product-image-02.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+														<img src="/img/shop/product/placeholder.svg" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+														<img src="/img/shop/product/placeholder.svg" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+														<img src="/img/shop/product/placeholder.svg" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+														<img src="/img/shop/product/placeholder.svg" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+														<img src="/img/shop/product/placeholder.svg" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+														<img src="/img/shop/product/placeholder.svg" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
 													</div>
 												</div>
 												<!-- Product Info Section -->
@@ -259,15 +261,15 @@
 																<span>1</span>
 																<button>+</button>
 															</div>
-															<button 														
+															<button 
+																class="add-to-cart w-full px-6 py-2.5 background-primary-color text-white font-semibold rounded-lg hover:bg-gray-700"
 																data-id='${product.id}'
 																data-title='${product.title}'
 																data-price='${product.price}'
 																data-image='${product.image}'
 																data-rating='${product.rating}'
 																data-reviews='${product.reviews}'
-																data-category='${product.category}'
-																class="add-to-cart w-full md:w-96 px-6 py-2.5 background-primary-color text-white font-semibold rounded-lg hover:bg-gray-700">
+																data-category='${product.category}'>
 																	ADD TO CART <i class="bi bi-cart2 text-2xl ml-2"></i>
 															</button>
 														</div>
@@ -300,12 +302,12 @@
 														<img id src="${product.image}" alt="${product.title}" class="h-96 rounded-md mb-4" />
 													</section>
 													<div class="flex gap-5 pl-2 overflow-x-auto pb-4 md:pb-0">
-														<img src="/img/shop/product/product-image-02.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
-														<img src="/img/shop/product/product-image-03.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
-														<img src="/img/shop/product/product-image-04.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
-														<img src="/img/shop/product/product-image-07.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
-														<img src="/img/shop/product/product-image-02.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
-														<img src="/img/shop/product/product-image-02.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+														<img src="/img/shop/product/placeholder.svg" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+														<img src="/img/shop/product/placeholder.svg" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+														<img src="/img/shop/product/placeholder.svg" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+														<img src="/img/shop/product/placeholder.svg" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+														<img src="/img/shop/product/placeholder.svg" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+														<img src="/img/shop/product/placeholder.svg" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
 													</div>
 												</div>
 												<!-- Product Info Section -->

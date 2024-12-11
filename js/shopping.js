@@ -17,30 +17,30 @@ $(document).ready(function () {
                         <img src="${item.image}" alt="${item.image}" class="w-24 h-24 rounded" />
                         <article>
                             <h2 class="text-lg font-semibold cursor-pointer" title="${item.title}">
-                                ${item.title.length > 30 ? item.title.slice(0, 30) + '...' : item.title}
+                              ${item.title.length > 30 ? item.title.slice(0, 30) + '...' : item.title}
                             </h2>
                             <p class="text-sm text-gray-500">Category: ${item.category} 
-                                <span class="text-red-500 text-md pl-4">x ${item.quantity}</span>
+                              <span class="text-red-500 text-md pl-4">x ${item.quantity}</span>
                             </p> 
                             <div class="flex items-center text-yellow-500 text-sm mt-1">
-                                <span><i class="bi bi-star-fill text-yellow-300 text-md"></i> ${item.rating}/5.0</span>
-                                <span class="text-gray-500 ml-2">(${item.reviews} ratings)</span>
+                              <span><i class="bi bi-star-fill text-yellow-300 text-md"></i> ${item.rating}/5.0</span>
+                              <span class="text-gray-500 ml-2">(${item.reviews} ratings)</span>
                             </div>
                             <div class="md:hidden flex gap-3">  
-                                <button class="remove-from-cart text-red-500 hover:underline" data-id="${item.id}">Remove</button>
-                                <button class="save-for-later text-blue-500 ml-4 hover:underline" data-id="${item.id}">Save for later</button>
+                              <button class="remove-from-cart text-red-500 hover:underline" data-id="${item.id}">Remove</button>
+                              <button class="save-for-later text-blue-500 hover:underline" data-id="${item.id}">Save for later</button>
                             </div>
                         </article>
                     </div>
                     <div class="hidden md:block">
                         <div class="flex flex-col">
-                            <button class="remove-from-cart text-red-500 hover:underline" data-id="${item.id}">Remove</button>
-                            <button class="save-for-later text-blue-500 ml-4 hover:underline" data-id="${item.id}">Save for later</button>
+                          <button class="remove-from-cart text-red-500 hover:underline" data-id="${item.id}">Remove</button>
+                          <button class="save-for-latertext-blue-500 hover:underline" data-id="${item.id}">Save for later</button>
                         </div>
                     </div>
                     <div class="text-right">
-                        <p class="text-md md:text-xl font-bold text-purple-600">$${item.price}</p>
-                        <p class="text-sm md:text-sm line-through text-gray-400">$${(item.price * 1.5).toFixed(2)}</p>
+                      <p class="text-md md:text-xl font-bold text-purple-600">$${item.price}</p>
+                      <p class="text-sm md:text-sm line-through text-gray-400">$${(item.price * 1.5).toFixed(2)}</p>
                     </div>
                 </div>
             </div>
