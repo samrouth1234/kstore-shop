@@ -1,33 +1,3 @@
-function initializeTabs(tabListId, contentId) {
-	document.querySelectorAll(`#${tabListId} [role='tab']`).forEach((tab) => {
-		tab.addEventListener('click', function () {
-			document.querySelectorAll(`#${tabListId} [role='tab']`).forEach((t) => t.classList.remove('active-tab'));
-
-			this.classList.add('active-tab');
-			document.querySelectorAll(`#${contentId} [role='tabpanel']`).forEach((content) => content.classList.add('hidden'));
-
-			const target = this.getAttribute('data-tabs-target');
-			document.querySelector(target).classList.remove('hidden');
-
-			localStorage.setItem(`${tabListId}-activeTab`, target);
-		});
-	});
-
-	// Restore active tab on page load
-	window.addEventListener('DOMContentLoaded', function () {
-		const activeTab = localStorage.getItem(`${tabListId}-activeTab`);
-		if (activeTab) {
-			const activeButton = document.querySelector(`[data-tabs-target="${activeTab}"]`);
-			if (activeButton) {
-				activeButton.click();
-			}
-		}
-	});
-}
-
-initializeTabs('default-tab', 'default-tab-content');
-initializeTabs('featured-tab', 'featured-tab-content');
-
 $(document).ready(function () {
 	let cart = {};
 
@@ -52,8 +22,8 @@ $(document).ready(function () {
 		setTimeout(() => {
 			alertMessage.addClass('hidden'); // Hide after 3 seconds
 		}, 3000);
-  }
-	
+	}
+
 	// Update the cart UI
 	function updateCartUI() {
 		const cartItemsContainer = $('.cart-items');
@@ -124,7 +94,7 @@ $(document).ready(function () {
 			rating: $(this).data('rating'),
 			reviews: $(this).data('reviews'),
 			category: $(this).data('category'),
-			description: $(this).data('description'),
+			description: $(this).data('description')
 		};
 		addToCart(productDetails.id, productDetails);
 	});
@@ -141,7 +111,6 @@ $(document).ready(function () {
 		updateCartUI();
 	}
 });
-
 
 // fetch product
 $(document).ready(function () {
@@ -184,7 +153,18 @@ $(document).ready(function () {
 														</div>
 														<span class='text-xs font-normal px-1 py-0.5 rounded ms-1'>(${product.reviews})</span>
 												</div>
-												<p class='description-card-featured hover:underline'>${product.description}</p>
+												<p
+													class='product-details description-card-featured hover:underline'
+													data-id='${product.id}'
+													data-title='${product.title}'
+													data-price='${product.price}'
+													data-image='${product.image}'
+													data-rating='${product.rating}'
+													data-reviews='${product.reviews}'
+													data-category='${product.category}'
+													>
+														${product.description}
+												</p>
 												<p class='price-card mt-2'>$ ${product.price}</p>
 										</div>
 									</div>`;
@@ -195,6 +175,27 @@ $(document).ready(function () {
 		// Render all products initially
 		renderProducts(allProducts, '#product-container-all');
 
+		// Filter products based on category when a button is clicked
+		$('.filter-btn').on('click', function () {
+			const category = $(this).data('category');
+			let filteredProducts;
+
+			if (category === 'All') {
+				filteredProducts = allProducts;
+				$('.filter-btn').attr('aria-selected', false);
+				$(this).attr('aria-selected', true);
+			} else {
+				filteredProducts = allProducts.filter((product) => product.category.toLowerCase() === category.toLowerCase());
+				$('.filter-btn').attr('aria-selected', false);
+				$(this).attr('aria-selected', true);
+			}
+
+			renderProducts(filteredProducts, `#product-container-${category.toLowerCase()}`);
+
+			$('#default-tab-content > div').addClass('hidden');
+			$(`#${category.toLowerCase()}`).removeClass('hidden');
+		});
+
 		// Render "Might Also Like" products
 		function renderMightAlsoLike(products) {
 			const mightAlsoLikeContainer = $('.items-might-like');
@@ -203,14 +204,23 @@ $(document).ready(function () {
 			const randomProducts = [...products].sort(() => 0.5 - Math.random()).slice(0, 5); // Select 4 random products
 
 			randomProducts.forEach((product) => {
-					const mightAlsoLikeHtml = `
+				const mightAlsoLikeHtml = `
 						<div class="w-full bg-white border border-gray-200 rounded-lg shadow">
 							<div class="flex justify-center ">
 								<img class="rounded-t-lg w-44 h-44 " src="${product.image}" alt="${product.title}" />		
 							</div>
 							<div class="px-4 py-5">
-								<h5 class="text-xl font-semibold tracking-tight text-gray-900 cursor-pointer" title="${product.description}">
-								${product.description.length > 30 ? product.description.slice(0, 30) + '...' : product.description}
+								<h5
+									class="product-details text-xl font-semibold tracking-tight text-gray-900 cursor-pointer hover:underline" title="${product.description}"
+									data-id='${product.id}'
+									data-title='${product.title}'
+									data-price='${product.price}'
+									data-image='${product.image}'
+									data-rating='${product.rating}'
+									data-reviews='${product.reviews}'
+									data-category='${product.category}'
+									>
+									${product.description.length > 30 ? product.description.slice(0, 30) + '...' : product.description}
 								</h5>
 								<div class="flex items-center mt-2.5 mb-3">
 									<div class="flex items-center space-x-2 rtl:space-x-reverse">
@@ -235,7 +245,7 @@ $(document).ready(function () {
 									</button>
 								</div>
             </div>`;
-					mightAlsoLikeContainer.append(mightAlsoLikeHtml);
+				mightAlsoLikeContainer.append(mightAlsoLikeHtml);
 			});
 		}
 
@@ -250,13 +260,22 @@ $(document).ready(function () {
 			const randomProducts = [...products].sort(() => 0.5 - Math.random()).slice(0, 9);
 
 			randomProducts.forEach((product) => {
-					const shoppingItemHtml = `
+				const shoppingItemHtml = `
 						<div class="w-full bg-white border border-gray-200 rounded-lg shadow">
 							<div class="flex justify-center ">
 								<img class="rounded-t-lg w-44 h-44" src="${product.image}" alt="${product.title}" />		
 							</div>
 							<div class="px-4 py-5">
-								<h5 class="text-xl font-semibold tracking-tight text-gray-900 cursor-pointer" title="${product.description}">
+								<h5 
+									class="product-details text-xl font-semibold tracking-tight text-gray-900 cursor-pointer hover:underline" title="${product.description}"
+									data-id='${product.id}'
+									data-title='${product.title}'
+									data-price='${product.price}'
+									data-image='${product.image}'
+									data-rating='${product.rating}'
+									data-reviews='${product.reviews}'
+									data-category='${product.category}'
+									>
 									${product.description.length > 40 ? product.description.slice(0, 35) + '...' : product.description}
 								</h5>
 								<div class="flex items-center mt-2.5 mb-4">
@@ -282,32 +301,17 @@ $(document).ready(function () {
 									</button>
 								</div>
             </div>`;
-					shoppingPageContainer.append(shoppingItemHtml);
+				shoppingPageContainer.append(shoppingItemHtml);
 			});
 		}
 
 		// Render Shopping Page
 		renderShoppingPage(allProducts);
 
-		// Filter products based on category when a button is clicked
-		$('.filter-btn').on('click', function () {
-			const category = $(this).data('category');
-			let filteredProducts;
-
-			if (category === 'Computer') {
-				filteredProducts = allProducts;
-				$('.filter-btn').attr('aria-selected', false);
-				$(this).attr('aria-selected', true);
-			} else {
-				filteredProducts = allProducts.filter((product) => product.category.toLowerCase() === category.toLowerCase());
-				$('.filter-btn').attr('aria-selected', false);
-				$(this).attr('aria-selected', true);
-			}
-
-			renderProducts(filteredProducts, `#product-container-${category.toLowerCase()}`);
-
-			$('#default-tab-content > div').addClass('hidden');
-			$(`#${category.toLowerCase()}`).removeClass('hidden');
+		// Add click event for product details (placed outside of render loop)
+		$(document).on('click', '.product-details', function () {
+			const productId = $(this).data('id');
+			window.location.href = `/product-details.html?id=${productId}`;
 		});
 
 		// Helper function to render stars
@@ -361,7 +365,18 @@ $(document).ready(function () {
 											</div>
 											<span class='text-xs font-normal px-1 py-0.5 rounded ms-1'>(${computer_accessries.reviews})</span>
 										</div>
-										<p class='description-card-featured hover:underline'>${computer_accessries.description}</p>
+										<p 
+											id="product-details"
+											data-id='${computer_accessries.id}'
+											data-title='${computer_accessries.title}'
+											data-price='${computer_accessries.price}'
+											data-image='${computer_accessries.image}'
+											data-rating='${computer_accessries.rating}'
+											data-reviews='${computer_accessries.reviews}'
+											data-category='${computer_accessries.category}'
+											class='description-card-featured hover:underline'>
+												${computer_accessries.description}
+											</p>
 										<p class='price-card mt-2'>$ ${computer_accessries.price}</p>
 									</div>
 							</div>`;
@@ -371,6 +386,12 @@ $(document).ready(function () {
 
 		// Render all products initially
 		renderProducts(allProducts, '#product-container-computeraccessories');
+
+		// Add click event for product details (placed outside of render loop)
+		$(document).on('click', '#product-details', function () {
+			const containerId = $(this).data('id');
+			window.location.href = `/product-details.html?id=${containerId}`;
+		});
 
 		// Filter products based on category when a button is clicked
 		$('.filter-computer').on('click', function () {

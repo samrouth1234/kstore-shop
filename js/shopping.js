@@ -1,17 +1,17 @@
 $(document).ready(function () {
-  // Retrieve cart data from localStorage
-  const cartData = JSON.parse(localStorage.getItem('cart'));
-  const cartItemsContainer = $('#shopping-cart');
+	// Retrieve cart data from localStorage
+	const cartData = JSON.parse(localStorage.getItem('cart'));
+	const cartItemsContainer = $('#shopping-cart');
 
-  // Function to update the Cart UI
-  function updateCartUI() {
-    cartItemsContainer.empty();
-    if (cartData && typeof cartData === 'object') {
-      let totalItems = 0;
-      Object.entries(cartData).forEach(([productId, item]) => {
-        totalItems += item.quantity;
-        const cartItemHtml = `
-            <div class="p-4 border-b">
+	// Function to update the Cart UI
+	function updateCartUI() {
+		cartItemsContainer.empty();
+		if (cartData && typeof cartData === 'object') {
+			let totalItems = 0;
+			Object.entries(cartData).forEach(([productId, item]) => {
+				totalItems += item.quantity;
+				const cartItemHtml = `
+            <div class="py-4 border-b">
                 <div class="flex justify-between md:items-center gap-4">
                     <div class="flex items-center gap-4">
                         <img src="${item.image}" alt="${item.image}" class="w-24 h-24 rounded" />
@@ -26,15 +26,15 @@ $(document).ready(function () {
                                 <span><i class="bi bi-star-fill text-yellow-300 text-md"></i> ${item.rating}/5.0</span>
                                 <span class="text-gray-500 ml-2">(${item.reviews} ratings)</span>
                             </div>
-                            <div class="md:hidden flex gap-3">
-                                <button class="remove-from-cart text-red-500 mt-2 hover:underline" data-id="${item.id}">Remove</button>
+                            <div class="md:hidden flex gap-3">  
+                                <button class="remove-from-cart text-red-500 hover:underline" data-id="${item.id}">Remove</button>
                                 <button class="save-for-later text-blue-500 ml-4 hover:underline" data-id="${item.id}">Save for later</button>
                             </div>
                         </article>
                     </div>
                     <div class="hidden md:block">
                         <div class="flex flex-col">
-                            <button class="remove-from-cart text-red-500 mt-2 hover:underline" data-id="${item.id}">Remove</button>
+                            <button class="remove-from-cart text-red-500 hover:underline" data-id="${item.id}">Remove</button>
                             <button class="save-for-later text-blue-500 ml-4 hover:underline" data-id="${item.id}">Save for later</button>
                         </div>
                     </div>
@@ -45,79 +45,79 @@ $(document).ready(function () {
                 </div>
             </div>
         `;
-        cartItemsContainer.append(cartItemHtml);
-      });
+				cartItemsContainer.append(cartItemHtml);
+			});
 
-      // Update total count in cart icon
-      $('.total-count-shopping-cart').text(totalItems);
+			// Update total count in cart icon
+			$('.total-count-shopping-cart').text(totalItems);
 
-      // Update cart summary
-      calculateCartTotal();
-    } else {
-      cartItemsContainer.html('<p class="text-gray-500">No items to display.</p>');
-    }
-  }
+			// Update cart summary
+			calculateCartTotal();
+		} else {
+			cartItemsContainer.html('<p class="text-gray-500">No items to display.</p>');
+		}
+	}
 
-  // Function to calculate and display cart totals
-  function calculateCartTotal() {
-    let originalPrice = 0;
-    let totalDiscount = 0;
+	// Function to calculate and display cart totals
+	function calculateCartTotal() {
+		let originalPrice = 0;
+		let totalDiscount = 0;
 
-    if (cartData && typeof cartData === 'object') {
-      Object.values(cartData).forEach((item) => {
-        originalPrice += item.price * item.quantity;
-        totalDiscount += (item.price * 0.15) * item.quantity; // Assuming a 15% discount
-      });
+		if (cartData && typeof cartData === 'object') {
+			Object.values(cartData).forEach((item) => {
+				originalPrice += item.price * item.quantity;
+				totalDiscount += item.price * 0.15 * item.quantity; // Assuming a 15% discount
+			});
 
-      const finalTotal = originalPrice - totalDiscount;
+			const finalTotal = originalPrice - totalDiscount;
 
-      $('.cart-total-original-price').text(`$${originalPrice.toFixed(2)}`);
-      $('.cart-total-discounts').text(`-$${totalDiscount.toFixed(2)}`);
-      $('.cart-total-final').text(`$${finalTotal.toFixed(2)}`);
-    }
-  }
+			$('.cart-total-original-price').text(`$${originalPrice.toFixed(2)}`);
+			$('.cart-total-discounts').text(`-$${totalDiscount.toFixed(2)}`);
+			$('.cart-total-final').text(`$${finalTotal.toFixed(2)}`);
+		}
+	}
 
-  // Remove item from cart
-  $(document).on('click', '.remove-from-cart', function () {
-    const productIdToRemove = $(this).data('id');
-    if (cartData[productIdToRemove]) {
-      delete cartData[productIdToRemove];
-      localStorage.setItem('cart', JSON.stringify(cartData));
-      updateCartUI();
-    }
-  });
+	// Remove item from cart
+	$(document).on('click', '.remove-from-cart', function () {
+		const productIdToRemove = $(this).data('id');
+		if (cartData[productIdToRemove]) {
+			delete cartData[productIdToRemove];
+			localStorage.setItem('cart', JSON.stringify(cartData));
+			updateCartUI();
+		}
+	});
 
-  // Save item for later
-  $(document).on('click', '.save-for-later', function () {
-    const productId = $(this).data('id');
-    if (cartData[productId]) {
-      delete cartData[productId];
-      localStorage.setItem('cart', JSON.stringify(cartData));
-      updateCartUI();
-      alert('Item saved for later!');
-    }
-  });
+	// Save item for later
+	$(document).on('click', '.save-for-later', function () {
+		const productId = $(this).data('id');
+		if (cartData[productId]) {
+			delete cartData[productId];
+			localStorage.setItem('cart', JSON.stringify(cartData));
+			updateCartUI();
+			alert('Item saved for later!');
+		}
+	});
 
-  // btn checkout
-  $('#checkout-btn').on('click', function () {
-    const cartData = localStorage.getItem('cart');
-    if (cartData) {
-      localStorage.setItem('checkoutCart', cartData);
-      window.location.href = 'payment.html';
-    } else {
-      alert('Your cart is empty. Please add items to proceed.');
-    }
-  });
+	// btn checkout
+	$('.checkout-btn').on('click', function () {
+		const cartData = localStorage.getItem('cart');
+		if (cartData) {
+			localStorage.setItem('checkoutCart', cartData);
+			window.location.href = 'payment.html';
+		} else {
+			alert('Your cart is empty. Please add items to proceed.');
+		}
+	});
 
-  // rendering data to the cart
-  $(document).ready(function () {
-    const cartData = JSON.parse(localStorage.getItem('checkoutCart'));
-    const paymentItemsContainer = $('#payment-items-container');
-    paymentItemsContainer.empty();
+	// rendering data to the cart
+	$(document).ready(function () {
+		const cartData = JSON.parse(localStorage.getItem('checkoutCart'));
+		const paymentItemsContainer = $('#payment-items-container');
+		paymentItemsContainer.empty();
 
-    if (cartData && typeof cartData === 'object') {
-      Object.entries(cartData).forEach(([productId, item]) => {
-        const completeItemPayment = `
+		if (cartData && typeof cartData === 'object') {
+			Object.entries(cartData).forEach(([productId, item]) => {
+				const completeItemPayment = `
           <div class="flex items-center mb-4 border-b py-2">
             <img src="${item.image}" alt="${item.title}" class="w-20 h-20 rounded-lg" />
             <div class="ml-4 flex-1">
@@ -126,13 +126,13 @@ $(document).ready(function () {
             </div>
           </div>
         `;
-        paymentItemsContainer.append(completeItemPayment);
-      });
-    } else {
-      paymentItemsContainer.html('<p class="text-gray-500">No items to display.</p>');
-    }
-  });
+				paymentItemsContainer.append(completeItemPayment);
+			});
+		} else {
+			paymentItemsContainer.html('<p class="text-gray-500">No items to display.</p>');
+		}
+	});
 
-  // Initialize cart UI
-  updateCartUI();
+	// Initialize cart UI
+	updateCartUI();
 });

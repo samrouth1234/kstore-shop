@@ -339,5 +339,55 @@
     "reviews": 699,
     "description": "Vizio P-Series 4K HDR TV is $100 off, and PC ...",
     "category": "TV"
+  },
+  {
+    "id": 33,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/keyboard/keyboard-01.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Accessories"
+  },
+  {
+    "id": 33,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/keyboard/keyboard-01.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Keyboard"
+  },
+  {
+    "id": 34,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/webcam/webcam-09.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Webcam"
+  },
+  {
+    "id": 35,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/printer/printer-01.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Printer"
+  },
+  {
+    "id": 36,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/toys-baby/toy-01.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Toys"
   }
 ]

@@ -11,6 +11,8 @@
 		<link rel="stylesheet" href="./css/mian.css" />
 		<!-- Link Tailwind CSS -->
 		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- Jquery -->
+		<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<!-- Navigation Bar -->
@@ -59,7 +61,7 @@
 								</div>
 								<div class="flex justify-between gap-5 mt-5">
 									<button id="view-cart-btn" type="button" class="w-full text-center py-2.5 text-md font-medium text-white bg-gray-800 rounded-md">View Cart</button>
-									<button id="" type="button" class="w-full text-center py-2.5 text-md font-medium text-black bg-gray-200 rounded-md">Checkout</button>
+									<button type="button" class=" checkout-btn w-full text-center py-2.5 text-md font-medium text-black bg-gray-200 rounded-md">Checkout</button>
 								</div>
 							</div>
 
@@ -103,86 +105,8 @@
 			</section>
 		</nav>
 		<!-- End Navigation Bar -->
-		
 		<main class="container max-w-screen-xl mx-auto py-8 px-4 md:px-0">
-			<div class="bg-white overflow-hidden">
-				<div class="flex flex-col lg:flex-row">
-					<!-- Image Section -->
-					<div class="w-full lg:w-1/2 p-0 md:p-6">
-						<img src="/img/shop/product/product-image-01.png" alt="Product Image" class="w-full h-auto rounded-md mb-4" />
-						<div class="flex gap-5 pl-2 overflow-x-auto pb-4 md:pb-0">
-							<img src="/img/shop/product/product-image-05.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
-							<img src="/img/shop/product/product-image-03.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
-							<img src="/img/shop/product/product-image-04.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
-							<img src="/img/shop/product/product-image-07.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
-							<img src="/img/shop/product/product-image-02.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
-							<img src="/img/shop/product/product-image-02.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
-						</div>
-					</div>
-					<!-- Product Info Section -->
-					<div class="w-full lg:w-1/2  p-0 pt-5 md:p-6">
-						<article class="flex items-center mb-4 flex-wrap">
-							<div class="flex items-center space-x-2 rtl:space-x-reverse">
-								<i class="bi bi-star-fill text-yellow-300 text-lg"></i>
-								<i class="bi bi-star-fill text-yellow-300 text-lg"></i>
-								<i class="bi bi-star-fill text-yellow-300 text-lg"></i>
-								<i class="bi bi-star-fill text-yellow-300 text-lg"></i>
-								<i class="bi bi-star text-gray-200 text-lg"></i>
-							</div>
-							<p class="ml-2 md:text-md font-medium">4.7 Star Rating</p>
-							<p class="md:ml-2 pt-2 md:pt-0 text-gray-600">( 21,671 User feedback )</p>
-						</article>
-
-						<h1 class="text-3xl font-semibold text-start text-gray-800 my-5">2020 Apple MacBook Pro with Apple M1 Chip (13-inch, 8GB RAM, 256GB SSD Storage) - Space Gray</h1>
-						<section class="grid grid-cols-1 md:grid-cols-2 my-5 gap-3">
-							<div>
-								<p class="text-gray-800 mb-2">Stock keeping unit: <span class="font-semibold">A264671</span></p>
-								<p class="text-gray-800">Brand: <span class="font-semibold">Apple</span></p>
-							</div>
-							<div>
-								<p class="text-gray-800 mb-2">Availability: <span class="text-green-600 font-semibold">In Stock</span></p>
-								<p class="text-gray-800">Category: <span class="font-semibold"> Electronics Devices</span></p>
-							</div>
-						</section>
-						<article class="flex items-center mb-5">
-							<p class="text-3xl font-bold text-[#2EB8B8]">$1699</p>
-							<p class="text-lg text-gray-400 line-through ml-4">$1999</p>
-							<p class="ml-4 px-2 py-1 bg-[#ffd050] text-primary-color font-semibold text-sm rounded">21% OFF</p>
-						</article>
-						<section class="grid grid-cols-1 md:grid-cols-2 gap-4 my-5">
-							<div>
-								<p class="text-gray-600 mb-2">Color:</p>
-								<div class="flex items-center space-x-2">
-									<button class="w-8 h-8 rounded-full background-secondary-color border-2 focus:outline-none focus:ring focus:border-[#ffd050]"></button>
-									<button class="w-8 h-8 rounded-full background-primary-color border-2 focus:outline-none focus:ring focus:border-[#232536]"></button>
-								</div>
-							</div>
-							<div>
-								<p class="text-gray-600 mb-2">Size:</p>
-								<select class="w-full p-2 border border-gray-300 rounded">
-									<option>14-inch Liquid Retina XDR display</option>
-									<option>15-inch Retina XDR display</option>
-									<option>16-inch Retina XDR display</option>
-									<option>17-inch Retina XDR display</option>
-									<option>18-inch Retina XDR display</option>
-								</select>
-							</div>
-						</section>
-						<section class="mt-12">
-							<p class="font-medium mb-3">Quantity</p>
-							<div class="flex flex-col md:flex-row items-center justify-center gap-4">
-								<div class="flex w-full md:w-44 justify-center items-center gap-8 text-xl font-semibold border border-[#232536] rounded-lg px-6 py-4 hover:bg-gray-100 cursor-pointer">
-									<button>-</button>
-									<span>1</span>
-									<button>+</button>
-								</div>
-								<button class="w-full md:w-96 px-6 py-4 background-primary-color text-white font-semibold rounded-lg hover:bg-gray-700">ADD TO CART <i class="bi bi-cart2 text-2xl ml-2"></i></button>
-								<button class="w-full md:w-44 px-6 py-4 text-primary-color border border-[#232536] font-semibold rounded-lg hover:bg-gray-100">BUY NOW</button>
-							</div>
-						</section>
-					</div>
-				</div>
-			</div>
+			<div id="product-detail-container" class="bg-white overflow-hidden"></div>
 		</main>
 
 		<!-- Footer -->
@@ -256,9 +180,221 @@
 			</div>
 		</footer>
 		<!-- End Footer -->
+		<script>
+			 $(document).ready(function () {
+            // Get the product ID from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
 
+            // Fetch JSON data
+            $.getJSON('/lib/products.json', function (data) {
+                const product = data.find(p => p.id == productId);
+                if (product) {
+                    const productDetailHtml = `
+											<div class="flex flex-col lg:flex-row">
+												<!-- Image Section -->
+												<div class="w-full lg:w-1/2 p-0 md:p-6">
+													<section class="flex justify-center">
+														<img id src="${product.image}" alt="${product.title}" class="h-96 rounded-md mb-4" />
+													</section>
+													<div class="flex gap-5 pl-2 overflow-x-auto pb-4 md:pb-0">
+														<img src="/img/shop/product/product-image-02.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+														<img src="/img/shop/product/product-image-03.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+														<img src="/img/shop/product/product-image-04.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+														<img src="/img/shop/product/product-image-07.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+														<img src="/img/shop/product/product-image-02.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+														<img src="/img/shop/product/product-image-02.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+													</div>
+												</div>
+												<!-- Product Info Section -->
+												<div class="w-full lg:w-1/2  p-0 pt-5 md:p-6">
+													<article class="flex items-center mb-4 flex-wrap">
+														<div class="flex items-center space-x-2 rtl:space-x-reverse">
+															${renderStars(product.rating)}
+														</div>
+														<p class="ml-2 md:text-md font-medium">${product.rating} Star Rating</p>
+														<p class="md:ml-2 pt-2 md:pt-0 text-gray-600">( ${product.reviews} User feedback )</p>
+													</article>
+
+													<h1 class="text-3xl font-semibold text-start text-gray-800 my-5">${product.description}</h1>
+													<section class="grid grid-cols-1 md:grid-cols-2 my-5 gap-3">
+														<div>
+															<p class="text-gray-800 mb-2">Stock keeping unit: <span class="font-semibold">A264671</span></p>
+															<p class="text-gray-800">Brand: <span class="font-semibold">App</span></p>
+														</div>
+														<div>
+															<p class="text-gray-800 mb-2">Availability: <span class="text-green-600 font-semibold">In Stock</span></p>
+															<p class="text-gray-800">Category: <span class="font-semibold"> ${product.category}</span></p>
+														</div>
+													</section>
+													<article class="flex items-center mb-5">
+														<p class="text-3xl font-bold text-[#2EB8B8]">$${product.price}</p>
+														<p class="text-lg text-gray-400 line-through ml-4">${(product.price * 1.5).toFixed(2)}</p>
+														<p class="ml-4 px-2 py-1 bg-[#ffd050] text-primary-color font-semibold text-sm rounded">21% OFF</p>
+													</article>
+													<section class="grid grid-cols-1 md:grid-cols-2 gap-4 my-5">
+														<div>
+															<p class="text-gray-600 mb-2">Color:</p>
+															<div class="flex items-center space-x-2">
+																<button class="w-8 h-8 rounded-full background-secondary-color border-2 focus:outline-none focus:ring focus:border-[#ffd050]"></button>
+																<button class="w-8 h-8 rounded-full background-primary-color border-2 focus:outline-none focus:ring focus:border-[#232536]"></button>
+															</div>
+														</div>
+														<div>
+															<p class="text-gray-600 mb-2">Size:</p>
+															<select class="w-full p-2 border border-gray-300 rounded">
+																<option>14-inch Liquid Retina XDR display</option>
+																<option>15-inch Retina XDR display</option>
+																<option>16-inch Retina XDR display</option>
+																<option>17-inch Retina XDR display</option>
+																<option>18-inch Retina XDR display</option>
+															</select>
+														</div>
+													</section>
+													<section class="mt-12">
+														<p class="font-medium mb-3">Quantity</p>
+														<div class="flex flex-col md:flex-row items-center justify-center gap-4">
+															<div class="flex w-full md:w-44 justify-center items-center gap-8 text-xl font-semibold border border-[#232536] rounded-lg px-6 py-2.5 hover:bg-gray-100 cursor-pointer">
+																<button>-</button>
+																<span>1</span>
+																<button>+</button>
+															</div>
+															<button 														
+																data-id='${product.id}'
+																data-title='${product.title}'
+																data-price='${product.price}'
+																data-image='${product.image}'
+																data-rating='${product.rating}'
+																data-reviews='${product.reviews}'
+																data-category='${product.category}'
+																class="add-to-cart w-full md:w-96 px-6 py-2.5 background-primary-color text-white font-semibold rounded-lg hover:bg-gray-700">
+																	ADD TO CART <i class="bi bi-cart2 text-2xl ml-2"></i>
+															</button>
+														</div>
+													</section>
+												</div>
+											</div>
+                    `;
+                    $('#product-detail-container').append(productDetailHtml);
+                }
+
+								// Helper function to render stars
+								function renderStars(rating) {
+									let stars = '';
+									for (let i = 1; i <= 5; i++) {
+										stars += `<i class='bi ${i <= rating ? 'bi-star-fill text-[#f3de6d]' : 'bi-star text-gray-300'}'></i>`;
+									}
+									return stars;
+								}
+            });
+
+						// Accessories
+						$.getJSON('/lib/computer-accessories.json', function (data) {
+                const product = data.find(p => p.id == productId);
+                if (product) {
+                    const productDetailHtml = `
+											<div class="flex flex-col lg:flex-row">
+												<!-- Image Section -->
+												<div class="w-full lg:w-1/2 p-0 md:p-6">
+													<section class="flex justify-center">
+														<img id src="${product.image}" alt="${product.title}" class="h-96 rounded-md mb-4" />
+													</section>
+													<div class="flex gap-5 pl-2 overflow-x-auto pb-4 md:pb-0">
+														<img src="/img/shop/product/product-image-02.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+														<img src="/img/shop/product/product-image-03.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+														<img src="/img/shop/product/product-image-04.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+														<img src="/img/shop/product/product-image-07.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+														<img src="/img/shop/product/product-image-02.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+														<img src="/img/shop/product/product-image-02.png" alt="Thumbnail" class="w-24 h-auto rounded-md cursor-pointer" />
+													</div>
+												</div>
+												<!-- Product Info Section -->
+												<div class="w-full lg:w-1/2  p-0 pt-5 md:p-6">
+													<article class="flex items-center mb-4 flex-wrap">
+														<div class="flex items-center space-x-2 rtl:space-x-reverse">
+															${renderStars(product.rating)}
+														</div>
+														<p class="ml-2 md:text-md font-medium">${product.rating} Star Rating</p>
+														<p class="md:ml-2 pt-2 md:pt-0 text-gray-600">( ${product.reviews} User feedback )</p>
+													</article>
+
+													<h1 class="text-3xl font-semibold text-start text-gray-800 my-5">${product.description}</h1>
+													<section class="grid grid-cols-1 md:grid-cols-2 my-5 gap-3">
+														<div>
+															<p class="text-gray-800 mb-2">Stock keeping unit: <span class="font-semibold">A264671</span></p>
+															<p class="text-gray-800">Brand: <span class="font-semibold">App</span></p>
+														</div>
+														<div>
+															<p class="text-gray-800 mb-2">Availability: <span class="text-green-600 font-semibold">In Stock</span></p>
+															<p class="text-gray-800">Category: <span class="font-semibold"> ${product.category}</span></p>
+														</div>
+													</section>
+													<article class="flex items-center mb-5">
+														<p class="text-3xl font-bold text-[#2EB8B8]">$${product.price}</p>
+														<p class="text-lg text-gray-400 line-through ml-4">${(product.price * 1.5).toFixed(2)}</p>
+														<p class="ml-4 px-2 py-1 bg-[#ffd050] text-primary-color font-semibold text-sm rounded">21% OFF</p>
+													</article>
+													<section class="grid grid-cols-1 md:grid-cols-2 gap-4 my-5">
+														<div>
+															<p class="text-gray-600 mb-2">Color:</p>
+															<div class="flex items-center space-x-2">
+																<button class="w-8 h-8 rounded-full background-secondary-color border-2 focus:outline-none focus:ring focus:border-[#ffd050]"></button>
+																<button class="w-8 h-8 rounded-full background-primary-color border-2 focus:outline-none focus:ring focus:border-[#232536]"></button>
+															</div>
+														</div>
+														<div>
+															<p class="text-gray-600 mb-2">Size:</p>
+															<select class="w-full p-2 border border-gray-300 rounded">
+																<option>14-inch Liquid Retina XDR display</option>
+																<option>15-inch Retina XDR display</option>
+																<option>16-inch Retina XDR display</option>
+																<option>17-inch Retina XDR display</option>
+																<option>18-inch Retina XDR display</option>
+															</select>
+														</div>
+													</section>
+													<section class="mt-12">
+														<p class="font-medium mb-3">Quantity</p>
+														<div class="flex flex-col md:flex-row items-center justify-center gap-4">
+															<div class="flex w-full md:w-44 justify-center items-center gap-8 text-xl font-semibold border border-[#232536] rounded-lg px-6 py-2.5 hover:bg-gray-100 cursor-pointer">
+																<button>-</button>
+																<span>1</span>
+																<button>+</button>
+															</div>
+															<button
+																class="add-to-cart w-full md:w-96 px-6 py-2.5 background-primary-color text-white font-semibold rounded-lg hover:bg-gray-700"
+																data-id='${product.id}'
+																data-title='${product.title}'
+																data-price='${product.price}'
+																data-image='${product.image}'
+																data-rating='${product.rating}'
+																data-reviews='${product.reviews}'
+																data-category='${product.category}'
+																type="button"
+																>
+																	ADD TO CART <i class="bi bi-cart2 text-2xl ml-2"></i>
+																</button>
+														</div>
+													</section>
+												</div>
+											</div>
+                    `;
+                    $('#product-detail-container').append(productDetailHtml);
+                }
+								// Helper function to render stars
+								function renderStars(rating) {
+									let stars = '';
+									for (let i = 1; i <= 5; i++) {
+										stars += `<i class='bi ${i <= rating ? 'bi-star-fill text-[#f3de6d]' : 'bi-star text-gray-300'}'></i>`;
+									}
+									return stars;
+								}
+            });
+        });
+		</script>
 		<!--CDN Javascript Flowbite -->
 		<script src="./js/main.js"></script>
+		<script src="./js/shopping.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 	</body>
 </html>

@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": 37,
     "title": "Samsung Galaxy S22 Ultra",
     "price": 1499,
     "image": "./img/home/computer-accessories/keyboard/keyboard-01.png",
@@ -10,426 +10,32 @@
     "category": "Keyboard"
   },
   {
-    "id": 2,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/webcam/webcam-09.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Webcam"
-  }
-  ,
-  {
-    "id": 3,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/webcam/webcam-10.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Webcam"
-  }
-  ,
-  {
-    "id": 4,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/printer/printer-01.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Printer"
-  }
-  ,
-  {
-    "id": 5,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/printer/printer-02.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Printer"
-  },
-  {
-    "id": 6,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/toys-baby/toy-01.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Toys"
-  }
-  ,
-  {
-    "id": 7,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/toys-baby/toy-02.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Toys"
-  },
-  {
-    "id": 8,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/keyboard/keyboard-02.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Keyboard"
-  }
-  ,
-  {
-    "id": 9,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/keyboard/keyboard-03.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Keyboard"
-  }
-  ,
-  {
-    "id": 10,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/keyboard/keyboard-04.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Keyboard"
-  }
-  ,
-  {
-    "id": 11,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/keyboard/keyboard-05.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Keyboard"
-  }
-  ,
-  {
-    "id": 12,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/keyboard/keyboard-06.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Keyboard"
-  }
-  ,
-  {
-    "id": 13,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/keyboard/keyboard-07.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Keyboard"
-  }
-  ,
-  {
-    "id": 14,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/keyboard/keyboard-08.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Keyboard"
-  }
-  ,
-  {
-    "id": 15,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/keyboard/keyboard-09.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Keyboard"
-  }
-  ,
-  {
-    "id": 16,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/keyboard/keyboard-10.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Keyboard"
-  }
-  ,
-  {
-    "id": 17,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/toys-baby/toy-01.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Toys"
-  }
-  ,
-  {
-    "id": 18,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/toys-baby/toy-02.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Toys"
-  }
-  ,
-  {
-    "id": 19,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/toys-baby/toy-03.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Toys"
-  }
-  ,
-  {
-    "id": 20,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/toys-baby/toy-04.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Toys"
-  }
-  ,
-  {
-    "id": 21,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/toys-baby/toy-05.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Toys"
-  }
-  ,
-  {
-    "id": 22,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/toys-baby/toy-06.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Toys"
-  }
-  ,
-  {
-    "id": 23,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/toys-baby/toy-07.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Toys"
-  }
-  ,
-  {
-    "id": 24,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/toys-baby/toy-08.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Toys"
-  }
-  ,
-  {
-    "id": 25,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/toys-baby/toy-09.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Toys"
-  }
-  ,
-  {
-    "id": 26,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/toys-baby/toy-10.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Toys"
-  }
-  ,
-  {
-    "id": 27,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/webcam/webcam-01.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Webcam"
-  }
-  ,
-  {
-    "id": 28,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/webcam/webcam-02.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Webcam"
-  }
-  ,
-  {
-    "id": 29,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/webcam/webcam-03.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Webcam"
-  }
-  ,
-  {
-    "id": 30,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/webcam/webcam-04.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Webcam"
-  }
-  ,
-  {
-    "id": 31,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/webcam/webcam-05.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Webcam"
-  }
-  ,
-  {
-    "id": 32,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/webcam/webcam-06.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Webcam"
-  }
-  ,
-  {
-    "id": 33,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/webcam/webcam-07.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Webcam"
-  }
-  ,
-  {
-    "id": 34,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/webcam/webcam-08.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Webcam"
-  }
-  ,
-  {
-    "id": 35,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/webcam/webcam-09.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Webcam"
-  }
-  ,
-  {
-    "id": 36,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/webcam/webcam-10.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Webcam"
-  }
-  ,
-  {
-    "id": 37,
-    "title": "Samsung Galaxy S22 Ultra",
-    "price": 1499,
-    "image": "./img/home/computer-accessories/printer/printer-01.png",
-    "rating": 4,
-    "reviews": 699,
-    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Printer"
-  }
-  ,
-  {
     "id": 38,
     "title": "Samsung Galaxy S22 Ultra",
     "price": 1499,
-    "image": "./img/home/computer-accessories/printer/printer-02.png",
+    "image": "./img/home/computer-accessories/webcam/webcam-09.png",
     "rating": 4,
     "reviews": 699,
     "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Printer"
+    "category": "Webcam"
   }
   ,
   {
     "id": 39,
     "title": "Samsung Galaxy S22 Ultra",
     "price": 1499,
-    "image": "./img/home/computer-accessories/printer/printer-03.png",
+    "image": "./img/home/computer-accessories/webcam/webcam-10.png",
     "rating": 4,
     "reviews": 699,
     "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
-    "category": "Printer"
+    "category": "Webcam"
   }
   ,
   {
     "id": 40,
     "title": "Samsung Galaxy S22 Ultra",
     "price": 1499,
-    "image": "./img/home/computer-accessories/printer/printer-04.png",
+    "image": "./img/home/computer-accessories/printer/printer-01.png",
     "rating": 4,
     "reviews": 699,
     "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
@@ -440,6 +46,400 @@
     "id": 41,
     "title": "Samsung Galaxy S22 Ultra",
     "price": 1499,
+    "image": "./img/home/computer-accessories/printer/printer-02.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Printer"
+  },
+  {
+    "id": 42,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/toys-baby/toy-01.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Toys"
+  }
+  ,
+  {
+    "id": 43,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/toys-baby/toy-02.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Toys"
+  },
+  {
+    "id": 44,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/keyboard/keyboard-02.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Keyboard"
+  }
+  ,
+  {
+    "id": 45,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/keyboard/keyboard-03.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Keyboard"
+  }
+  ,
+  {
+    "id": 46,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/keyboard/keyboard-04.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Keyboard"
+  }
+  ,
+  {
+    "id": 47,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/keyboard/keyboard-05.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Keyboard"
+  }
+  ,
+  {
+    "id": 48,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/keyboard/keyboard-06.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Keyboard"
+  }
+  ,
+  {
+    "id": 49,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/keyboard/keyboard-07.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Keyboard"
+  }
+  ,
+  {
+    "id": 50,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/keyboard/keyboard-08.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Keyboard"
+  }
+  ,
+  {
+    "id": 51,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/keyboard/keyboard-09.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Keyboard"
+  }
+  ,
+  {
+    "id": 52,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/keyboard/keyboard-10.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Keyboard"
+  }
+  ,
+  {
+    "id": 53,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/toys-baby/toy-01.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Toys"
+  }
+  ,
+  {
+    "id": 54,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/toys-baby/toy-02.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Toys"
+  }
+  ,
+  {
+    "id": 55,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/toys-baby/toy-03.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Toys"
+  }
+  ,
+  {
+    "id": 56,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/toys-baby/toy-04.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Toys"
+  }
+  ,
+  {
+    "id": 57,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/toys-baby/toy-05.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Toys"
+  }
+  ,
+  {
+    "id": 58,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/toys-baby/toy-06.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Toys"
+  }
+  ,
+  {
+    "id": 59,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/toys-baby/toy-07.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Toys"
+  }
+  ,
+  {
+    "id": 60,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/toys-baby/toy-08.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Toys"
+  }
+  ,
+  {
+    "id": 61,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/toys-baby/toy-09.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Toys"
+  }
+  ,
+  {
+    "id": 62,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/toys-baby/toy-10.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Toys"
+  }
+  ,
+  {
+    "id": 63,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/webcam/webcam-01.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Webcam"
+  }
+  ,
+  {
+    "id": 64,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/webcam/webcam-02.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Webcam"
+  }
+  ,
+  {
+    "id": 65,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/webcam/webcam-03.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Webcam"
+  }
+  ,
+  {
+    "id": 66,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/webcam/webcam-04.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Webcam"
+  }
+  ,
+  {
+    "id": 67,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/webcam/webcam-05.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Webcam"
+  }
+  ,
+  {
+    "id": 68,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/webcam/webcam-06.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Webcam"
+  }
+  ,
+  {
+    "id": 69,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/webcam/webcam-07.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Webcam"
+  }
+  ,
+  {
+    "id": 70,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/webcam/webcam-08.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Webcam"
+  }
+  ,
+  {
+    "id": 71,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/webcam/webcam-09.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Webcam"
+  }
+  ,
+  {
+    "id": 72,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/webcam/webcam-10.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Webcam"
+  }
+  ,
+  {
+    "id": 73,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/printer/printer-01.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Printer"
+  }
+  ,
+  {
+    "id": 74,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/printer/printer-02.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Printer"
+  }
+  ,
+  {
+    "id": 75,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/printer/printer-03.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Printer"
+  }
+  ,
+  {
+    "id": 76,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
+    "image": "./img/home/computer-accessories/printer/printer-04.png",
+    "rating": 4,
+    "reviews": 699,
+    "description": "TOZO T6 True Wireless Earbuds Bluetooth Headphon...",
+    "category": "Printer"
+  }
+  ,
+  {
+    "id": 77,
+    "title": "Samsung Galaxy S22 Ultra",
+    "price": 1499,
     "image": "./img/home/computer-accessories/printer/printer-05.png",
     "rating": 4,
     "reviews": 699,
@@ -448,7 +448,7 @@
   }
   ,
   {
-    "id": 42,
+    "id": 78,
     "title": "Samsung Galaxy S22 Ultra",
     "price": 1499,
     "image": "./img/home/computer-accessories/printer/printer-06.png",
@@ -459,7 +459,7 @@
   }
   ,
   {
-    "id": 43,
+    "id": 79,
     "title": "Samsung Galaxy S22 Ultra",
     "price": 1499,
     "image": "./img/home/computer-accessories/printer/printer-07.png",
@@ -470,7 +470,7 @@
   }
   ,
   {
-    "id": 44,
+    "id": 80,
     "title": "Samsung Galaxy S22 Ultra",
     "price": 1499,
     "image": "./img/home/computer-accessories/printer/printer-08.png",
@@ -481,7 +481,7 @@
   }
   ,
   {
-    "id": 45,
+    "id": 81,
     "title": "Samsung Galaxy S22 Ultra",
     "price": 1499,
     "image": "./img/home/computer-accessories/printer/printer-09.png",
@@ -492,7 +492,7 @@
   }
   ,
   {
-    "id": 46,
+    "id": 82,
     "title": "Samsung Galaxy S22 Ultra",
     "price": 1499,
     "image": "./img/home/computer-accessories/printer/printer-10.png",
