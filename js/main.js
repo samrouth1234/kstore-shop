@@ -43,7 +43,7 @@ $(document).ready(function () {
 					<img src="${item.image}" alt="${item.title}" class="w-20 h-20 rounded" />
 					<div class="flex-1">
 						<h2 class="text-md font-medium">${item.title}</h2>
-						<p class="text-xs text-gray-600">$${item.price}</p>
+						<p class="text-md font-medium text-gray-800">$${item.price}</p>
 					</div>
 					<span class="font-medium">x${item.quantity}</span>
 					<button class="remove-from-cart text-red-500 hover:text-red-700" data-id="${item.id}">
